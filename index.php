@@ -59,13 +59,15 @@ if ( empty($_REQUEST) ){
 
         <h2>Passo 2</h2>
 
-        <!--<p><b>Caso queira, execute o comando abaixo para a visualização para auto instalar o Magento com o sample data</b></p>
+        <!--<p><b>Caso queira, execute o comando abaixo para auto instalar o Magento com o sample data</b></p>
 
         <p>heroku run --app $APP_NAME ' bash magento_install.sh $MAGENTO_URL ; '</p>
 
         <p><b>Obs.</b> a execução do arquivo *.sh, não armazena o sample data, nem instala o Magento, por isso da execução via php WEB</p>-->
 
-        <p><a href="${BASE_URL}magento_install.php" target="_blank">Clique aqui para auto instalar o Magento com o sample data</a></p>
+        <p><b>Caso queira, acesse o link a seguir para auto instalar o Magento com o sample data</b></p>
+
+        <p><a href="${BASE_URL}?magento_sample_data=true" target="_blank">Clique aqui para auto instalar o Magento com o sample data</a></p>
 
         <p><b>Obs:</b> Pode ocorrer o erro de timeout apenas recarregue a página</p>
 
@@ -84,6 +86,34 @@ EOF;
 EOF;
 
     echo $html;
+
+}
+
+//
+
+if ( array_key_exists('magento_sample_data', $_REQUEST) ){
+
+    if( file_exists($path_file) ){
+        echo 'Magento já foi instalado.';
+        exit;
+    }
+
+    //
+
+    $BASE_URL = 'http'.(isset($_SERVER['HTTPS'])?'s':'').'://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+
+    $BASE_URL = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+
+    $BASE_URL = $BASE_URL . 'root/';
+
+    $arg1 = $BASE_URL;
+    $arg2 = '2';
+
+    var_dump($BASE_URL);exit;
+
+    $output = shell_exec(" bash magento_install.sh $arg1 $arg2 ");
+
+    echo "<pre>$output</pre>";
 
 }
 
