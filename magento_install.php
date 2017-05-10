@@ -19,12 +19,14 @@ if( file_exists($path_file) ){
 
 $BASE_URL = 'http'.(isset($_SERVER['HTTPS'])?'s':'').'://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
 
-$BASE_URL = $BASE_URL . 'root';
+$BASE_URL = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+
+$BASE_URL = $BASE_URL . 'root/';
 
 $arg1 = $BASE_URL;
 $arg2 = '2';
 
-$output = shell_exec("bash magento_install.sh $arg1 $arg2");
+$output = shell_exec(" bash magento_install.sh $arg1 $arg2 > /dev/null & ");
 
 echo "<pre>$output</pre>";
 
