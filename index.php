@@ -22,7 +22,7 @@ http://magento-heroku.herokuapp.com/?phpinfo=true
 
 http://magento-heroku.herokuapp.com/?database=true
 
-http://magento-heroku.herokuapp.com/?scandir=true&dir=/app/root/var/&load_file=true&file=/app/root/var/report/821626541659
+http://magento-heroku.herokuapp.com/?scandir=true&dir=/app/root/&load_file=true&file=/app/root/var/report/821626541659
 
 */
 
@@ -75,7 +75,7 @@ if ( empty($_REQUEST) ){
 
         <!--<p><b>Obs:</b> Pode ocorrer o erro h12, https://devcenter.heroku.com/articles/error-codes#h12-request-timeout</p>-->
 
-        <p><b>Obs:</b> Pode ocorrer o erro de timeout apenas recarregue a página</p>
+        <p><b>Obs:</b> Esse processo ira rodar em background, aguarde 1 minuto e acesse a URL do Magento</p>
 
         <h2>Passo 3</h2>
 
@@ -119,7 +119,7 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
 
     try {
         $cmd = "bash magento_install.sh $arg1 $arg2";
-        $output = exec($cmd . " > /dev/null &");
+        $output = passthru($cmd . " > /dev/null &");
         dump('cmd');
         dump($output);
     } catch (Exception $e) {
