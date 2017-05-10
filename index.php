@@ -115,11 +115,16 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
     $BASE_URL = $BASE_URL . 'root/';
 
     $arg1 = $BASE_URL;
-    $arg2 = '2';
+    $arg2 = '';
 
-    $output = shell_exec(" bash magento_install.sh $arg1 $arg2 ");
+    try {
+        $output = shell_exec(" bash magento_install.sh $arg1 $arg2 ");
+        dump($output);
+    } catch (Exception $e) {
+        dump($e->getMessage());
+    }
 
-    echo "<pre>$output</pre>";
+    echo "Fim";
 
 }
 
