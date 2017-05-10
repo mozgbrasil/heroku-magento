@@ -1,0 +1,49 @@
+{
+  "name": "mozgbrasil/heroku-magento",
+  "description": "Magento App",
+  "keywords": [
+    "app.json",
+    "magento",
+    "heroku",
+    "mozg"
+  ],
+  "website": "http://mozg.com.br/",
+  "repository": "https://github.com/mozgbrasil/heroku-magento",
+  "logo": "http://mozg.com.br/assets/images/logos/Red_star.svg",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "echo 'Yo_postdeploy' ; bash postdeploy.sh",
+    "pr-predestroy": "echo 'Yo_predestroy' ; bash teardown.sh ; "
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
+  },
+  "image": "heroku/php",
+  "addons": [
+    "jawsdb:leopard",
+    "cleardb",
+    "heroku-postgresql",
+    "semaphore",
+    "codeship",
+    "sendgrid"
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    },
+    {
+      "url": "https://github.com/gaumire/heroku-buildpack-mysql"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "echo 'Yo_environments';"
+      }
+    }
+  }
+}

@@ -1,0 +1,947 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "31dfaeb1599b5db568a6e86ad550301d",
+    "packages": [
+        {
+            "name": "aoepeople/aoe_scheduler",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AOEpeople/Aoe_Scheduler.git",
+                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AOEpeople/Aoe_Scheduler/zipball/9510692d6155feb3345e32151e5cd6492f162ce5",
+                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*",
+                "php": ">=5.3"
+            },
+            "replace": {
+                "fbrnc/aoe_scheduler": "*"
+            },
+            "type": "magento-module",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabrizio Branca",
+                    "email": "firstname.lastname@aoe.com",
+                    "role": "Author/Maintainer"
+                },
+                {
+                    "name": "Lee Saferite",
+                    "email": "lee.saferite@aoe.com",
+                    "role": "Contributor/Maintainer"
+                }
+            ],
+            "description": "Magento Cron Scheduler",
+            "homepage": "https://github.com/AOEpeople/Aoe_Scheduler",
+            "support": {
+                "source": "https://github.com/AOEpeople/Aoe_Scheduler/tree/v1.5.1",
+                "issues": "https://github.com/AOEpeople/Aoe_Scheduler/issues"
+            },
+            "time": "2016-12-14T14:42:05+00:00"
+        },
+        {
+            "name": "aschroder/smtp_pro",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension.git",
+                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aschroder/Magento-SMTP-Pro-Email-Extension/zipball/5101ed278d4aba05279fc1e53c3811983be8adda",
+                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "extra": {
+                "map": [
+                    [
+                        "app/etc/modules/Aschroder_SMTPPro.xml",
+                        "app/etc/modules/Aschroder_SMTPPro.xml"
+                    ],
+                    [
+                        "app/code/local/Aschroder/SMTPPro",
+                        "app/code/local/Aschroder/SMTPPro"
+                    ],
+                    [
+                        "app/design/adminhtml/base/default/template/smtppro",
+                        "app/design/adminhtml/default/default/template/smtppro"
+                    ],
+                    [
+                        "app/locale/en_US/Aschroder_SMTPPro.csv",
+                        "app/locale/en_US/Aschroder_SMTPPro.csv"
+                    ]
+                ]
+            },
+            "authors": [
+                {
+                    "name": "aschroder"
+                }
+            ],
+            "description": "sending Magento mail through an external smtp-server",
+            "homepage": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension",
+            "support": {
+                "source": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/tree/2.0.7",
+                "issues": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/issues"
+            },
+            "time": "2015-10-30T09:33:29+00:00"
+        },
+        {
+            "name": "aydin-hassan/magento-core-composer-installer",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AydinHassan/magento-core-composer-installer.git",
+                "reference": "ef9de07e2378665e31056109f165d10657389c74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AydinHassan/magento-core-composer-installer/zipball/ef9de07e2378665e31056109f165d10657389c74",
+                "reference": "ef9de07e2378665e31056109f165d10657389c74",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "~1.0",
+                "php": "^5.5 | ^7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.3@dev",
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "\\AydinHassan\\MagentoCoreComposerInstaller\\CoreManager"
+            },
+            "autoload": {
+                "psr-4": {
+                    "AydinHassan\\MagentoCoreComposerInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aydin Hassan",
+                    "email": "aydin@hotmail.co.uk"
+                }
+            ],
+            "description": "A composer plugin for managing Magento Core",
+            "time": "2016-12-21T09:57:51+00:00"
+        },
+        {
+            "name": "connect20/Mage_Locale_pt_BR",
+            "version": "1.9.0.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://connect20.magentocommerce.com/community/Mage_Locale_pt_BR/1.9.0.0/Mage_Locale_pt_BR-1.9.0.0.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "suggest": {
+                "magento-hackathon/magento-composer-installer": "Allows to manage this package as a dependency"
+            },
+            "type": "magento-module",
+            "extra": {
+                "package-xml": "package.xml"
+            },
+            "license": [
+                "AFL-v3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Magento Core Team",
+                    "email": "core@magentocommerce.com"
+                }
+            ],
+            "description": "pt_BR locale"
+        },
+        {
+            "name": "eloquent/composer-config-reader",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eloquent/composer-config-reader.git",
+                "reference": "873dfd6d2b38c14bf1bfd0deb0f54ac7e11d1a14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eloquent/composer-config-reader/zipball/873dfd6d2b38c14bf1bfd0deb0f54ac7e11d1a14",
+                "reference": "873dfd6d2b38c14bf1bfd0deb0f54ac7e11d1a14",
+                "shasum": ""
+            },
+            "require": {
+                "eloquent/enumeration": "^5",
+                "justinrainbow/json-schema": "^4",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "eloquent/liberator": "^2",
+                "eloquent/phony": "0.14.4",
+                "phpunit/phpunit": "^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eloquent\\Composer\\Configuration\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Millard",
+                    "email": "ezzatron@gmail.com",
+                    "homepage": "http://ezzatron.com/"
+                }
+            ],
+            "description": "A light-weight component for reading Composer configuration files.",
+            "homepage": "https://github.com/eloquent/composer-config-reader",
+            "keywords": [
+                "composer",
+                "configuration",
+                "parser",
+                "reader"
+            ],
+            "time": "2016-12-20T03:37:03+00:00"
+        },
+        {
+            "name": "eloquent/enumeration",
+            "version": "5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eloquent/enumeration.git",
+                "reference": "0242859435d9b135939816858348556d3cde9e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eloquent/enumeration/zipball/0242859435d9b135939816858348556d3cde9e3c",
+                "reference": "0242859435d9b135939816858348556d3cde9e3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "icecave/archer": "dev-develop",
+                "phpunit/phpunit": "^4",
+                "sami/sami": "^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eloquent\\Enumeration\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Millard",
+                    "email": "ezzatron@gmail.com",
+                    "homepage": "http://ezzatron.com/"
+                }
+            ],
+            "description": "An enumeration implementation for PHP.",
+            "homepage": "https://github.com/eloquent/enumeration",
+            "keywords": [
+                "class",
+                "enum",
+                "enumeration",
+                "multiton",
+                "set",
+                "type"
+            ],
+            "time": "2015-11-03T22:21:38+00:00"
+        },
+        {
+            "name": "firegento/magento",
+            "version": "v1.9.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firegento/magento.git",
+                "reference": "b6d5eb96a8ca3675db1b7ae8403294440bc9d56b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firegento/magento/zipball/b6d5eb96a8ca3675db1b7ae8403294440bc9d56b",
+                "reference": "b6d5eb96a8ca3675db1b7ae8403294440bc9d56b",
+                "shasum": ""
+            },
+            "type": "magento-core",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Magento CE",
+            "support": {
+                "source": "https://github.com/firegento/magento/tree/v1.9.3.2",
+                "issues": "https://github.com/firegento/magento/issues"
+            },
+            "time": "2017-02-08T10:51:10+00:00"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
+                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpdocumentor/phpdocumentor": "~2",
+                "phpunit/phpunit": "^4.8.22"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2016-12-22T16:43:46+00:00"
+        },
+        {
+            "name": "magento-hackathon/magento-composer-installer",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cotya/magento-composer-installer.git",
+                "reference": "49257eef08a37ebc5e1e9ffaab438d00a14a578f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cotya/magento-composer-installer/zipball/49257eef08a37ebc5e1e9ffaab438d00a14a578f",
+                "reference": "49257eef08a37ebc5e1e9ffaab438d00a14a578f",
+                "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "vendor",
+                    "/tests/FullStackTest/"
+                ]
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "eloquent/composer-config-reader": "2.*",
+                "php": ">=5.5",
+                "symfony/console": "^2.5|^3.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "cotya/composer-test-framework": "dev-master",
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "~2.3",
+                "squizlabs/php_codesniffer": "~2.1",
+                "symfony/process": "~2.5"
+            },
+            "suggest": {
+                "colinmollenhour/modman": "*",
+                "theseer/autoload": "~1.14"
+            },
+            "bin": [
+                "bin/magento-composer-installer.php"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "class": "MagentoHackathon\\Composer\\Magento\\Plugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "MagentoHackathon\\Composer": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-0": {
+                    "MagentoHackathon\\Composer\\Magento": "tests/"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Fahlke aka Flyingmana",
+                    "email": "flyingmana@googlemail.com"
+                },
+                {
+                    "name": "Jörg Weller",
+                    "email": "weller@flagbit.de"
+                },
+                {
+                    "name": "Karl Spies",
+                    "email": "karl.spies@gmx.net"
+                },
+                {
+                    "name": "Tobias Vogt",
+                    "email": "tobi@webguys.de"
+                },
+                {
+                    "name": "David Fuhr",
+                    "email": "fuhr@flagbit.de"
+                },
+                {
+                    "name": "Vinai Kopp",
+                    "email": "vinai@netzarbeiter.com"
+                }
+            ],
+            "description": "Composer installer for Magento modules",
+            "homepage": "https://github.com/magento-hackathon/magento-composer-installer",
+            "keywords": [
+                "composer-installer",
+                "magento"
+            ],
+            "support": {
+                "source": "https://github.com/Cotya/magento-composer-installer/tree/master",
+                "issues": "https://github.com/Cotya/magento-composer-installer/issues"
+            },
+            "time": "2017-02-23T13:23:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-brasil-regions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-brasil-regions.git",
+                "reference": "3443e4e552ec3e2dd039ce3cf2d63fba60ffacf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-brasil-regions/zipball/3443e4e552ec3e2dd039ce3cf2d63fba60ffacf4",
+                "reference": "3443e4e552ec3e2dd039ce3cf2d63fba60ffacf4",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adiciona o suporte aos 27 estados do Brasil ao Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "brasil",
+                "cerebrum",
+                "mozg",
+                "regions"
+            ],
+            "time": "2017-04-26 21:29:19"
+        },
+        {
+            "name": "mozgbrasil/magento-iwd-all",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-iwd-all.git",
+                "reference": "9d406aca5f59db9bc5c012ed1f9db1e8939a3af4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-all/zipball/9d406aca5f59db9bc5c012ed1f9db1e8939a3af4",
+                "reference": "9d406aca5f59db9bc5c012ed1f9db1e8939a3af4",
+                "shasum": ""
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IWD_All",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "all",
+                "cerebrum",
+                "iwd",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-04-26 21:29:35"
+        },
+        {
+            "name": "mozgbrasil/magento-iwd-opc",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-iwd-opc.git",
+                "reference": "39ceabf5e71d6650a5004fba062f609e740d6ac2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-opc/zipball/39ceabf5e71d6650a5004fba062f609e740d6ac2",
+                "reference": "39ceabf5e71d6650a5004fba062f609e740d6ac2",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-iwd-all": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IWD_Opc",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "checkout",
+                "iwd",
+                "magento",
+                "mozg",
+                "opc"
+            ],
+            "time": "2017-04-26 21:29:43"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v3.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "a7a17e0c6c3c4d70a211f80782e4b90ddadeaa38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/a7a17e0c6c3c4d70a211f80782e4b90ddadeaa38",
+                "reference": "a7a17e0c6c3c4d70a211f80782e4b90ddadeaa38",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/debug": "~2.8|~3.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.8|~3.0",
+                "symfony/filesystem": "~2.8|~3.0",
+                "symfony/process": "~2.8|~3.0"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/filesystem": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-04-26T01:39:17+00:00"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "v3.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "fd6eeee656a5a7b384d56f1072243fe1c0e81686"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/fd6eeee656a5a7b384d56f1072243fe1c0e81686",
+                "reference": "fd6eeee656a5a7b384d56f1072243fe1c0e81686",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "conflict": {
+                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+            },
+            "require-dev": {
+                "symfony/class-loader": "~2.8|~3.0",
+                "symfony/http-kernel": "~2.8|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Debug\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Debug Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-04-19T20:17:50+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2016-11-14T01:06:16+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "fa47963ac7979ddbd42b2d646d1b056bddbf7bb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/fa47963ac7979ddbd42b2d646d1b056bddbf7bb8",
+                "reference": "fa47963ac7979ddbd42b2d646d1b056bddbf7bb8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "twig/twig": "~1.20|~2.0"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2017-05-01T14:55:58+00:00"
+        },
+        {
+            "name": "zendframework/zend-loader",
+            "version": "2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-loader.git",
+                "reference": "c5fd2f071bde071f4363def7dea8dec7393e135c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-loader/zipball/c5fd2f071bde071f4363def7dea8dec7393e135c",
+                "reference": "c5fd2f071bde071f4363def7dea8dec7393e135c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Loader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-loader",
+            "keywords": [
+                "loader",
+                "zf2"
+            ],
+            "time": "2015-06-03T14:05:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "mozgbrasil/magento-iwd-opc": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^5.5.12",
+        "ext-gd": "*",
+        "ext-mbstring": "*",
+        "ext-soap": "*",
+        "ext-bcmath": "*",
+        "ext-mcrypt": "*",
+        "ext-memcached": "*",
+        "ext-mongodb": "*"
+    },
+    "platform-dev": []
+}
