@@ -32,7 +32,7 @@ Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) em ap
 
 Clique abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/)
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/magento-heroku)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/heroku-magento)
 
 Em seguida clique no botão "Deploy"
 
@@ -46,6 +46,6 @@ Em seguida você pode baixar o aplicativo, fazer as alterações e enviar ao seu
 
 ## Sobre o aplicativo para o Heroku
 
-Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/magento-heroku](https://github.com/mozgbrasil/magento-heroku), qualquer contribuição é bem vinda.
+Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
 
 :cat2:
