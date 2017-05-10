@@ -4,7 +4,7 @@
 [getcomposer]: https://getcomposer.org/
 [uninstall-mods]: https://getcomposer.org/doc/03-cli.md#remove
 
-# Magento\Heroku
+# Heroku\Magento
 
 ## Sinopse
 
