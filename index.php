@@ -118,7 +118,7 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
     $arg2 = '';
 
     try {
-        $output = shell_exec(" bash magento_install.sh $arg1 $arg2 2>&1 ");
+        $output = shell_exec(" bash magento_install.sh $arg1 $arg2 > /dev/null 2>&1 & ");
         dump($output);
     } catch (Exception $e) {
         dump($e->getMessage());
