@@ -109,8 +109,6 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
     $arg1 = $BASE_URL;
     $arg2 = '2';
 
-    var_dump($BASE_URL);exit;
-
     $output = shell_exec(" bash magento_install.sh $arg1 $arg2 ");
 
     echo "<pre>$output</pre>";
