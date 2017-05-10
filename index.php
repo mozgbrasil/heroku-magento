@@ -59,19 +59,27 @@ if ( empty($_REQUEST) ){
 
         <h2>Passo 2</h2>
 
-        <!--<p><b>Caso queira, execute o comando abaixo para auto instalar o Magento com o sample data</b></p>
+        <!--
+
+        <p><b>Caso queira, execute o comando abaixo para auto instalar o Magento com o sample data</b></p>
 
         <p>heroku run --app $APP_NAME ' bash magento_install.sh $MAGENTO_URL ; '</p>
 
-        <p><b>Obs.</b> a execução do arquivo *.sh, não armazena o sample data, nem instala o Magento, por isso da execução via php WEB</p>-->
+        <p><b>Obs.</b> a execução do arquivo *.sh, não armazena o sample data, nem instala o Magento, por isso da execução via php WEB</p>
+
+        -->
 
         <p><b>Caso queira, acesse o link a seguir para auto instalar o Magento com o sample data</b></p>
 
         <p><a href="${BASE_URL}?magento_sample_data=true" target="_blank">Clique aqui para auto instalar o Magento com o sample data</a></p>
 
+        <!--<p><b>Obs:</b> Pode ocorrer o erro h12, https://devcenter.heroku.com/articles/error-codes#h12-request-timeout</p>-->
+
         <p><b>Obs:</b> Pode ocorrer o erro de timeout apenas recarregue a página</p>
 
         <h2>Passo 3</h2>
+
+        <p><a href="${BASE_URL}?phpinfo=true" target="_blank">Clique aqui para acesso ao phpinfo</a></p>
 
 EOF;
 
