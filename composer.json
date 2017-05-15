@@ -33,6 +33,7 @@
         "ext-mcrypt": "*",
         "ext-memcached": "*",
         "ext-mongodb": "*",
+        "ext-zend-guard-loader": "*",
         "symfony/var-dumper": "*",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",

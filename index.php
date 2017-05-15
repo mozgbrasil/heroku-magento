@@ -158,8 +158,8 @@ if ( array_key_exists('scandir', $_REQUEST) ){
 
 if ( array_key_exists('load_file', $_REQUEST) ){
 
-    $path_file    = isset($_REQUEST['file']) ? $_REQUEST['file'] : __FILE__;
-    $file = file_get_contents($path_file);
+    $path_file  = isset($_REQUEST['file']) ? $_REQUEST['file'] : __FILE__;
+    $file       = file_get_contents($path_file);
     dump($path_file);
     dump($file);
 
