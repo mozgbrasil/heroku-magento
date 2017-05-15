@@ -135,8 +135,11 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
 
 if ( array_key_exists('server', $_REQUEST) ){
 
-    dump($_SERVER);
-    dump($_REQUEST);
+    //var_dump($_SERVER);
+    //var_dump($_REQUEST);
+
+    $ext = 'zend-guard-loader';    
+    var_dump(extension_loaded($ext));
 
 }
 
