@@ -25,6 +25,7 @@
         "magento-force": true
     },
     "require": {
-        "php": "^5.5.12"
+        "php": "^5.5.12",
+        "ext-zend-guard-loader": "*"
     }
 }
