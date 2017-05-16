@@ -102,23 +102,25 @@ echo -e "--(Sample Data)--" ;\
 
 echo -e "--(Processo 1)--" ;\
 
-wget https://raw.githubusercontent.com/Vinai/compressed-magento-sample-data/1.9.1.0/compressed-no-mp3-magento-sample-data-1.9.1.0.tgz ;\
+wget wget https://sourceforge.net/projects/mageloads/files/assets/1.9.2.4/magento-sample-data-1.9.2.4.zip ;\
 
 echo -e "--(Processo 3)--" ;\
 
-tar xzf compressed-no-mp3-magento-sample-data-1.9.1.0.tgz ;\
+unzip magento-sample-data-1.9.2.4.zip ;\
 
 echo -e "--(Processo 4)--" ;\
 
-cp -fr magento-sample-data-1.9.1.0/media/* media/ ;\
+cp -fr magento-sample-data-1.9.2.4/media/* media/ ;\
+
+cp -fr magento-sample-data-1.9.2.4/skin/* skin/ ;\
 
 echo -e "--(Processo 5)--" ;\
 
-mysql -h ${MAGENTO_DB_HOST} -P ${MAGENTO_DB_PORT} -u ${MAGENTO_DB_USER} -p${MAGENTO_DB_PASS} ${MAGENTO_DB_NAME} < 'magento-sample-data-1.9.1.0/magento_sample_data_for_1.9.1.0.sql' ;\
+mysql -h ${MAGENTO_DB_HOST} -P ${MAGENTO_DB_PORT} -u ${MAGENTO_DB_USER} -p${MAGENTO_DB_PASS} ${MAGENTO_DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql' ;\
 
 echo -e "--(Processo 6)--" ;\
 
-#rm -fr compressed-no-mp3-magento-sample-data-1.9.1.0.tar compressed-no-mp3-magento-sample-data-1.9.1.0.tar.7z magento-sample-data-1.9.1.0
+rm -fr magento-sample-data-1.9.2.4.zip magento-sample-data-1.9.2.4
 
 echo -e "--(Processo 7)--" ;\
 

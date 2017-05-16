@@ -26,6 +26,46 @@ http://magento-heroku.herokuapp.com/?scandir=true&dir=/app/root/&load_file=true&
 
 */
 
+
+//
+
+if ( (php_sapi_name() === 'cli') ){
+
+    echo "\e[1;33m (1) \e[0m" ;
+    echo "\n";
+
+    print_r('PHP CLI');
+
+    echo "\n";
+    echo "\e[1;33m (2) \e[0m" ;
+    echo "\n";
+
+    print_r(get_loaded_extensions());
+
+    echo "\n";
+    echo "\e[1;33m (3) \e[0m" ;
+    echo "\n";
+
+    $ext = 'zend-guard-loader';    
+    print_r(extension_loaded($ext));
+
+    echo "\n";
+    echo "\e[1;33m (4) \e[0m" ;
+    echo "\n";
+
+    $ext = 'zend guard loader';    
+    print_r(extension_loaded($ext));
+
+    echo "\n";
+    echo "\e[1;33m (5) \e[0m" ;
+    echo "\n";
+
+    print_r(get_extension_funcs($ext));
+
+    exit;
+
+}
+
 //
 
 if ( empty($_REQUEST) ){
@@ -135,11 +175,8 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
 
 if ( array_key_exists('server', $_REQUEST) ){
 
-    //var_dump($_SERVER);
-    //var_dump($_REQUEST);
-
-    $ext = 'zend-guard-loader';    
-    var_dump(extension_loaded($ext));
+    dump($_SERVER);
+    dump($_REQUEST);
 
 }
 
