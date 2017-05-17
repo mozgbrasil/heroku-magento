@@ -66,7 +66,7 @@ Ou
 
 Podemos usar o seguinte repositório
 
-https://packagist.org/packages/mozgbrasil/
+https://packagist.org/
 
 Que se trata do repositório central de bibliotecas disponibilizada via Composer
 
