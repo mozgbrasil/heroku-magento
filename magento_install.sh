@@ -102,7 +102,7 @@ echo -e "--(Sample Data)--" ;\
 
 echo -e "--(Processo 1)--" ;\
 
-wget wget https://sourceforge.net/projects/mageloads/files/assets/1.9.2.4/magento-sample-data-1.9.2.4.zip ;\
+wget https://sourceforge.net/projects/mageloads/files/assets/1.9.2.4/magento-sample-data-1.9.2.4.zip ;\
 
 echo -e "--(Processo 3)--" ;\
 
