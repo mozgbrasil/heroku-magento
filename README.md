@@ -42,7 +42,7 @@ Clique no botão "View"
 
 Será carregado o aplicativo, com o acesso ao Magento
 
-Em seguida você pode baixar o aplicativo, fazer as alterações e enviar ao seu repositório no github que a implantação na Heroku será efetuada.
+Em seguida você pode fazer um fork desse repositório e fazer as alterações necessárias, certifique de apontar o seu repositório na Heroku e habilitar a implantação automatica.
 
 ## Sobre temas
 
@@ -52,7 +52,7 @@ https://www.magentocommerce.com/magento-connect/themes.html
 
 Usando o Magento Connect podemos instalar módulos ou templates no Magento
 
-Mas não é recomendado o uso do Magento Connect quando se trabalha com o Composer, pois o Magento Connect se trata de um ambiente defasado, e no uso do mesmo pode ser feito download do arquivo composer.json de módulos de terceiros, corrompendo o arquivo composer.json do projeto
+Mas não é recomendado o uso do Magento Connect quando se trabalha com o Composer, pois pode ser feito download do arquivo composer.json de módulos de terceiros, corrompendo o arquivo composer.json do projeto
 
 Portanto no uso do Composer com o Magento
 
