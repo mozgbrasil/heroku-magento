@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "55fc0cf833eb24dc004db07273ccffe3",
+    "content-hash": "54243bd72e36fba96474d01c9922108e",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -3727,24 +3727,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.5.12",
-        "ext-spl": "*",
-        "ext-dom": "*",
-        "ext-simplexml": "*",
-        "ext-mcrypt": "*",
-        "ext-hash": "*",
-        "ext-curl": "*",
-        "ext-soap": "*",
-        "ext-iconv": "*",
-        "ext-gd": "*",
-        "ext-openssl": "*",
-        "lib-libxml": "*",
-        "ext-pdo": "*",
-        "ext-sockets": "*",
-        "ext-mbstring": "*",
-        "ext-bcmath": "*",
-        "ext-memcached": "*",
-        "ext-mongodb": "*"
+        "php": "^5.5.12"
     },
     "platform-dev": []
 }
