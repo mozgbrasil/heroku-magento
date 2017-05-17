@@ -44,6 +44,32 @@ Será carregado o aplicativo, com o acesso ao Magento
 
 Em seguida você pode baixar o aplicativo, fazer as alterações e enviar ao seu repositório no github que a implantação na Heroku será efetuada.
 
+## Sobre temas
+
+Pelo seguinte repositório
+
+https://www.magentocommerce.com/magento-connect/themes.html
+
+Usando o Magento Connect podemos instalar módulos ou templates no Magento
+
+Mas não é recomendado o uso do Magento Connect quando se trabalha com o Composer, pois o Magento Connect se trata de um ambiente defasado, e no uso do mesmo pode ser feito download do arquivo composer.json de módulos de terceiros, corrompendo o arquivo composer.json do projeto
+
+Portanto no uso do Composer com o Magento
+
+Podemos usar o seguinte repositório
+
+http://packages.firegento.com/
+
+Onde vemos diversos temas, pesquise por "theme", vemos que essas bibliotecas se trata das mesmas registrada no Magento Connect mas por esse repositório podemos instalar via Composer
+
+Ou
+
+Podemos usar o seguinte repositório
+
+https://packagist.org/packages/mozgbrasil/
+
+Que se trata do repositório central de bibliotecas disponibilizada via Composer
+
 ## Sobre o aplicativo para o Heroku
 
 Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
