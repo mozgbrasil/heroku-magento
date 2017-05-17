@@ -13,7 +13,7 @@
 
 #
 
-echo -e "--(ENV)--" ;\
+echo -e "--(ENV)--"
 
 # https://www.cyberciti.biz/faq/linux-list-all-environment-variables-env-command/
 
@@ -21,7 +21,7 @@ printenv
 
 #
 
-echo -e "--(REGEX_EXPR)--" ;\
+echo -e "--(REGEX_EXPR)--"
 
 #MAGENTO_URL="http://magento-heroku.herokuapp.com/"
 MAGENTO_URL="$1"
@@ -50,26 +50,26 @@ then
     MAGENTO_DB_USER=${BASH_REMATCH[1]}
     MAGENTO_DB_PASS=${BASH_REMATCH[2]}
 
-    echo -e "--(MAGENTO_URL: ${MAGENTO_URL})--" ;\
-    echo -e "--(DB_HOST: ${MAGENTO_DB_HOST})--" ;\
-    echo -e "--(DB_PORT: ${MAGENTO_DB_PORT})--" ;\
-    echo -e "--(DB_NAME: ${MAGENTO_DB_NAME})--" ;\
-    echo -e "--(DB_USER: ${MAGENTO_DB_USER})--" ;\
-    echo -e "--(DB_PASS: ${MAGENTO_DB_PASS})--" ;\
+    echo -e "--(MAGENTO_URL: ${MAGENTO_URL})--"
+    echo -e "--(DB_HOST: ${MAGENTO_DB_HOST})--"
+    echo -e "--(DB_PORT: ${MAGENTO_DB_PORT})--"
+    echo -e "--(DB_NAME: ${MAGENTO_DB_NAME})--"
+    echo -e "--(DB_USER: ${MAGENTO_DB_USER})--"
+    echo -e "--(DB_PASS: ${MAGENTO_DB_PASS})--"
 
     # Check Database
 
-    echo -e "--(Check Database)--" ;\
+    echo -e "--(Check Database)--"
 
     mysql -h ${MAGENTO_DB_HOST} -P ${MAGENTO_DB_PORT} -u ${MAGENTO_DB_USER} -p${MAGENTO_DB_PASS} ${MAGENTO_DB_NAME} -v -e "SHOW TABLES"
 
 else
-    echo -e "--(Unable to parse STRING from config)--" ;\
+    echo -e "--(Unable to parse STRING from config)--"
 fi
 
 #
 
-echo -e "--(WICH)--" ;\
+echo -e "--(WICH)--"
 
 #
 
@@ -77,16 +77,16 @@ WICH_7ZA=`which 7za`
 WICH_TAR=`which tar`
 WICH_MYSQL=`which mysql`
 
-echo -e "--( ${WICH_7ZA} )--" ;\
-echo -e "--( ${WICH_TAR} )--" ;\
-echo -e "--( ${WICH_MYSQL} )--" ;\
+echo -e "--( ${WICH_7ZA} )--"
+echo -e "--( ${WICH_TAR} )--"
+echo -e "--( ${WICH_MYSQL} )--"
 
 #
 
-echo -e "--(DIRECTORY)--" ;\
+echo -e "--(DIRECTORY)--"
 
-echo -e "--(`pwd`)--" ;\
-echo -e "--(`ls -all`)--" ;\
+echo -e "--(`pwd`)--"
+echo -e "--(`ls -all`)--"
 
 cd root
 
@@ -98,33 +98,38 @@ ls -all
 
 # Sample Data
 
-echo -e "--(Sample Data)--" ;\
+echo -e "--(Sample Data)--"
 
-echo -e "--(Processo 1)--" ;\
+echo -e "--(Processo 1)--"
 
-wget https://sourceforge.net/projects/mageloads/files/assets/1.9.2.4/magento-sample-data-1.9.2.4.zip ;\
 
-echo -e "--(Processo 3)--" ;\
+wget https://managedway.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
 
-ls
+echo -e "--(Processo 3)--"
 
-unzip magento-sample-data-1.9.2.4.zip ;\
+pwd
 
-echo -e "--(Processo 4)--" ;\
+ls -all
 
-cp -fr magento-sample-data-1.9.2.4/media/* media/ ;\
+tar xvzf magento-sample-data-1.9.2.4-fix.tar.gz
 
-cp -fr magento-sample-data-1.9.2.4/skin/* skin/ ;\
+ls -all
 
-echo -e "--(Processo 5)--" ;\
+echo -e "--(Processo 4)--"
 
-mysql -h ${MAGENTO_DB_HOST} -P ${MAGENTO_DB_PORT} -u ${MAGENTO_DB_USER} -p${MAGENTO_DB_PASS} ${MAGENTO_DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql' ;\
+cp -fr magento-sample-data-1.9.2.4/media/* media/
 
-echo -e "--(Processo 6)--" ;\
+cp -fr magento-sample-data-1.9.2.4/skin/* skin/
 
-rm -fr magento-sample-data-1.9.2.4.zip magento-sample-data-1.9.2.4
+echo -e "--(Processo 5)--"
 
-echo -e "--(Processo 7)--" ;\
+mysql -h ${MAGENTO_DB_HOST} -P ${MAGENTO_DB_PORT} -u ${MAGENTO_DB_USER} -p${MAGENTO_DB_PASS} ${MAGENTO_DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql'
+
+echo -e "--(Processo 6)--"
+
+rm -fr magento-sample-data-1.9.2.4-fix.tar.gz magento-sample-data-1.9.2.4
+
+echo -e "--(Processo 7)--"
 
 pwd
 
@@ -132,7 +137,7 @@ ls -all
 
 # Install Magento
 
-echo -e "--(Install Magento)--" ;\
+echo -e "--(Install Magento)--"
 
 php -f install.php -- \
 --license_agreement_accepted "yes" \
@@ -157,32 +162,32 @@ php -f install.php -- \
 
 # Magento /shell
 
-echo -e "--(Magento /shell)--" ;\
+echo -e "--(Magento /shell)--"
 
-echo -e "--(Processo 1)--" ;\
-php shell/compiler.php --state ;\
-echo -e "--(Processo 2)--" ;\
-php shell/log.php --clean ;\
-echo -e "--(Processo 3)--" ;\
-php shell/indexer.php --status ;\
-echo -e "--(Processo 4)--" ;\
-php shell/indexer.php --info ;\
-echo -e "--(Processo 5)--" ;\
+echo -e "--(Processo 1)--"
+php shell/compiler.php --state
+echo -e "--(Processo 2)--"
+php shell/log.php --clean
+echo -e "--(Processo 3)--"
+php shell/indexer.php --status
+echo -e "--(Processo 4)--"
+php shell/indexer.php --info
+echo -e "--(Processo 5)--"
 php shell/indexer.php --reindexall
 
 # Magento ./mage command-line
 
-#echo -e "--(Magento ./mage)--" ;\
+#echo -e "--(Magento ./mage)--"
 
-#echo -e "--(Processo 1)--" ;\
-#sh mage ;\
-#echo -e "--(Processo 2)--" ;\
-#sh mage mage-setup ;\
-#echo -e "--(Processo 3)--" ;\
-#sh mage sync ;\
-#echo -e "--(Processo 4)--" ;\
-#sh mage list-installed ;\
-#echo -e "--(Processo 5)--" ;\
-#sh mage list-upgrades ;\
+#echo -e "--(Processo 1)--"
+#sh mage
+#echo -e "--(Processo 2)--"
+#sh mage mage-setup
+#echo -e "--(Processo 3)--"
+#sh mage sync
+#echo -e "--(Processo 4)--"
+#sh mage list-installed
+#echo -e "--(Processo 5)--"
+#sh mage list-upgrades
 
 #
