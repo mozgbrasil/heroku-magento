@@ -40,6 +40,7 @@
         "mozgbrasil/magento-iwd-opc": "dev-master",
         "connect20/mage_locale_pt_br": "^1.9",
         "aoepeople/aoe_scheduler": "^1.5",
-        "aschroder/smtp_pro": "^2.0"
+        "aschroder/smtp_pro": "^2.0",
+        "mozgbrasil/magento-bundle-php56": "dev-master"
     }
 }
