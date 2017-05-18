@@ -12,8 +12,8 @@
   "logo": "http://mozg.com.br/assets/images/logos/Red_star.svg",
   "success_url": "/",
   "scripts": {
-    "postdeploy": "echo 'Yo_postdeploy' ; bash app.sh postdeploy >> app.log | curl --request POST 'https://fleep.io/hook/uIRi0JRt2yv5OQisX6tg' --data @app.log --verbose ; ",
-    "pr-predestroy": "echo 'Yo_predestroy' ; bash app.sh teardown >> app.log | curl --request POST 'https://fleep.io/hook/uIRi0JRt2yv5OQisX6tg' --data @app.log --verbose ; "
+    "postdeploy": "echo 'Yo_postdeploy' ; bash app.sh postdeploy >> app.log ; ",
+    "pr-predestroy": "echo 'Yo_predestroy' ; bash app.sh teardown >> app.log ; "
   },
   "env": {
     "SECRET_TOKEN": {
@@ -33,7 +33,7 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/puteulanus/heroku-buildpack-php"
+      "url": "heroku/php"
     },
     {
       "url": "https://github.com/gaumire/heroku-buildpack-mysql"
@@ -42,7 +42,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test": "echo 'Yo_environments' ; bash app.sh environments >> app.log | curl --request POST 'https://fleep.io/hook/uIRi0JRt2yv5OQisX6tg' --data @app.log --verbose ; "
+        "test": "echo 'Yo_environments' ; bash app.sh environments >> app.log ; "
       }
     }
   }

@@ -16,13 +16,13 @@ require 'vendor/autoload.php';
 
 /*
 
-http://magento-heroku.herokuapp.com/?server=true
+/?server=true
 
-http://magento-heroku.herokuapp.com/?phpinfo=true
+/?phpinfo=true
 
-http://magento-heroku.herokuapp.com/?database=true
+/?database=true
 
-http://magento-heroku.herokuapp.com/?scandir=true&dir=/app/root/&load_file=true&file=/app/root/var/report/821626541659
+/?scandir=true&dir=/app/root/&load_file=true&file=/app/root/var/report/821626541659
 
 */
 
