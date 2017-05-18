@@ -1308,12 +1308,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/framework-php56.git",
-                "reference": "83c6d07411ddd12870d7ce23ecc516180a27d1e1"
+                "reference": "87dc21a831979551e3deab457ba8e5e0c5848ac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/framework-php56/zipball/83c6d07411ddd12870d7ce23ecc516180a27d1e1",
-                "reference": "83c6d07411ddd12870d7ce23ecc516180a27d1e1",
+                "url": "https://api.github.com/repos/mozgbrasil/framework-php56/zipball/87dc21a831979551e3deab457ba8e5e0c5848ac9",
+                "reference": "87dc21a831979551e3deab457ba8e5e0c5848ac9",
                 "shasum": ""
             },
             "require": {
@@ -1329,6 +1329,7 @@
                 "ext-soap": "*",
                 "ext-sockets": "*",
                 "ext-spl": "*",
+                "ext-zend-guard-loader": "*",
                 "guzzlehttp/guzzle": "*",
                 "jenssegers/agent": "*",
                 "lib-libxml": "*",
@@ -1386,7 +1387,7 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2017-05-17 14:37:33"
+            "time": "2017-05-18 21:51:25"
         },
         {
             "name": "mozgbrasil/loggi-sdk-php",
@@ -1454,12 +1455,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-base-php56.git",
-                "reference": "f03e6646eed168be249e664b948e2a972ccc67b0"
+                "reference": "04e0c03917cd943eb9e2541aaad227323a00057c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php56/zipball/f03e6646eed168be249e664b948e2a972ccc67b0",
-                "reference": "f03e6646eed168be249e664b948e2a972ccc67b0",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php56/zipball/04e0c03917cd943eb9e2541aaad227323a00057c",
+                "reference": "04e0c03917cd943eb9e2541aaad227323a00057c",
                 "shasum": ""
             },
             "require": {
@@ -1497,7 +1498,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-17 14:37:52"
+            "time": "2017-05-18 21:51:45"
         },
         {
             "name": "mozgbrasil/magento-boxpacker-php56",
@@ -1505,12 +1506,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-boxpacker-php56.git",
-                "reference": "be7409320e75ba1605ec631e23d715d5692dd030"
+                "reference": "2905110ffcd0c242f2cf042215ad6a77f9d86c27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php56/zipball/be7409320e75ba1605ec631e23d715d5692dd030",
-                "reference": "be7409320e75ba1605ec631e23d715d5692dd030",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php56/zipball/2905110ffcd0c242f2cf042215ad6a77f9d86c27",
+                "reference": "2905110ffcd0c242f2cf042215ad6a77f9d86c27",
                 "shasum": ""
             },
             "require": {
@@ -1542,7 +1543,7 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2017-05-17 14:38:08"
+            "time": "2017-05-18 21:52:02"
         },
         {
             "name": "mozgbrasil/magento-bradesco-php56",
@@ -1550,12 +1551,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-bradesco-php56.git",
-                "reference": "4c6f1e4bc9d6e7e311e9092bc765ffc22a233122"
+                "reference": "a0b32ae222b162bf893b89f1d7dd7fafef18869a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php56/zipball/4c6f1e4bc9d6e7e311e9092bc765ffc22a233122",
-                "reference": "4c6f1e4bc9d6e7e311e9092bc765ffc22a233122",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php56/zipball/a0b32ae222b162bf893b89f1d7dd7fafef18869a",
+                "reference": "a0b32ae222b162bf893b89f1d7dd7fafef18869a",
                 "shasum": ""
             },
             "require": {
@@ -1584,7 +1585,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-17 14:38:25"
+            "time": "2017-05-18 21:52:18"
         },
         {
             "name": "mozgbrasil/magento-brasil-regions",
@@ -1632,12 +1633,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-braspag-php56.git",
-                "reference": "15af77cf550ffc9e0b32a44e549ced17e6f4daf9"
+                "reference": "7e70a6185f8060868741078bcda52c33c296cab8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php56/zipball/15af77cf550ffc9e0b32a44e549ced17e6f4daf9",
-                "reference": "15af77cf550ffc9e0b32a44e549ced17e6f4daf9",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php56/zipball/7e70a6185f8060868741078bcda52c33c296cab8",
+                "reference": "7e70a6185f8060868741078bcda52c33c296cab8",
                 "shasum": ""
             },
             "require": {
@@ -1667,7 +1668,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-17 14:38:45"
+            "time": "2017-05-18 21:52:37"
         },
         {
             "name": "mozgbrasil/magento-bundle-php56",
@@ -1675,12 +1676,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-bundle-php56.git",
-                "reference": "fda12581be0e7a63e3b46acd0ce97463305d1fd4"
+                "reference": "6086e2013db924e2d5b78dc0ba115c45f83f2574"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php56/zipball/fda12581be0e7a63e3b46acd0ce97463305d1fd4",
-                "reference": "fda12581be0e7a63e3b46acd0ce97463305d1fd4",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php56/zipball/6086e2013db924e2d5b78dc0ba115c45f83f2574",
+                "reference": "6086e2013db924e2d5b78dc0ba115c45f83f2574",
                 "shasum": ""
             },
             "require": {
@@ -1720,7 +1721,7 @@
                 "metapackage",
                 "mozg"
             ],
-            "time": "2017-05-17T11:36:38+00:00"
+            "time": "2017-05-18T18:50:53+00:00"
         },
         {
             "name": "mozgbrasil/magento-checkout-filters-php56",
@@ -1728,12 +1729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-checkout-filters-php56.git",
-                "reference": "c61e758de22e29f9f6cf8819ca4ebb858a6e1112"
+                "reference": "68752426216c0d4daffc2d5305d7fa7a9e832506"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php56/zipball/c61e758de22e29f9f6cf8819ca4ebb858a6e1112",
-                "reference": "c61e758de22e29f9f6cf8819ca4ebb858a6e1112",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php56/zipball/68752426216c0d4daffc2d5305d7fa7a9e832506",
+                "reference": "68752426216c0d4daffc2d5305d7fa7a9e832506",
                 "shasum": ""
             },
             "require": {
@@ -1761,7 +1762,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-17 14:39:18"
+            "time": "2017-05-18 21:53:08"
         },
         {
             "name": "mozgbrasil/magento-cielo-php56",
@@ -1769,12 +1770,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-cielo-php56.git",
-                "reference": "2f233fcb74650494acba74e68b8ee7fa0104191a"
+                "reference": "19ad7eaabf97f68b4583b23577af8ad47d7a49c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php56/zipball/2f233fcb74650494acba74e68b8ee7fa0104191a",
-                "reference": "2f233fcb74650494acba74e68b8ee7fa0104191a",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php56/zipball/19ad7eaabf97f68b4583b23577af8ad47d7a49c9",
+                "reference": "19ad7eaabf97f68b4583b23577af8ad47d7a49c9",
                 "shasum": ""
             },
             "require": {
@@ -1805,7 +1806,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-17 14:39:35"
+            "time": "2017-05-18 21:53:24"
         },
         {
             "name": "mozgbrasil/magento-clearsale-php56",
@@ -1813,12 +1814,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-clearsale-php56.git",
-                "reference": "c0813b8e34c3e1785fb0dca1e87150686be89ddf"
+                "reference": "4807737afafc25d25dd59637272c771ebc72246e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php56/zipball/c0813b8e34c3e1785fb0dca1e87150686be89ddf",
-                "reference": "c0813b8e34c3e1785fb0dca1e87150686be89ddf",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php56/zipball/4807737afafc25d25dd59637272c771ebc72246e",
+                "reference": "4807737afafc25d25dd59637272c771ebc72246e",
                 "shasum": ""
             },
             "require": {
@@ -1846,7 +1847,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-17 14:39:53"
+            "time": "2017-05-18 21:53:42"
         },
         {
             "name": "mozgbrasil/magento-correios-php56",
@@ -1854,12 +1855,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-correios-php56.git",
-                "reference": "40c5b210dfe407de38fc4ca1b176b3973e41b63c"
+                "reference": "41d736081924826240ff42aba262489a4b45144b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php56/zipball/40c5b210dfe407de38fc4ca1b176b3973e41b63c",
-                "reference": "40c5b210dfe407de38fc4ca1b176b3973e41b63c",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php56/zipball/41d736081924826240ff42aba262489a4b45144b",
+                "reference": "41d736081924826240ff42aba262489a4b45144b",
                 "shasum": ""
             },
             "require": {
@@ -1890,7 +1891,7 @@
                 "sigep",
                 "transporte"
             ],
-            "time": "2017-05-17 14:40:08"
+            "time": "2017-05-18 21:53:58"
         },
         {
             "name": "mozgbrasil/magento-customer-php56",
@@ -1898,12 +1899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-customer-php56.git",
-                "reference": "6541f3bf93e86d0de96385ff1f8cb12565116b9f"
+                "reference": "7f012a7ff9f092f53e46274eb3277a8452d55065"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php56/zipball/6541f3bf93e86d0de96385ff1f8cb12565116b9f",
-                "reference": "6541f3bf93e86d0de96385ff1f8cb12565116b9f",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php56/zipball/7f012a7ff9f092f53e46274eb3277a8452d55065",
+                "reference": "7f012a7ff9f092f53e46274eb3277a8452d55065",
                 "shasum": ""
             },
             "require": {
@@ -1933,7 +1934,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-17 14:40:26"
+            "time": "2017-05-18 21:54:14"
         },
         {
             "name": "mozgbrasil/magento-fee-php56",
@@ -1941,12 +1942,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-fee-php56.git",
-                "reference": "f6e304de35a8cf7335961863bb48c3e797784566"
+                "reference": "a2136736e02305727bfc12af7d9332c9275b72da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php56/zipball/f6e304de35a8cf7335961863bb48c3e797784566",
-                "reference": "f6e304de35a8cf7335961863bb48c3e797784566",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php56/zipball/a2136736e02305727bfc12af7d9332c9275b72da",
+                "reference": "a2136736e02305727bfc12af7d9332c9275b72da",
                 "shasum": ""
             },
             "type": "magento-module",
@@ -1973,7 +1974,7 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2017-05-17 14:40:42"
+            "time": "2017-05-18 21:54:30"
         },
         {
             "name": "mozgbrasil/magento-itau-php56",
@@ -1981,12 +1982,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-itau-php56.git",
-                "reference": "4e272956d4b1418eb05dc0f5e5bb404ff100fadd"
+                "reference": "c16500ab1f43bbc3a7d8954d2cef9e3ef7aae22c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php56/zipball/4e272956d4b1418eb05dc0f5e5bb404ff100fadd",
-                "reference": "4e272956d4b1418eb05dc0f5e5bb404ff100fadd",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php56/zipball/c16500ab1f43bbc3a7d8954d2cef9e3ef7aae22c",
+                "reference": "c16500ab1f43bbc3a7d8954d2cef9e3ef7aae22c",
                 "shasum": ""
             },
             "require": {
@@ -2016,7 +2017,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-17 14:41:00"
+            "time": "2017-05-18 21:54:48"
         },
         {
             "name": "mozgbrasil/magento-iwd-all",
@@ -2104,12 +2105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-jadlog-php56.git",
-                "reference": "2d76940186556cf1f8156430a5a394f7f3a6a4b1"
+                "reference": "946dfc02927d2cc58f3e300149678449ce222125"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php56/zipball/2d76940186556cf1f8156430a5a394f7f3a6a4b1",
-                "reference": "2d76940186556cf1f8156430a5a394f7f3a6a4b1",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php56/zipball/946dfc02927d2cc58f3e300149678449ce222125",
+                "reference": "946dfc02927d2cc58f3e300149678449ce222125",
                 "shasum": ""
             },
             "require": {
@@ -2139,7 +2140,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2017-05-17 14:41:17"
+            "time": "2017-05-18 21:55:05"
         },
         {
             "name": "mozgbrasil/magento-jamef-php56",
@@ -2147,12 +2148,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-jamef-php56.git",
-                "reference": "0c49c10b178f41b0619ab79aedb5f77d170e75f0"
+                "reference": "5f0be4fd5f9de3c301b020746a5e6f5d06d02fad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php56/zipball/0c49c10b178f41b0619ab79aedb5f77d170e75f0",
-                "reference": "0c49c10b178f41b0619ab79aedb5f77d170e75f0",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php56/zipball/5f0be4fd5f9de3c301b020746a5e6f5d06d02fad",
+                "reference": "5f0be4fd5f9de3c301b020746a5e6f5d06d02fad",
                 "shasum": ""
             },
             "require": {
@@ -2182,7 +2183,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2017-05-17 14:41:32"
+            "time": "2017-05-18 21:55:21"
         },
         {
             "name": "mozgbrasil/magento-loggi-php56",
@@ -2190,12 +2191,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-loggi-php56.git",
-                "reference": "9b7651fa193b5539d69c1b0d7123498415be5e9d"
+                "reference": "b14d928fef84df3503409faa440f204cb8c5e11a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php56/zipball/9b7651fa193b5539d69c1b0d7123498415be5e9d",
-                "reference": "9b7651fa193b5539d69c1b0d7123498415be5e9d",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php56/zipball/b14d928fef84df3503409faa440f204cb8c5e11a",
+                "reference": "b14d928fef84df3503409faa440f204cb8c5e11a",
                 "shasum": ""
             },
             "require": {
@@ -2227,7 +2228,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2017-05-17 14:41:48"
+            "time": "2017-05-18 21:55:38"
         },
         {
             "name": "mozgbrasil/magento-payment-php56",
@@ -2235,12 +2236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-payment-php56.git",
-                "reference": "04a7b88763429822792114dac75db88fe6ff5e7f"
+                "reference": "f5ab335f573ee7cb4edb087b93c685dcbbaf4371"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php56/zipball/04a7b88763429822792114dac75db88fe6ff5e7f",
-                "reference": "04a7b88763429822792114dac75db88fe6ff5e7f",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php56/zipball/f5ab335f573ee7cb4edb087b93c685dcbbaf4371",
+                "reference": "f5ab335f573ee7cb4edb087b93c685dcbbaf4371",
                 "shasum": ""
             },
             "require": {
@@ -2269,7 +2270,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-17 14:42:07"
+            "time": "2017-05-18 21:55:55"
         },
         {
             "name": "mozgbrasil/magento-product-page-shipping-php56",
@@ -2277,12 +2278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php56.git",
-                "reference": "85732b411697010a03a917d2be62c673b84eb585"
+                "reference": "83051e971808dec26cb99e3f37fb2eb1260edca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php56/zipball/85732b411697010a03a917d2be62c673b84eb585",
-                "reference": "85732b411697010a03a917d2be62c673b84eb585",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php56/zipball/83051e971808dec26cb99e3f37fb2eb1260edca9",
+                "reference": "83051e971808dec26cb99e3f37fb2eb1260edca9",
                 "shasum": ""
             },
             "require": {
@@ -2312,7 +2313,7 @@
                 "shipestimation",
                 "shipping"
             ],
-            "time": "2017-05-17 14:42:24"
+            "time": "2017-05-18 21:56:12"
         },
         {
             "name": "mozgbrasil/magento-redecard-php56",
@@ -2320,12 +2321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/magento-redecard-php56.git",
-                "reference": "5fa707abb7a32970f211c827bb0ae3756fae0f9b"
+                "reference": "3567ca4a52bd9c3f0d54b7e3b56943416445a8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php56/zipball/5fa707abb7a32970f211c827bb0ae3756fae0f9b",
-                "reference": "5fa707abb7a32970f211c827bb0ae3756fae0f9b",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php56/zipball/3567ca4a52bd9c3f0d54b7e3b56943416445a8da",
+                "reference": "3567ca4a52bd9c3f0d54b7e3b56943416445a8da",
                 "shasum": ""
             },
             "require": {
@@ -2355,7 +2356,7 @@
                 "payment",
                 "redecard"
             ],
-            "time": "2017-05-17 14:42:42"
+            "time": "2017-05-18 21:56:30"
         },
         {
             "name": "nategood/httpful",
@@ -3647,16 +3648,16 @@
         },
         {
             "name": "zendframework/zend-validator",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-validator.git",
-                "reference": "b71641582297eab52753b72cd4eb45a5ded4485c"
+                "reference": "c9a8160a0191e34bb98ac1ecd4e453391c424bb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/b71641582297eab52753b72cd4eb45a5ded4485c",
-                "reference": "b71641582297eab52753b72cd4eb45a5ded4485c",
+                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/c9a8160a0191e34bb98ac1ecd4e453391c424bb3",
+                "reference": "c9a8160a0191e34bb98ac1ecd4e453391c424bb3",
                 "shasum": ""
             },
             "require": {
@@ -3714,7 +3715,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2017-03-17T10:15:50+00:00"
+            "time": "2017-05-17T22:06:13+00:00"
         }
     ],
     "packages-dev": [],
