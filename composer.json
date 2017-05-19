@@ -31,8 +31,8 @@
         "firegento/magento": "~1.9.3.1",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
-        "connect20/mage_locale_pt_br": "^1.9",
-        "mozgbrasil/magento-brasil-regions": "*",
+        "mozgbrasil/magento-locale-pt_br": "dev-master",
+        "mozgbrasil/magento-brasil-regions": "dev-master",
         "mozgbrasil/magento-iwd-opc": "dev-master",
         "mozgbrasil/magento-bundle-php55": "dev-master"
     }

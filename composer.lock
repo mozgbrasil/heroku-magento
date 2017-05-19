@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "54243bd72e36fba96474d01c9922108e",
+    "content-hash": "4af7e17fc3e0579bc0d5002e5ca9deb9",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -187,33 +187,6 @@
             ],
             "description": "Komerci is brazilian acquirer solution provided by Rede (former RedeCard) that accept payments with MasterCard, Visa and Diners Club International credit cards on the Internet",
             "time": "2017-05-05T13:16:41+00:00"
-        },
-        {
-            "name": "connect20/Mage_Locale_pt_BR",
-            "version": "1.9.0.0",
-            "dist": {
-                "type": "tar",
-                "url": "https://connect20.magentocommerce.com/community/Mage_Locale_pt_BR/1.9.0.0/Mage_Locale_pt_BR-1.9.0.0.tgz",
-                "reference": null,
-                "shasum": null
-            },
-            "suggest": {
-                "magento-hackathon/magento-composer-installer": "Allows to manage this package as a dependency"
-            },
-            "type": "magento-module",
-            "extra": {
-                "package-xml": "package.xml"
-            },
-            "license": [
-                "AFL-v3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Magento Core Team",
-                    "email": "core@magentocommerce.com"
-                }
-            ],
-            "description": "pt_BR locale"
         },
         {
             "name": "container-interop/container-interop",
@@ -1303,17 +1276,17 @@
             "time": "2017-04-27 14:13:48"
         },
         {
-            "name": "mozgbrasil/framework-php56",
+            "name": "mozgbrasil/framework-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/framework-php56.git",
-                "reference": "87dc21a831979551e3deab457ba8e5e0c5848ac9"
+                "url": "https://github.com/mozgbrasil/framework-php55.git",
+                "reference": "b085bfa6d1343655acc3443e520eb8c3aaf29f49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/framework-php56/zipball/87dc21a831979551e3deab457ba8e5e0c5848ac9",
-                "reference": "87dc21a831979551e3deab457ba8e5e0c5848ac9",
+                "url": "https://api.github.com/repos/mozgbrasil/framework-php55/zipball/b085bfa6d1343655acc3443e520eb8c3aaf29f49",
+                "reference": "b085bfa6d1343655acc3443e520eb8c3aaf29f49",
                 "shasum": ""
             },
             "require": {
@@ -1329,7 +1302,6 @@
                 "ext-soap": "*",
                 "ext-sockets": "*",
                 "ext-spl": "*",
-                "ext-zend-guard-loader": "*",
                 "guzzlehttp/guzzle": "*",
                 "jenssegers/agent": "*",
                 "lib-libxml": "*",
@@ -1387,7 +1359,7 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2017-05-18 21:51:25"
+            "time": "2017-05-18 22:35:30"
         },
         {
             "name": "mozgbrasil/loggi-sdk-php",
@@ -1450,22 +1422,22 @@
             "time": "2017-04-26 21:29:11"
         },
         {
-            "name": "mozgbrasil/magento-base-php56",
+            "name": "mozgbrasil/magento-base-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-base-php56.git",
-                "reference": "04e0c03917cd943eb9e2541aaad227323a00057c"
+                "url": "https://github.com/mozgbrasil/magento-base-php55.git",
+                "reference": "1ae2667311c827ff11734f1db23b2fb2e39b686e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php56/zipball/04e0c03917cd943eb9e2541aaad227323a00057c",
-                "reference": "04e0c03917cd943eb9e2541aaad227323a00057c",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php55/zipball/1ae2667311c827ff11734f1db23b2fb2e39b686e",
+                "reference": "1ae2667311c827ff11734f1db23b2fb2e39b686e",
                 "shasum": ""
             },
             "require": {
                 "magento-hackathon/magento-composer-installer": "*",
-                "mozgbrasil/framework-php56": "dev-master"
+                "mozgbrasil/framework-php55": "dev-master"
             },
             "suggest": {
                 "aoepeople/aoe_scheduler": "Magento Cron Scheduler",
@@ -1498,26 +1470,26 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-18 21:51:45"
+            "time": "2017-05-18 22:35:51"
         },
         {
-            "name": "mozgbrasil/magento-boxpacker-php56",
+            "name": "mozgbrasil/magento-boxpacker-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-boxpacker-php56.git",
-                "reference": "2905110ffcd0c242f2cf042215ad6a77f9d86c27"
+                "url": "https://github.com/mozgbrasil/magento-boxpacker-php55.git",
+                "reference": "014700d886828e2c7e9aede34e5b7989c53fa4f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php56/zipball/2905110ffcd0c242f2cf042215ad6a77f9d86c27",
-                "reference": "2905110ffcd0c242f2cf042215ad6a77f9d86c27",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php55/zipball/014700d886828e2c7e9aede34e5b7989c53fa4f4",
+                "reference": "014700d886828e2c7e9aede34e5b7989c53fa4f4",
                 "shasum": ""
             },
             "require": {
                 "dvdoug/boxpacker": "*",
-                "mozgbrasil/magento-base-php56": "dev-master",
-                "mozgbrasil/magento-product-page-shipping-php56": "dev-master"
+                "mozgbrasil/magento-base-php55": "dev-master",
+                "mozgbrasil/magento-product-page-shipping-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1543,24 +1515,24 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2017-05-18 21:52:02"
+            "time": "2017-05-18 22:36:08"
         },
         {
-            "name": "mozgbrasil/magento-bradesco-php56",
+            "name": "mozgbrasil/magento-bradesco-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bradesco-php56.git",
-                "reference": "a0b32ae222b162bf893b89f1d7dd7fafef18869a"
+                "url": "https://github.com/mozgbrasil/magento-bradesco-php55.git",
+                "reference": "0fe4198a7c00e1d7268564e57903359e938ba6dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php56/zipball/a0b32ae222b162bf893b89f1d7dd7fafef18869a",
-                "reference": "a0b32ae222b162bf893b89f1d7dd7fafef18869a",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php55/zipball/0fe4198a7c00e1d7268564e57903359e938ba6dd",
+                "reference": "0fe4198a7c00e1d7268564e57903359e938ba6dd",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php56": "dev-master"
+                "mozgbrasil/magento-payment-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1585,7 +1557,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-18 21:52:18"
+            "time": "2017-05-18 22:36:26"
         },
         {
             "name": "mozgbrasil/magento-brasil-regions",
@@ -1628,22 +1600,22 @@
             "time": "2017-04-26 21:29:19"
         },
         {
-            "name": "mozgbrasil/magento-braspag-php56",
+            "name": "mozgbrasil/magento-braspag-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-braspag-php56.git",
-                "reference": "7e70a6185f8060868741078bcda52c33c296cab8"
+                "url": "https://github.com/mozgbrasil/magento-braspag-php55.git",
+                "reference": "1ded9b9c4980f8d2c3b5a17bf36ee3324de77054"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php56/zipball/7e70a6185f8060868741078bcda52c33c296cab8",
-                "reference": "7e70a6185f8060868741078bcda52c33c296cab8",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php55/zipball/1ded9b9c4980f8d2c3b5a17bf36ee3324de77054",
+                "reference": "1ded9b9c4980f8d2c3b5a17bf36ee3324de77054",
                 "shasum": ""
             },
             "require": {
                 "mozgbrasil/cielo-braspag-sdk-php": "*",
-                "mozgbrasil/magento-payment-php56": "dev-master"
+                "mozgbrasil/magento-payment-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1668,37 +1640,37 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-18 21:52:37"
+            "time": "2017-05-18 22:36:44"
         },
         {
-            "name": "mozgbrasil/magento-bundle-php56",
+            "name": "mozgbrasil/magento-bundle-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bundle-php56.git",
-                "reference": "6086e2013db924e2d5b78dc0ba115c45f83f2574"
+                "url": "https://github.com/mozgbrasil/magento-bundle-php55.git",
+                "reference": "4f3f6b5e7eaf655d5f01fff99532f2846937c9bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php56/zipball/6086e2013db924e2d5b78dc0ba115c45f83f2574",
-                "reference": "6086e2013db924e2d5b78dc0ba115c45f83f2574",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php55/zipball/4f3f6b5e7eaf655d5f01fff99532f2846937c9bc",
+                "reference": "4f3f6b5e7eaf655d5f01fff99532f2846937c9bc",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-bradesco-php56": "dev-master",
+                "mozgbrasil/magento-bradesco-php55": "dev-master",
                 "mozgbrasil/magento-brasil-regions": "dev-master",
-                "mozgbrasil/magento-braspag-php56": "dev-master",
-                "mozgbrasil/magento-checkout-filters-php56": "dev-master",
-                "mozgbrasil/magento-cielo-php56": "dev-master",
-                "mozgbrasil/magento-clearsale-php56": "dev-master",
-                "mozgbrasil/magento-correios-php56": "dev-master",
-                "mozgbrasil/magento-customer-php56": "dev-master",
-                "mozgbrasil/magento-itau-php56": "dev-master",
+                "mozgbrasil/magento-braspag-php55": "dev-master",
+                "mozgbrasil/magento-checkout-filters-php55": "dev-master",
+                "mozgbrasil/magento-cielo-php55": "dev-master",
+                "mozgbrasil/magento-clearsale-php55": "dev-master",
+                "mozgbrasil/magento-correios-php55": "dev-master",
+                "mozgbrasil/magento-customer-php55": "dev-master",
+                "mozgbrasil/magento-itau-php55": "dev-master",
                 "mozgbrasil/magento-iwd-opc": "dev-master",
-                "mozgbrasil/magento-jadlog-php56": "dev-master",
-                "mozgbrasil/magento-jamef-php56": "dev-master",
-                "mozgbrasil/magento-loggi-php56": "dev-master",
-                "mozgbrasil/magento-redecard-php56": "dev-master"
+                "mozgbrasil/magento-jadlog-php55": "dev-master",
+                "mozgbrasil/magento-jamef-php55": "dev-master",
+                "mozgbrasil/magento-loggi-php55": "dev-master",
+                "mozgbrasil/magento-redecard-php55": "dev-master"
             },
             "type": "metapackage",
             "notification-url": "https://packagist.org/downloads/",
@@ -1721,24 +1693,24 @@
                 "metapackage",
                 "mozg"
             ],
-            "time": "2017-05-18T18:50:53+00:00"
+            "time": "2017-05-18T19:35:07+00:00"
         },
         {
-            "name": "mozgbrasil/magento-checkout-filters-php56",
+            "name": "mozgbrasil/magento-checkout-filters-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php56.git",
-                "reference": "68752426216c0d4daffc2d5305d7fa7a9e832506"
+                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php55.git",
+                "reference": "4dc226acaa1c96634a0a40f88926cf6bd7ba2817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php56/zipball/68752426216c0d4daffc2d5305d7fa7a9e832506",
-                "reference": "68752426216c0d4daffc2d5305d7fa7a9e832506",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php55/zipball/4dc226acaa1c96634a0a40f88926cf6bd7ba2817",
+                "reference": "4dc226acaa1c96634a0a40f88926cf6bd7ba2817",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php56": "dev-master"
+                "mozgbrasil/magento-base-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1762,25 +1734,25 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-18 21:53:08"
+            "time": "2017-05-18 22:37:19"
         },
         {
-            "name": "mozgbrasil/magento-cielo-php56",
+            "name": "mozgbrasil/magento-cielo-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-cielo-php56.git",
-                "reference": "19ad7eaabf97f68b4583b23577af8ad47d7a49c9"
+                "url": "https://github.com/mozgbrasil/magento-cielo-php55.git",
+                "reference": "28c48affe54056f6b0e496bb4d275ae44e355eef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php56/zipball/19ad7eaabf97f68b4583b23577af8ad47d7a49c9",
-                "reference": "19ad7eaabf97f68b4583b23577af8ad47d7a49c9",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php55/zipball/28c48affe54056f6b0e496bb4d275ae44e355eef",
+                "reference": "28c48affe54056f6b0e496bb4d275ae44e355eef",
                 "shasum": ""
             },
             "require": {
                 "mozgbrasil/cielo-braspag-sdk-php": "*",
-                "mozgbrasil/magento-payment-php56": "dev-master"
+                "mozgbrasil/magento-payment-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1806,24 +1778,24 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-18 21:53:24"
+            "time": "2017-05-18 22:37:35"
         },
         {
-            "name": "mozgbrasil/magento-clearsale-php56",
+            "name": "mozgbrasil/magento-clearsale-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-clearsale-php56.git",
-                "reference": "4807737afafc25d25dd59637272c771ebc72246e"
+                "url": "https://github.com/mozgbrasil/magento-clearsale-php55.git",
+                "reference": "a4ee00aae8ed1e063f06231d13f57fa70298a9f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php56/zipball/4807737afafc25d25dd59637272c771ebc72246e",
-                "reference": "4807737afafc25d25dd59637272c771ebc72246e",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php55/zipball/a4ee00aae8ed1e063f06231d13f57fa70298a9f5",
+                "reference": "a4ee00aae8ed1e063f06231d13f57fa70298a9f5",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php56": "dev-master"
+                "mozgbrasil/magento-base-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1847,24 +1819,24 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-18 21:53:42"
+            "time": "2017-05-18 22:37:52"
         },
         {
-            "name": "mozgbrasil/magento-correios-php56",
+            "name": "mozgbrasil/magento-correios-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-correios-php56.git",
-                "reference": "41d736081924826240ff42aba262489a4b45144b"
+                "url": "https://github.com/mozgbrasil/magento-correios-php55.git",
+                "reference": "2dff958f2015a0bd05d43aca54589a29d10e878c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php56/zipball/41d736081924826240ff42aba262489a4b45144b",
-                "reference": "41d736081924826240ff42aba262489a4b45144b",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php55/zipball/2dff958f2015a0bd05d43aca54589a29d10e878c",
+                "reference": "2dff958f2015a0bd05d43aca54589a29d10e878c",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1891,24 +1863,24 @@
                 "sigep",
                 "transporte"
             ],
-            "time": "2017-05-18 21:53:58"
+            "time": "2017-05-18 22:38:08"
         },
         {
-            "name": "mozgbrasil/magento-customer-php56",
+            "name": "mozgbrasil/magento-customer-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-customer-php56.git",
-                "reference": "7f012a7ff9f092f53e46274eb3277a8452d55065"
+                "url": "https://github.com/mozgbrasil/magento-customer-php55.git",
+                "reference": "23a25766bee2d66a0948f8572b3502ccd0b30dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php56/zipball/7f012a7ff9f092f53e46274eb3277a8452d55065",
-                "reference": "7f012a7ff9f092f53e46274eb3277a8452d55065",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php55/zipball/23a25766bee2d66a0948f8572b3502ccd0b30dbe",
+                "reference": "23a25766bee2d66a0948f8572b3502ccd0b30dbe",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php56": "dev-master",
+                "mozgbrasil/magento-base-php55": "dev-master",
                 "mozgbrasil/magento-brasil-regions": "*"
             },
             "type": "magento-module",
@@ -1934,20 +1906,20 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2017-05-18 21:54:14"
+            "time": "2017-05-18 22:38:24"
         },
         {
-            "name": "mozgbrasil/magento-fee-php56",
+            "name": "mozgbrasil/magento-fee-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-fee-php56.git",
-                "reference": "a2136736e02305727bfc12af7d9332c9275b72da"
+                "url": "https://github.com/mozgbrasil/magento-fee-php55.git",
+                "reference": "6bb21c33844c25845045f6e3d04e963790fc1a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php56/zipball/a2136736e02305727bfc12af7d9332c9275b72da",
-                "reference": "a2136736e02305727bfc12af7d9332c9275b72da",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php55/zipball/6bb21c33844c25845045f6e3d04e963790fc1a88",
+                "reference": "6bb21c33844c25845045f6e3d04e963790fc1a88",
                 "shasum": ""
             },
             "type": "magento-module",
@@ -1974,25 +1946,25 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2017-05-18 21:54:30"
+            "time": "2017-05-18 22:38:41"
         },
         {
-            "name": "mozgbrasil/magento-itau-php56",
+            "name": "mozgbrasil/magento-itau-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-itau-php56.git",
-                "reference": "c16500ab1f43bbc3a7d8954d2cef9e3ef7aae22c"
+                "url": "https://github.com/mozgbrasil/magento-itau-php55.git",
+                "reference": "df10c81d5b704675e36da6e931a3c43cc11e6432"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php56/zipball/c16500ab1f43bbc3a7d8954d2cef9e3ef7aae22c",
-                "reference": "c16500ab1f43bbc3a7d8954d2cef9e3ef7aae22c",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php55/zipball/df10c81d5b704675e36da6e931a3c43cc11e6432",
+                "reference": "df10c81d5b704675e36da6e931a3c43cc11e6432",
                 "shasum": ""
             },
             "require": {
                 "dilneiss/itaubankline": "*",
-                "mozgbrasil/magento-payment-php56": "dev-master"
+                "mozgbrasil/magento-payment-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2017,7 +1989,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-18 21:54:48"
+            "time": "2017-05-18 22:38:56"
         },
         {
             "name": "mozgbrasil/magento-iwd-all",
@@ -2100,21 +2072,21 @@
             "time": "2017-04-26 21:29:43"
         },
         {
-            "name": "mozgbrasil/magento-jadlog-php56",
+            "name": "mozgbrasil/magento-jadlog-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jadlog-php56.git",
-                "reference": "946dfc02927d2cc58f3e300149678449ce222125"
+                "url": "https://github.com/mozgbrasil/magento-jadlog-php55.git",
+                "reference": "b2980c6baab1925c3ae7c0add7b945badfa7acf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php56/zipball/946dfc02927d2cc58f3e300149678449ce222125",
-                "reference": "946dfc02927d2cc58f3e300149678449ce222125",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php55/zipball/b2980c6baab1925c3ae7c0add7b945badfa7acf8",
+                "reference": "b2980c6baab1925c3ae7c0add7b945badfa7acf8",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2140,24 +2112,24 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2017-05-18 21:55:05"
+            "time": "2017-05-18 22:39:14"
         },
         {
-            "name": "mozgbrasil/magento-jamef-php56",
+            "name": "mozgbrasil/magento-jamef-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jamef-php56.git",
-                "reference": "5f0be4fd5f9de3c301b020746a5e6f5d06d02fad"
+                "url": "https://github.com/mozgbrasil/magento-jamef-php55.git",
+                "reference": "13471627bfac9feeb176c1d85ed56835eaa49017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php56/zipball/5f0be4fd5f9de3c301b020746a5e6f5d06d02fad",
-                "reference": "5f0be4fd5f9de3c301b020746a5e6f5d06d02fad",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php55/zipball/13471627bfac9feeb176c1d85ed56835eaa49017",
+                "reference": "13471627bfac9feeb176c1d85ed56835eaa49017",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2183,25 +2155,65 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2017-05-18 21:55:21"
+            "time": "2017-05-18 22:39:30"
         },
         {
-            "name": "mozgbrasil/magento-loggi-php56",
+            "name": "mozgbrasil/magento-locale-pt_br",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-loggi-php56.git",
-                "reference": "b14d928fef84df3503409faa440f204cb8c5e11a"
+                "url": "https://github.com/mozgbrasil/magento-locale-pt_br.git",
+                "reference": "cd80fc15bb847fc2c901bcf6612f5cae9c012dd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php56/zipball/b14d928fef84df3503409faa440f204cb8c5e11a",
-                "reference": "b14d928fef84df3503409faa440f204cb8c5e11a",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-locale-pt_br/zipball/cd80fc15bb847fc2c901bcf6612f5cae9c012dd2",
+                "reference": "cd80fc15bb847fc2c901bcf6612f5cae9c012dd2",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Arquivos de tradução",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "locale",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-05-18 22:53:12"
+        },
+        {
+            "name": "mozgbrasil/magento-loggi-php55",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-loggi-php55.git",
+                "reference": "b6ce66bf76e6873efb9f9a5b63580c3e8a7ec886"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php55/zipball/b6ce66bf76e6873efb9f9a5b63580c3e8a7ec886",
+                "reference": "b6ce66bf76e6873efb9f9a5b63580c3e8a7ec886",
                 "shasum": ""
             },
             "require": {
                 "mozgbrasil/loggi-sdk-php": "*",
-                "mozgbrasil/magento-boxpacker-php56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2228,25 +2240,25 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2017-05-18 21:55:38"
+            "time": "2017-05-18 22:39:45"
         },
         {
-            "name": "mozgbrasil/magento-payment-php56",
+            "name": "mozgbrasil/magento-payment-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-payment-php56.git",
-                "reference": "f5ab335f573ee7cb4edb087b93c685dcbbaf4371"
+                "url": "https://github.com/mozgbrasil/magento-payment-php55.git",
+                "reference": "a2fdb6fb09b2f663e5f4c6db84948262c3f73dc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php56/zipball/f5ab335f573ee7cb4edb087b93c685dcbbaf4371",
-                "reference": "f5ab335f573ee7cb4edb087b93c685dcbbaf4371",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php55/zipball/a2fdb6fb09b2f663e5f4c6db84948262c3f73dc5",
+                "reference": "a2fdb6fb09b2f663e5f4c6db84948262c3f73dc5",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php56": "dev-master",
-                "mozgbrasil/magento-fee-php56": "dev-master"
+                "mozgbrasil/magento-base-php55": "dev-master",
+                "mozgbrasil/magento-fee-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2270,24 +2282,24 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2017-05-18 21:55:55"
+            "time": "2017-05-18 22:40:01"
         },
         {
-            "name": "mozgbrasil/magento-product-page-shipping-php56",
+            "name": "mozgbrasil/magento-product-page-shipping-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php56.git",
-                "reference": "83051e971808dec26cb99e3f37fb2eb1260edca9"
+                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php55.git",
+                "reference": "fee55222cf43026a3f503724da81cb50f74417d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php56/zipball/83051e971808dec26cb99e3f37fb2eb1260edca9",
-                "reference": "83051e971808dec26cb99e3f37fb2eb1260edca9",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php55/zipball/fee55222cf43026a3f503724da81cb50f74417d8",
+                "reference": "fee55222cf43026a3f503724da81cb50f74417d8",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php56": "dev-master"
+                "mozgbrasil/magento-base-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2313,25 +2325,25 @@
                 "shipestimation",
                 "shipping"
             ],
-            "time": "2017-05-18 21:56:12"
+            "time": "2017-05-18 22:40:17"
         },
         {
-            "name": "mozgbrasil/magento-redecard-php56",
+            "name": "mozgbrasil/magento-redecard-php55",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-redecard-php56.git",
-                "reference": "3567ca4a52bd9c3f0d54b7e3b56943416445a8da"
+                "url": "https://github.com/mozgbrasil/magento-redecard-php55.git",
+                "reference": "5b0c1235db5fb845c751bfdb55d98815c16f842a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php56/zipball/3567ca4a52bd9c3f0d54b7e3b56943416445a8da",
-                "reference": "3567ca4a52bd9c3f0d54b7e3b56943416445a8da",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php55/zipball/5b0c1235db5fb845c751bfdb55d98815c16f842a",
+                "reference": "5b0c1235db5fb845c751bfdb55d98815c16f842a",
                 "shasum": ""
             },
             "require": {
                 "byjg/omnipay-komerci": "*",
-                "mozgbrasil/magento-payment-php56": "dev-master"
+                "mozgbrasil/magento-payment-php55": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2356,7 +2368,7 @@
                 "payment",
                 "redecard"
             ],
-            "time": "2017-05-18 21:56:30"
+            "time": "2017-05-18 22:40:33"
         },
         {
             "name": "nategood/httpful",
@@ -3722,13 +3734,15 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "mozgbrasil/magento-locale-pt_br": 20,
+        "mozgbrasil/magento-brasil-regions": 20,
         "mozgbrasil/magento-iwd-opc": 20,
-        "mozgbrasil/magento-bundle-php56": 20
+        "mozgbrasil/magento-bundle-php55": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.5.12"
+        "php": "~5.5.38"
     },
     "platform-dev": []
 }
