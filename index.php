@@ -158,7 +158,7 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
     $arg2 = '';
 
     try {
-        $cmd = "bash magento_install.sh $arg1 $arg2";
+        $cmd = "wget https://raw.githubusercontent.com/mozgbrasil/apps/master/app.sh ; bash app.sh --url=$arg1 ; ";
         $output = passthru($cmd . " > /dev/null &");
         dump('cmd');
         dump($output);
