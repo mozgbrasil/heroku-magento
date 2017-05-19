@@ -605,7 +605,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:mozgbrasil/magento-theme-porto.git",
-                "reference": "279e308b26264b03e145e3244197f481ef4bb773"
+                "reference": "6508690714fb7e57fed66dae93b1e3af3d0f0c2a"
             },
             "require": {
                 "magento-hackathon/magento-composer-installer": "*"
@@ -640,7 +640,7 @@
                 "docs": "https://github.com/mozgbrasil/magento-theme-porto/wiki",
                 "rss": "https://mozg.com.br/feed.xml"
             },
-            "time": "2017-05-19 17:26:21"
+            "time": "2017-05-19 18:11:18"
         },
         {
             "name": "psr/log",
