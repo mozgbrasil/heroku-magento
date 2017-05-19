@@ -16,6 +16,10 @@
     ],
     "repositories":[
         {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:mozgbrasil/magento-theme-porto.git"
+        },
+        {
             "type":"composer",
             "url":"https?://packages.firegento.com"
         }
@@ -34,6 +38,6 @@
         "mozgbrasil/magento-locale-pt_br": "dev-master",
         "mozgbrasil/magento-brasil-regions": "dev-master",
         "mozgbrasil/magento-iwd-opc": "dev-master",
-        "mozgbrasil/magento-bundle-php55": "dev-master"
+        "mozgbrasil/magento-theme-porto": "dev-master"
     }
 }
