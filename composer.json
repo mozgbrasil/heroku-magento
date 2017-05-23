@@ -25,7 +25,7 @@
         "magento-force": true
     },
     "require": {
-        "php": "~5.5.38",
+        "php": "^5.5.12",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.3.1",
@@ -34,6 +34,6 @@
         "mozgbrasil/magento-locale-pt_br": "dev-master",
         "mozgbrasil/magento-brasil-regions": "dev-master",
         "mozgbrasil/magento-iwd-opc": "dev-master",
-        "mozgbrasil/magento-bundle-php55": "dev-master"
+        "mozgbrasil/magento-bundle-php56": "dev-master"
     }
 }
