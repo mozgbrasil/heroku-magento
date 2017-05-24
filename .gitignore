@@ -1,4 +1,6 @@
-root/
-vendor/
+/.git
+/node_modules
+/root
+/vendor
 README_Dev.md
 addon-manifest.json
