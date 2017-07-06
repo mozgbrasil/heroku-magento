@@ -2,24 +2,26 @@
 
 #
 
-echo -e "--(22/05/2017 12:57:54)--"
+ARRAY=([0]="05/07/2017 12:16:22" [1]=$1 [2]=`pwd` [3]=`ls` [4]=`printenv` )
+ARRAY=([0]="05/07/2017 12:16:22" [1]=$1 [2]=`pwd` [3]=`ls` [4]=`whoami` )
+RETURN=""
 
-echo -e "--(1)--"
+#echo "Array size: ${#ARRAY[*]}"
 
-pwd
+#echo "Array items and indexes:"
+for index in ${!ARRAY[*]}
+do
+    #RETURN="${RETURN}\n"
+    RETURN="${RETURN}${index}: 
+${ARRAY[$index]}
 
-echo -e "--(2)--"
+"
+    #RETURN="${RETURN}\n"
+done
 
-ls
+#echo -e $RETURN
+echo $RETURN
 
-echo -e "--(3)--"
-
-echo $1
-
-echo -e "--(4)--"
-
-curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data $1
-
-echo -e "--(5)--"
+curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data "${RETURN}"
 
 #
