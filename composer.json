@@ -21,7 +21,7 @@
         }
     ],
     "extra":{
-        "magento-root-dir":"root",
+        "magento-root-dir":"magento",
         "magento-deploystrategy": "copy",
         "magento-force": true
     },
