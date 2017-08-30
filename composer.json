@@ -27,9 +27,8 @@
     },
     "require": {
         "php": "^5.5.12",
-        "magento-hackathon/magento-composer-installer": "~3.0",
-        "aydin-hassan/magento-core-composer-installer": "~1.2",
-        "firegento/magento": "~1.9.3.1",
+        "bragento/magento-composer-installer": "~1",  
+        "magento/core": "~1.6",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
         "mozgbrasil/magento-bundle": "dev-master"
