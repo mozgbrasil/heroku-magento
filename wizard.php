@@ -111,7 +111,7 @@ if ( empty($_REQUEST) ){
 
         <p><b>Caso queira, acesse o link a seguir para auto instalar o Magento com o sample data</b></p>
 
-        <p><a href="${BASE_URL}?magento_sample_data=true" target="_blank">Clique aqui para auto instalar o Magento com o sample data</a></p>
+        <p><a href="${BASE_URL}wizard.php?magento_sample_data=true" target="_blank">Clique aqui para auto instalar o Magento com o sample data</a></p>
 
         <!--<p><b>Obs:</b> Pode ocorrer o erro h12, https://devcenter.heroku.com/articles/error-codes#h12-request-timeout</p>-->
 
@@ -119,7 +119,7 @@ if ( empty($_REQUEST) ){
 
         <h2>Passo 3</h2>
 
-        <p><a href="${BASE_URL}?phpinfo=true" target="_blank">Clique aqui para acesso ao phpinfo</a></p>
+        <p><a href="${BASE_URL}wizard.php?phpinfo=true" target="_blank">Clique aqui para acesso ao phpinfo</a></p>
 
 EOF;
 
@@ -127,9 +127,9 @@ EOF;
 
     $html .= <<<EOF
 
-    <p><a href="${BASE_URL}root/admin" target="_blank">Clique aqui para acesso ao backend do Magento</a></p>
+    <p><a href="${BASE_URL}magento/admin" target="_blank">Clique aqui para acesso ao backend do Magento</a></p>
 
-    <p><a href="${BASE_URL}root" target="_blank">Clique aqui para para acesso ao frontend do Magento</a></p>
+    <p><a href="${BASE_URL}magento" target="_blank">Clique aqui para para acesso ao frontend do Magento</a></p>
 
 EOF;
 
