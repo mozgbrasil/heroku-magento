@@ -26,6 +26,6 @@
         "magento-force": true
     },
     "require": {
-        "php": "5.5.*"
+        "php": "7.1.*"
     }
 }
