@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c9e9ec1abc3747480d9fb7abe98a657",
+    "content-hash": "e65648d5ab60e11e893764ce214b4cf3",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -576,16 +576,16 @@
         },
         {
             "name": "dvdoug/boxpacker",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dvdoug/BoxPacker.git",
-                "reference": "530003f3a78595c12badb3e2edb00d85c97b19f3"
+                "reference": "f6da7f6e80b37ef7e09e76726ca4e022bf6cd506"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dvdoug/BoxPacker/zipball/530003f3a78595c12badb3e2edb00d85c97b19f3",
-                "reference": "530003f3a78595c12badb3e2edb00d85c97b19f3",
+                "url": "https://api.github.com/repos/dvdoug/BoxPacker/zipball/f6da7f6e80b37ef7e09e76726ca4e022bf6cd506",
+                "reference": "f6da7f6e80b37ef7e09e76726ca4e022bf6cd506",
                 "shasum": ""
             },
             "require": {
@@ -629,7 +629,7 @@
                 "parcelpacking",
                 "shipping"
             ],
-            "time": "2017-08-13T20:39:02+00:00"
+            "time": "2017-09-04T19:17:06+00:00"
         },
         {
             "name": "eloquent/composer-config-reader",
@@ -1137,16 +1137,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.51",
+            "version": "v1.2.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "be9074b1206ba7b5ac5662f900295edc088a9da8"
+                "reference": "bd6f1eef08645f1fe2fe79fb58d745e17670c3eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/be9074b1206ba7b5ac5662f900295edc088a9da8",
-                "reference": "be9074b1206ba7b5ac5662f900295edc088a9da8",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/bd6f1eef08645f1fe2fe79fb58d745e17670c3eb",
+                "reference": "bd6f1eef08645f1fe2fe79fb58d745e17670c3eb",
                 "shasum": ""
             },
             "require": {
@@ -1182,7 +1182,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2017-08-07T18:48:00+00:00"
+            "time": "2017-09-07T08:18:18+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -1693,17 +1693,1007 @@
             "time": "2017-08-29T18:23:54+00:00"
         },
         {
-            "name": "mozgbrasil/framework",
+            "name": "mozgbrasil/magento-bancodobrasil-php_56",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/php-framework.git",
-                "reference": "4f6b93ef85a5691483c1ff2f80f6ef711bb42d2d"
+                "url": "https://github.com/mozgbrasil/magento-bancodobrasil-php_56.git",
+                "reference": "eda8a775f61d1be0bc3bb1006a19f5a4659682cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/php-framework/zipball/4f6b93ef85a5691483c1ff2f80f6ef711bb42d2d",
-                "reference": "4f6b93ef85a5691483c1ff2f80f6ef711bb42d2d",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bancodobrasil-php_56/zipball/eda8a775f61d1be0bc3bb1006a19f5a4659682cc",
+                "reference": "eda8a775f61d1be0bc3bb1006a19f5a4659682cc",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao bancodobrasil",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "bancodobrasil",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2017-09-12T14:43:31+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-base-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-base-php_56.git",
+                "reference": "0a4749883274fe2c2630097c997d4a9945bad585"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php_56/zipball/0a4749883274fe2c2630097c997d4a9945bad585",
+                "reference": "0a4749883274fe2c2630097c997d4a9945bad585",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*",
+                "mozgbrasil/php-framework-php_56": "dev-master"
+            },
+            "suggest": {
+                "aoepeople/aoe_scheduler": "Magento Cron Scheduler",
+                "aschroder/smtp_pro": "sending Magento mail through an external smtp-server",
+                "connect20/mage_locale_pt_br": "pt_BR locale",
+                "husseycoding/customordergrid": "Sort and filter the sales order grid by many different columns.",
+                "jayelkaake/enhancedgrid": "Improves the existing Magento admin product management grid. It adds some useful, customizable features to the admin product management grid including new columns and tools.",
+                "magento-hackathon/hackathon_magemonitoring": "Magento Monitoring Module to get information about the current installation (Server,Cache,PHP,Rewrites,Logs,...)"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Módulo base para Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Bridge",
+                "api",
+                "cerebrum",
+                "email",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-09-12T14:43:41+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-boxpacker-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-boxpacker-php_56.git",
+                "reference": "595c1ab3f54e47b214f16679a0a611c9d9b86183"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php_56/zipball/595c1ab3f54e47b214f16679a0a611c9d9b86183",
+                "reference": "595c1ab3f54e47b214f16679a0a611c9d9b86183",
+                "shasum": ""
+            },
+            "require": {
+                "dvdoug/boxpacker": "*",
+                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-product-page-shipping-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Módulo de Gerenciamento de Embalagem/Caixa requerido para funcionamento dos métodos de entrega",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "correios",
+                "entrega",
+                "magento",
+                "mozg",
+                "shipping",
+                "transporte"
+            ],
+            "time": "2017-09-12T14:43:50+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-bradesco-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-bradesco-php_56.git",
+                "reference": "dfd084afe577d6747bee0927e38593f423808d67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php_56/zipball/dfd084afe577d6747bee0927e38593f423808d67",
+                "reference": "dfd084afe577d6747bee0927e38593f423808d67",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao bradesco",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "bradesco",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2017-09-12T14:44:04+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-brasil-regions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-brasil-regions.git",
+                "reference": "dc152e7295d7cfe32163f685d89cac020c158c4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-brasil-regions/zipball/dc152e7295d7cfe32163f685d89cac020c158c4a",
+                "reference": "dc152e7295d7cfe32163f685d89cac020c158c4a",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adiciona o suporte aos 27 estados do Brasil ao Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "brasil",
+                "cerebrum",
+                "mozg",
+                "regions"
+            ],
+            "time": "2017-09-12T14:36:56+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-braspag-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-braspag-php_56.git",
+                "reference": "3d113ed46fe1f10f5197fd74cb1f8ab725c42806"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php_56/zipball/3d113ed46fe1f10f5197fd74cb1f8ab725c42806",
+                "reference": "3d113ed46fe1f10f5197fd74cb1f8ab725c42806",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao braspag",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "braspag",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2017-09-12T14:44:13+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-bundle-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-bundle-php_56.git",
+                "reference": "6e9a39fdf0f09729ac8f953ebda2b5b9471dccc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php_56/zipball/6e9a39fdf0f09729ac8f953ebda2b5b9471dccc4",
+                "reference": "6e9a39fdf0f09729ac8f953ebda2b5b9471dccc4",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-bancodobrasil-php_56": "dev-master",
+                "mozgbrasil/magento-bradesco-php_56": "dev-master",
+                "mozgbrasil/magento-brasil-regions": "dev-master",
+                "mozgbrasil/magento-braspag-php_56": "dev-master",
+                "mozgbrasil/magento-checkout-filters-php_56": "dev-master",
+                "mozgbrasil/magento-cielo-php_56": "dev-master",
+                "mozgbrasil/magento-clearsale-php_56": "dev-master",
+                "mozgbrasil/magento-correios-php_56": "dev-master",
+                "mozgbrasil/magento-customer-php_56": "dev-master",
+                "mozgbrasil/magento-itau-php_56": "dev-master",
+                "mozgbrasil/magento-iwd-opc": "dev-master",
+                "mozgbrasil/magento-jadlog-php_56": "dev-master",
+                "mozgbrasil/magento-jamef-php_56": "dev-master",
+                "mozgbrasil/magento-locale-pt_br": "dev-master",
+                "mozgbrasil/magento-loggi-php_56": "dev-master",
+                "mozgbrasil/magento-redecard-php_56": "dev-master"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Este é um meta pacote que instala todos os módulos da Mozg no Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "magento",
+                "metapackage",
+                "mozg"
+            ],
+            "time": "2017-09-12T11:39:46+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-checkout-filters-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php_56.git",
+                "reference": "06e322938ae3f7544673965f6b501dca5aad6e0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php_56/zipball/06e322938ae3f7544673965f6b501dca5aad6e0e",
+                "reference": "06e322938ae3f7544673965f6b501dca5aad6e0e",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Checkout Filters",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "checkout",
+                "filters",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-09-12T14:44:31+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-cielo-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-cielo-php_56.git",
+                "reference": "63aec18d72d0267d1164cb77135dc8424365de60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php_56/zipball/63aec18d72d0267d1164cb77135dc8424365de60",
+                "reference": "63aec18d72d0267d1164cb77135dc8424365de60",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao cielo",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "cielo",
+                "itaú",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2017-09-12T14:44:39+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-clearsale-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-clearsale-php_56.git",
+                "reference": "9b6b43df127a00e23534a9cb1f0ce8e74d302260"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php_56/zipball/9b6b43df127a00e23534a9cb1f0ce8e74d302260",
+                "reference": "9b6b43df127a00e23534a9cb1f0ce8e74d302260",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Clearsale",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "ClearSale",
+                "anti-fraud",
+                "cerebrum",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-09-12T14:44:50+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-correios-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-correios-php_56.git",
+                "reference": "ca26897d9728db1a4f6a4dd568d98f350c98c162"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php_56/zipball/ca26897d9728db1a4f6a4dd568d98f350c98c162",
+                "reference": "ca26897d9728db1a4f6a4dd568d98f350c98c162",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao Correios",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "correios",
+                "entrega",
+                "magento",
+                "mozg",
+                "shipping",
+                "sigep",
+                "transporte"
+            ],
+            "time": "2017-09-12T14:44:58+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-customer-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-customer-php_56.git",
+                "reference": "8bc4ceb06659932840185b4ffee23a84c2ebae73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php_56/zipball/8bc4ceb06659932840185b4ffee23a84c2ebae73",
+                "reference": "8bc4ceb06659932840185b4ffee23a84c2ebae73",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-brasil-regions": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Personalização dos formulários de clientes",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "attributes",
+                "cerebrum",
+                "customer",
+                "form",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-09-12T14:45:08+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-fee-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-fee-php_56.git",
+                "reference": "7ec9d2742625e079b90baf0004f1e8fabce407bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php_56/zipball/7ec9d2742625e079b90baf0004f1e8fabce407bd",
+                "reference": "7ec9d2742625e079b90baf0004f1e8fabce407bd",
+                "shasum": ""
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao fee",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "fee",
+                "magento",
+                "mozg",
+                "shipping",
+                "transporte"
+            ],
+            "time": "2017-09-12T14:45:17+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-itau-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-itau-php_56.git",
+                "reference": "4e2d3121334842d31811b4c3d50c5f07c83dc490"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php_56/zipball/4e2d3121334842d31811b4c3d50c5f07c83dc490",
+                "reference": "4e2d3121334842d31811b4c3d50c5f07c83dc490",
+                "shasum": ""
+            },
+            "require": {
+                "dilneiss/itaubankline": "*",
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao itau",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "itaú",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2017-09-12T14:45:26+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-iwd-all",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-iwd-all.git",
+                "reference": "6f6cf1c2e297ee4a2a1639e1109058a8d2d9f60a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-all/zipball/6f6cf1c2e297ee4a2a1639e1109058a8d2d9f60a",
+                "reference": "6f6cf1c2e297ee4a2a1639e1109058a8d2d9f60a",
+                "shasum": ""
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IWD_All",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "all",
+                "cerebrum",
+                "iwd",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-09-12T14:37:59+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-iwd-opc",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-iwd-opc.git",
+                "reference": "c68bd2c34845afacbb0cac408a988b4d8af93e51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-opc/zipball/c68bd2c34845afacbb0cac408a988b4d8af93e51",
+                "reference": "c68bd2c34845afacbb0cac408a988b4d8af93e51",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-iwd-all": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IWD_Opc",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "checkout",
+                "iwd",
+                "magento",
+                "mozg",
+                "opc"
+            ],
+            "time": "2017-09-12T14:38:07+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-jadlog-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-jadlog-php_56.git",
+                "reference": "a550e4a5cc48ddb7a11ccfe7de1adfec4d5320bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php_56/zipball/a550e4a5cc48ddb7a11ccfe7de1adfec4d5320bf",
+                "reference": "a550e4a5cc48ddb7a11ccfe7de1adfec4d5320bf",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Jadlog",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "jadlog",
+                "magento",
+                "mozg",
+                "shipping",
+                "transportadora"
+            ],
+            "time": "2017-09-12T14:45:36+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-jamef-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-jamef-php_56.git",
+                "reference": "681fb8341e38bc608c20306799c2af8e80fd04d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php_56/zipball/681fb8341e38bc608c20306799c2af8e80fd04d0",
+                "reference": "681fb8341e38bc608c20306799c2af8e80fd04d0",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Jamef",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "jamef",
+                "magento",
+                "mozg",
+                "shipping",
+                "transportadora"
+            ],
+            "time": "2017-09-12T14:45:44+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-locale-pt_br",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-locale-pt_br.git",
+                "reference": "f220cb2bf6b0489fec062046d6bc16ad6a3534c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-locale-pt_br/zipball/f220cb2bf6b0489fec062046d6bc16ad6a3534c0",
+                "reference": "f220cb2bf6b0489fec062046d6bc16ad6a3534c0",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Arquivos de tradução",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "locale",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-09-12T14:38:29+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-loggi-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-loggi-php_56.git",
+                "reference": "b47c8613b057e061b8fef53260c8cf0ee57382ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php_56/zipball/b47c8613b057e061b8fef53260c8cf0ee57382ec",
+                "reference": "b47c8613b057e061b8fef53260c8cf0ee57382ec",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Loggi",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "loggi",
+                "magento",
+                "motoboy",
+                "mozg",
+                "shipping",
+                "transportadora"
+            ],
+            "time": "2017-09-12T14:45:52+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-payment-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-payment-php_56.git",
+                "reference": "f9268d78bfe6a27bb57e59c9ff44a72f836eb035"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php_56/zipball/f9268d78bfe6a27bb57e59c9ff44a72f836eb035",
+                "reference": "f9268d78bfe6a27bb57e59c9ff44a72f836eb035",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-fee-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao payment",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2017-09-12T14:46:10+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-product-page-shipping-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php_56.git",
+                "reference": "06ad906036501cbb7412a2e617628fdbbae2a8c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php_56/zipball/06ad906036501cbb7412a2e617628fdbbae2a8c7",
+                "reference": "06ad906036501cbb7412a2e617628fdbbae2a8c7",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Usando extensão os clientes será capaz de ver os métodos de envio na página do produto.",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "magento",
+                "mozg",
+                "page",
+                "product",
+                "shipestimation",
+                "shipping"
+            ],
+            "time": "2017-09-12T14:46:19+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-redecard-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-redecard-php_56.git",
+                "reference": "1034327592d8a55ec950fec9e1b05ee04aeed533"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php_56/zipball/1034327592d8a55ec950fec9e1b05ee04aeed533",
+                "reference": "1034327592d8a55ec950fec9e1b05ee04aeed533",
+                "shasum": ""
+            },
+            "require": {
+                "byjg/omnipay-komerci": "*",
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao redecard",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment",
+                "redecard"
+            ],
+            "time": "2017-09-12T14:46:27+00:00"
+        },
+        {
+            "name": "mozgbrasil/php-framework-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/php-framework-php_56.git",
+                "reference": "08d1a3526f7c5d7a74ebc5b3fcaf0893268d4506"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_56/zipball/08d1a3526f7c5d7a74ebc5b3fcaf0893268d4506",
+                "reference": "08d1a3526f7c5d7a74ebc5b3fcaf0893268d4506",
                 "shasum": ""
             },
             "require": {
@@ -1779,997 +2769,7 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2017-09-04 14:40:17"
-        },
-        {
-            "name": "mozgbrasil/magento-bancodobrasil",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bancodobrasil.git",
-                "reference": "fc329bb0666e5d861d4c457ce3a9939606e21e7e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bancodobrasil/zipball/fc329bb0666e5d861d4c457ce3a9939606e21e7e",
-                "reference": "fc329bb0666e5d861d4c457ce3a9939606e21e7e",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-payment": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao bancodobrasil",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "bancodobrasil",
-                "cerebrum",
-                "magento",
-                "mozg",
-                "payment"
-            ],
-            "time": "2017-09-04 14:37:21"
-        },
-        {
-            "name": "mozgbrasil/magento-base",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-base.git",
-                "reference": "5a30ddfa5658639f51da781f80c0a8edca00842a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-base/zipball/5a30ddfa5658639f51da781f80c0a8edca00842a",
-                "reference": "5a30ddfa5658639f51da781f80c0a8edca00842a",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "*",
-                "mozgbrasil/framework": "dev-master"
-            },
-            "suggest": {
-                "aoepeople/aoe_scheduler": "Magento Cron Scheduler",
-                "aschroder/smtp_pro": "sending Magento mail through an external smtp-server",
-                "connect20/mage_locale_pt_br": "pt_BR locale",
-                "husseycoding/customordergrid": "Sort and filter the sales order grid by many different columns.",
-                "jayelkaake/enhancedgrid": "Improves the existing Magento admin product management grid. It adds some useful, customizable features to the admin product management grid including new columns and tools.",
-                "magento-hackathon/hackathon_magemonitoring": "Magento Monitoring Module to get information about the current installation (Server,Cache,PHP,Rewrites,Logs,...)"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Módulo base para Magento",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Bridge",
-                "api",
-                "cerebrum",
-                "email",
-                "magento",
-                "mozg"
-            ],
-            "time": "2017-09-04 14:37:31"
-        },
-        {
-            "name": "mozgbrasil/magento-boxpacker",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-boxpacker.git",
-                "reference": "b022430503024ac81ded0e54d641a97fc4971a18"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker/zipball/b022430503024ac81ded0e54d641a97fc4971a18",
-                "reference": "b022430503024ac81ded0e54d641a97fc4971a18",
-                "shasum": ""
-            },
-            "require": {
-                "dvdoug/boxpacker": "*",
-                "mozgbrasil/magento-base": "dev-master",
-                "mozgbrasil/magento-product-page-shipping": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Módulo de Gerenciamento de Embalagem/Caixa requerido para funcionamento dos métodos de entrega",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "correios",
-                "entrega",
-                "magento",
-                "mozg",
-                "shipping",
-                "transporte"
-            ],
-            "time": "2017-09-04 14:37:40"
-        },
-        {
-            "name": "mozgbrasil/magento-bradesco",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bradesco.git",
-                "reference": "238f8f7e0c41ab2e09787a167fdb130449c0b75e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco/zipball/238f8f7e0c41ab2e09787a167fdb130449c0b75e",
-                "reference": "238f8f7e0c41ab2e09787a167fdb130449c0b75e",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-payment": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao bradesco",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "bradesco",
-                "cerebrum",
-                "magento",
-                "mozg",
-                "payment"
-            ],
-            "time": "2017-09-04 14:37:48"
-        },
-        {
-            "name": "mozgbrasil/magento-brasil-regions",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-brasil-regions.git",
-                "reference": "f0a58a871580945fb63ceafbe70871f398f86a0f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-brasil-regions/zipball/f0a58a871580945fb63ceafbe70871f398f86a0f",
-                "reference": "f0a58a871580945fb63ceafbe70871f398f86a0f",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "*"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Adiciona o suporte aos 27 estados do Brasil ao Magento",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "brasil",
-                "cerebrum",
-                "mozg",
-                "regions"
-            ],
-            "time": "2017-09-01 19:33:38"
-        },
-        {
-            "name": "mozgbrasil/magento-braspag",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-braspag.git",
-                "reference": "addebddc74bdfba5085d54bb294350d07d18aee6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag/zipball/addebddc74bdfba5085d54bb294350d07d18aee6",
-                "reference": "addebddc74bdfba5085d54bb294350d07d18aee6",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-payment": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao braspag",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "braspag",
-                "cerebrum",
-                "magento",
-                "mozg",
-                "payment"
-            ],
-            "time": "2017-09-04 14:37:56"
-        },
-        {
-            "name": "mozgbrasil/magento-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bundle.git",
-                "reference": "1a8b04c2b8afa324cb88129b7e5c8842e999b8ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle/zipball/1a8b04c2b8afa324cb88129b7e5c8842e999b8ef",
-                "reference": "1a8b04c2b8afa324cb88129b7e5c8842e999b8ef",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-bancodobrasil": "dev-master",
-                "mozgbrasil/magento-bradesco": "dev-master",
-                "mozgbrasil/magento-brasil-regions": "dev-master",
-                "mozgbrasil/magento-braspag": "dev-master",
-                "mozgbrasil/magento-checkout-filters": "dev-master",
-                "mozgbrasil/magento-cielo": "dev-master",
-                "mozgbrasil/magento-clearsale": "dev-master",
-                "mozgbrasil/magento-correios": "dev-master",
-                "mozgbrasil/magento-customer": "dev-master",
-                "mozgbrasil/magento-itau": "dev-master",
-                "mozgbrasil/magento-iwd-opc": "dev-master",
-                "mozgbrasil/magento-jadlog": "dev-master",
-                "mozgbrasil/magento-jamef": "dev-master",
-                "mozgbrasil/magento-locale-pt_br": "dev-master",
-                "mozgbrasil/magento-loggi": "dev-master",
-                "mozgbrasil/magento-redecard": "dev-master"
-            },
-            "type": "metapackage",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Este é um meta pacote que instala todos os módulos da Mozg no Magento",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "magento",
-                "metapackage",
-                "mozg"
-            ],
-            "time": "2017-09-04T11:36:55+00:00"
-        },
-        {
-            "name": "mozgbrasil/magento-checkout-filters",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-checkout-filters.git",
-                "reference": "e89b2576014dd4b47ddac8a7d1b95cbddac4cbb1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters/zipball/e89b2576014dd4b47ddac8a7d1b95cbddac4cbb1",
-                "reference": "e89b2576014dd4b47ddac8a7d1b95cbddac4cbb1",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-base": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Checkout Filters",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "checkout",
-                "filters",
-                "magento",
-                "mozg"
-            ],
-            "time": "2017-09-04 14:38:15"
-        },
-        {
-            "name": "mozgbrasil/magento-cielo",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-cielo.git",
-                "reference": "d2f7010d6beadb0aca41257c318abd625d0fc11c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo/zipball/d2f7010d6beadb0aca41257c318abd625d0fc11c",
-                "reference": "d2f7010d6beadb0aca41257c318abd625d0fc11c",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-payment": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao cielo",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "cerebrum",
-                "cielo",
-                "itaú",
-                "magento",
-                "mozg",
-                "payment"
-            ],
-            "time": "2017-09-04 14:38:23"
-        },
-        {
-            "name": "mozgbrasil/magento-clearsale",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-clearsale.git",
-                "reference": "082384c8d39a285be66e599536a5b4e0ca43b458"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale/zipball/082384c8d39a285be66e599536a5b4e0ca43b458",
-                "reference": "082384c8d39a285be66e599536a5b4e0ca43b458",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-base": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração a Clearsale",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "ClearSale",
-                "anti-fraud",
-                "cerebrum",
-                "magento",
-                "mozg"
-            ],
-            "time": "2017-09-04 14:38:32"
-        },
-        {
-            "name": "mozgbrasil/magento-correios",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-correios.git",
-                "reference": "e6f1dd35931d710cbb5b797ab89dcf76e4b22e8b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-correios/zipball/e6f1dd35931d710cbb5b797ab89dcf76e4b22e8b",
-                "reference": "e6f1dd35931d710cbb5b797ab89dcf76e4b22e8b",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-boxpacker": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao Correios",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "correios",
-                "entrega",
-                "magento",
-                "mozg",
-                "shipping",
-                "sigep",
-                "transporte"
-            ],
-            "time": "2017-09-04 14:38:41"
-        },
-        {
-            "name": "mozgbrasil/magento-customer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-customer.git",
-                "reference": "4d0a1564a5fbb7ebdc6f99f84872f1e18360c90c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-customer/zipball/4d0a1564a5fbb7ebdc6f99f84872f1e18360c90c",
-                "reference": "4d0a1564a5fbb7ebdc6f99f84872f1e18360c90c",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-base": "dev-master",
-                "mozgbrasil/magento-brasil-regions": "*"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Personalização dos formulários de clientes",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "attributes",
-                "cerebrum",
-                "customer",
-                "form",
-                "magento",
-                "mozg"
-            ],
-            "time": "2017-09-04 14:38:49"
-        },
-        {
-            "name": "mozgbrasil/magento-fee",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-fee.git",
-                "reference": "cfab499c24eb808cd7858a9f5995cf57ff497d8b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-fee/zipball/cfab499c24eb808cd7858a9f5995cf57ff497d8b",
-                "reference": "cfab499c24eb808cd7858a9f5995cf57ff497d8b",
-                "shasum": ""
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao fee",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "entrega",
-                "fee",
-                "magento",
-                "mozg",
-                "shipping",
-                "transporte"
-            ],
-            "time": "2017-09-04 14:38:59"
-        },
-        {
-            "name": "mozgbrasil/magento-itau",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-itau.git",
-                "reference": "b35430d96c2f486ad9d2386b2da406805041182e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-itau/zipball/b35430d96c2f486ad9d2386b2da406805041182e",
-                "reference": "b35430d96c2f486ad9d2386b2da406805041182e",
-                "shasum": ""
-            },
-            "require": {
-                "dilneiss/itaubankline": "*",
-                "mozgbrasil/magento-payment": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao itau",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "cerebrum",
-                "itaú",
-                "magento",
-                "mozg",
-                "payment"
-            ],
-            "time": "2017-09-04 14:39:07"
-        },
-        {
-            "name": "mozgbrasil/magento-iwd-all",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-iwd-all.git",
-                "reference": "c54a2409553bb8aa946536fd40f224436215cdd1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-all/zipball/c54a2409553bb8aa946536fd40f224436215cdd1",
-                "reference": "c54a2409553bb8aa946536fd40f224436215cdd1",
-                "shasum": ""
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "IWD_All",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "all",
-                "cerebrum",
-                "iwd",
-                "magento",
-                "mozg"
-            ],
-            "time": "2017-09-01 19:34:17"
-        },
-        {
-            "name": "mozgbrasil/magento-iwd-opc",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-iwd-opc.git",
-                "reference": "cc02eb21da12c68e03d49c82db901f6f6f7e4591"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-opc/zipball/cc02eb21da12c68e03d49c82db901f6f6f7e4591",
-                "reference": "cc02eb21da12c68e03d49c82db901f6f6f7e4591",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-iwd-all": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "IWD_Opc",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "checkout",
-                "iwd",
-                "magento",
-                "mozg",
-                "opc"
-            ],
-            "time": "2017-09-01 19:34:24"
-        },
-        {
-            "name": "mozgbrasil/magento-jadlog",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jadlog.git",
-                "reference": "2e402926be7d3ac2cb32682ba7298930e1d50b1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog/zipball/2e402926be7d3ac2cb32682ba7298930e1d50b1a",
-                "reference": "2e402926be7d3ac2cb32682ba7298930e1d50b1a",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-boxpacker": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração a Jadlog",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "entrega",
-                "jadlog",
-                "magento",
-                "mozg",
-                "shipping",
-                "transportadora"
-            ],
-            "time": "2017-09-04 14:39:16"
-        },
-        {
-            "name": "mozgbrasil/magento-jamef",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jamef.git",
-                "reference": "5d9184fe51f8aefdc88970270b9e7fee4af646cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef/zipball/5d9184fe51f8aefdc88970270b9e7fee4af646cc",
-                "reference": "5d9184fe51f8aefdc88970270b9e7fee4af646cc",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-boxpacker": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração a Jamef",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "entrega",
-                "jamef",
-                "magento",
-                "mozg",
-                "shipping",
-                "transportadora"
-            ],
-            "time": "2017-09-04 14:39:24"
-        },
-        {
-            "name": "mozgbrasil/magento-locale-pt_br",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-locale-pt_br.git",
-                "reference": "dbbd78c36a982cd5d56830292a5ddd6cc4bd1e4b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-locale-pt_br/zipball/dbbd78c36a982cd5d56830292a5ddd6cc4bd1e4b",
-                "reference": "dbbd78c36a982cd5d56830292a5ddd6cc4bd1e4b",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "*"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Arquivos de tradução",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "locale",
-                "magento",
-                "mozg"
-            ],
-            "time": "2017-09-01 19:34:40"
-        },
-        {
-            "name": "mozgbrasil/magento-loggi",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-loggi.git",
-                "reference": "f33a5cde43cd61de86aa10705e14bd8ad1f712d7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi/zipball/f33a5cde43cd61de86aa10705e14bd8ad1f712d7",
-                "reference": "f33a5cde43cd61de86aa10705e14bd8ad1f712d7",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-boxpacker": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração a Loggi",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "entrega",
-                "loggi",
-                "magento",
-                "motoboy",
-                "mozg",
-                "shipping",
-                "transportadora"
-            ],
-            "time": "2017-09-04 14:39:31"
-        },
-        {
-            "name": "mozgbrasil/magento-payment",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-payment.git",
-                "reference": "7cb683638e16d1a4017d5ada79f8f77593c814b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-payment/zipball/7cb683638e16d1a4017d5ada79f8f77593c814b8",
-                "reference": "7cb683638e16d1a4017d5ada79f8f77593c814b8",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-base": "dev-master",
-                "mozgbrasil/magento-fee": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao payment",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "cerebrum",
-                "magento",
-                "mozg",
-                "payment"
-            ],
-            "time": "2017-09-04 14:39:50"
-        },
-        {
-            "name": "mozgbrasil/magento-product-page-shipping",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-product-page-shipping.git",
-                "reference": "283e7e3be148b480561182a712978dacd3319a01"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping/zipball/283e7e3be148b480561182a712978dacd3319a01",
-                "reference": "283e7e3be148b480561182a712978dacd3319a01",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-base": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Usando extensão os clientes será capaz de ver os métodos de envio na página do produto.",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "magento",
-                "mozg",
-                "page",
-                "product",
-                "shipestimation",
-                "shipping"
-            ],
-            "time": "2017-09-04 14:39:59"
-        },
-        {
-            "name": "mozgbrasil/magento-redecard",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-redecard.git",
-                "reference": "51be282db057ee7d68ca8bd89bf1366985dd2066"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard/zipball/51be282db057ee7d68ca8bd89bf1366985dd2066",
-                "reference": "51be282db057ee7d68ca8bd89bf1366985dd2066",
-                "shasum": ""
-            },
-            "require": {
-                "byjg/omnipay-komerci": "*",
-                "mozgbrasil/magento-payment": "dev-master"
-            },
-            "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integração ao redecard",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "Pagamento",
-                "cerebrum",
-                "magento",
-                "mozg",
-                "payment",
-                "redecard"
-            ],
-            "time": "2017-09-04 14:40:08"
+            "time": "2017-09-12T14:46:37+00:00"
         },
         {
             "name": "nategood/httpful",
@@ -3361,16 +3361,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d6596cb5022b6a0bd940eae54a1de78646a5fda6"
+                "reference": "a1e1b01293a090cb9ae2ddd221a3251a4a7e4abf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d6596cb5022b6a0bd940eae54a1de78646a5fda6",
-                "reference": "d6596cb5022b6a0bd940eae54a1de78646a5fda6",
+                "url": "https://api.github.com/repos/symfony/console/zipball/a1e1b01293a090cb9ae2ddd221a3251a4a7e4abf",
+                "reference": "a1e1b01293a090cb9ae2ddd221a3251a4a7e4abf",
                 "shasum": ""
             },
             "require": {
@@ -3425,20 +3425,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-27T14:52:21+00:00"
+            "time": "2017-09-06T16:40:18+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "084d804fe35808eb2ef596ec83d85d9768aa6c9d"
+                "reference": "8beb24eec70b345c313640962df933499373a944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/084d804fe35808eb2ef596ec83d85d9768aa6c9d",
-                "reference": "084d804fe35808eb2ef596ec83d85d9768aa6c9d",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/8beb24eec70b345c313640962df933499373a944",
+                "reference": "8beb24eec70b345c313640962df933499373a944",
                 "shasum": ""
             },
             "require": {
@@ -3481,7 +3481,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-27T14:52:21+00:00"
+            "time": "2017-09-01T13:23:39+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3545,16 +3545,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "14bacad23a4f075bfd3fd456755236cb261320e3"
+                "reference": "2cdc7de1921d1a1c805a13dc05e44a2cd58f5ad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/14bacad23a4f075bfd3fd456755236cb261320e3",
-                "reference": "14bacad23a4f075bfd3fd456755236cb261320e3",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2cdc7de1921d1a1c805a13dc05e44a2cd58f5ad3",
+                "reference": "2cdc7de1921d1a1c805a13dc05e44a2cd58f5ad3",
                 "shasum": ""
             },
             "require": {
@@ -3594,7 +3594,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-10T07:07:06+00:00"
+            "time": "2017-09-06T17:07:39+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3657,7 +3657,7 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
@@ -4246,7 +4246,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mozgbrasil/magento-bundle": 20
+        "mozgbrasil/magento-bundle-php_56": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

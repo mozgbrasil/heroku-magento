@@ -32,6 +32,6 @@
         "firegento/magento": "~1.9.3.1",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
-        "mozgbrasil/magento-bundle": "dev-master"
+        "mozgbrasil/magento-bundle-php_56": "dev-master"
     }
 }
