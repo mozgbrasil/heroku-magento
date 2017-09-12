@@ -22,7 +22,7 @@ require 'vendor/autoload.php';
 
 /?database=true
 
-/?scandir=true&dir=/app/root/&load_file=true&file=/app/root/var/report/821626541659
+/?scandir=true&dir=/app/magento/&load_file=true&file=/app/magento/var/report/821626541659
 
 */
 
@@ -77,14 +77,14 @@ if ( empty($_REQUEST) ){
 
     $BASE_URL = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
 
-    $MAGENTO_URL = $BASE_URL . 'root/';
+    $MAGENTO_URL = $BASE_URL . 'magento/';
 
     $parsed_url = parse_url($BASE_URL);
     $host = explode('.', $parsed_url['host']);
     $subdomain = $host[0];
     $APP_NAME = $subdomain;
 
-    $path_file = __DIR__ . '/root/app/etc/local.xml';
+    $path_file = __DIR__ . '/magento/app/etc/local.xml';
 
     $html = '';
 
@@ -152,7 +152,7 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
 
     $BASE_URL = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
 
-    $BASE_URL = $BASE_URL . 'root/';
+    $BASE_URL = $BASE_URL . 'magento/';
 
     $arg1 = $BASE_URL;
     $arg2 = '';
