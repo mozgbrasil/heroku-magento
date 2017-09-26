@@ -46,14 +46,14 @@ if ( (php_sapi_name() === 'cli') ){
     echo "\e[1;33m (3) \e[0m" ;
     echo "\n";
 
-    $ext = 'zend-guard-loader';    
+    $ext = 'zend-guard-loader';
     print_r(extension_loaded($ext));
 
     echo "\n";
     echo "\e[1;33m (4) \e[0m" ;
     echo "\n";
 
-    $ext = 'zend guard loader';    
+    $ext = 'zend guard loader';
     print_r(extension_loaded($ext));
 
     echo "\n";
@@ -129,6 +129,8 @@ EOF;
 
     <p><a href="${BASE_URL}magento/admin" target="_blank">Clique aqui para acesso ao backend do Magento</a></p>
 
+    <p>admin / 123456a</p>
+
     <p><a href="${BASE_URL}magento" target="_blank">Clique aqui para para acesso ao frontend do Magento</a></p>
 
 EOF;
@@ -163,7 +165,7 @@ if ( array_key_exists('magento_sample_data', $_REQUEST) ){
         dump('cmd');
         //dump($output);
     } catch (Exception $e) {
-        dump('Exception'); 
+        dump('Exception');
         dump($e->getMessage());
     }
 
@@ -239,7 +241,7 @@ if ( array_key_exists('database', $_REQUEST) ){
 
     // Create connection
 
-    $mysql_database = parse_url(getenv("CLEARDB_DATABASE_URL")); 
+    $mysql_database = parse_url(getenv("CLEARDB_DATABASE_URL"));
     dump($mysql_database);
     $host = $mysql_database["host"];
     $user = $mysql_database["user"];
@@ -257,7 +259,7 @@ if ( array_key_exists('database', $_REQUEST) ){
     // Check connection
     if ($conn->connect_error) {
         dump("Connection failed: " . $conn->connect_error);
-    }       
+    }
 
     $sql = "SHOW tables";
     $result = $conn->query($sql);
@@ -279,7 +281,7 @@ if ( array_key_exists('database', $_REQUEST) ){
 
     // Create connection
 
-    $mysql_database = parse_url(getenv("JAWSDB_URL")); 
+    $mysql_database = parse_url(getenv("JAWSDB_URL"));
     dump($mysql_database);
     $host = $mysql_database["host"];
     $user = $mysql_database["user"];
@@ -297,7 +299,7 @@ if ( array_key_exists('database', $_REQUEST) ){
     // Check connection
     if ($conn->connect_error) {
         dump("Connection failed: " . $conn->connect_error);
-    }       
+    }
 
     $sql = "SHOW tables";
     $result = $conn->query($sql);
@@ -320,5 +322,3 @@ if ( array_key_exists('database', $_REQUEST) ){
 }
 
 //
-
-    
