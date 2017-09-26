@@ -78,7 +78,7 @@ Que se trata do repositório central de bibliotecas disponibilizada via Composer
 
 Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
 
-# O fim
+# -
 
 Se você gostou deste projeto, considere dar um 🌟 ou doar.
 
