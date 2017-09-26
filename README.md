@@ -78,4 +78,33 @@ Que se trata do repositório central de bibliotecas disponibilizada via Composer
 
 Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
 
+# O fim
+
+Se você gostou deste projeto, considere dar um 🌟 ou doar.
+
+- [![pagseguro](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/164x37-doar-assina.gif)](https://pagseguro.uol.com.br/checkout/v2/donation.html?currency=BRL&receiverEmail=mozgbrasil@gmail.com)
+- [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/stargazers)
+- [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/watchers)
+
+Verifique também minha [Conta GitHub](https://github.com/mozgbrasil), onde eu tenho outros artigos e aplicativos que você pode achar interessantes.
+
+## Para contratar 👨💻
+
+Se você quiser que eu o ajude, estou disponível para contratar.
+
+Entre em contato com suporte@mozg.com.br
+
+## Onde seguir
+
+Você pode me seguir nas mídias sociais 🐙😇, nos seguintes locais:
+
+- [GitHub](https://github.com/mozgbrasil)
+- [Twitter](https://twitter.com/mozgbrasil)
+
+## Mais sobre mim
+
+Eu não só vivo no GitHub, eu tento fazer muitas coisas para não me aborrecer 🙃. Para saber mais sobre mim, você pode visitar os seguintes links:
+
+- [Artigos](http://mozg.com.br/artigos/)
+
 :cat2:
