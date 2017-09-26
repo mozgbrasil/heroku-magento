@@ -88,6 +88,15 @@ if ( empty($_REQUEST) ){
 
     $html = '';
 
+
+
+    // output buffering
+    ob_start();
+    $mysql_database = parse_url(getenv("JAWSDB_URL"));
+    dump($mysql_database);
+    $ob_response = ob_get_clean();
+    // output buffering
+
     if( !file_exists($path_file) ){
         $html .= <<<EOF
 
@@ -115,7 +124,13 @@ if ( empty($_REQUEST) ){
 
         <!--<p><b>Obs:</b> Pode ocorrer o erro h12, https://devcenter.heroku.com/articles/error-codes#h12-request-timeout</p>-->
 
-        <p><b>Obs:</b> Esse processo ira rodar em background, aguarde 1 minuto e acesse a URL do Magento</p>
+        <p><b>Obs:</b> Esse processo ira rodar em background, aguarde 2minuto e acesse a URL do Magento</p>
+
+        <p>ou</p>
+
+        <p>Efetue a instalação do Magento pelo instalador do Magento, para isso acesse qualquer URL do projeto abaixo e informe os seguintes dados de acesso ao banco de dados</p>
+
+        <p>$ob_response</p>
 
         <h2>Passo 3</h2>
 
@@ -239,6 +254,8 @@ if ( array_key_exists('database', $_REQUEST) ){
 
     //
 
+    echo '<h1>CLEARDB_DATABASE_URL</h1>';
+
     // Create connection
 
     $mysql_database = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -278,6 +295,8 @@ if ( array_key_exists('database', $_REQUEST) ){
     $conn->close();
 
     //
+
+    echo '<h1>JAWSDB_URL</h1>';
 
     // Create connection
 
