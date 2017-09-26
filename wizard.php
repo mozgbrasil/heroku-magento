@@ -124,7 +124,7 @@ if ( empty($_REQUEST) ){
 
         <!--<p><b>Obs:</b> Pode ocorrer o erro h12, https://devcenter.heroku.com/articles/error-codes#h12-request-timeout</p>-->
 
-        <p><b>Obs:</b> Esse processo ira rodar em background, aguarde 2minuto e acesse a URL do Magento</p>
+        <p><b>Obs:</b> Esse processo ira rodar em background, aguarde 2 minutos e acesse a URL do Magento</p>
 
         <p>ou</p>
 
