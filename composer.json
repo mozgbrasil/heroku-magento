@@ -17,7 +17,7 @@
     "repositories":[
         {
             "type":"composer",
-            "url":"https?://packages.firegento.com"
+            "url":"https://packages.firegento.com"
         }
     ],
     "extra":{
