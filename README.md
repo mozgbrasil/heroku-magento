@@ -30,7 +30,7 @@ Como a Heroku trabalha com o [Composer](https://getcomposer.org/), todas as depe
 
 Olá
 
-Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) em apenas 1 clique, por apenas $10.00 que é o custo para uso do banco de dados [MySQL](https://elements.heroku.com/addons/jawsdb#leopard) na [Heroku](https://www.heroku.com/)
+Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) em apenas 1 clique
 
 ## Implantando na Heroku
 
