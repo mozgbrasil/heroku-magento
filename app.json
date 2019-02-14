@@ -27,7 +27,6 @@
     },
     "image":"heroku/php",
     "addons":[
-        "jawsdb:leopard",
         "cleardb",
         "heroku-postgresql",
         "semaphore",
@@ -48,5 +47,6 @@
                 "test":"echo 'Yo_environments' ; bash app.sh environments >> app.log ; "
             }
         }
-    }
+    },
+    "stack": "heroku-16"
 }

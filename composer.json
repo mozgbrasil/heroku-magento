@@ -6,6 +6,7 @@
     "license": [
         "proprietary"
     ],
+    "type": "project",
     "authors": [
         {
             "name": "Marcio dos Santos Amorim",
@@ -26,10 +27,10 @@
         "magento-force": true
     },
     "require": {
-        "php": "^5.5.12",
+        "php": ">=5.4 <=7.2",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
-        "firegento/magento": "~1.9.3.1",
+        "firegento/magento": "~1.9.4.0",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
         "mozgbrasil/magento-bundle-php_56": "dev-master"
