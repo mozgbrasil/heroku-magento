@@ -3,3 +3,4 @@ node_modules
 /magento
 /vendor
 addon-manifest.json
+tests/backdoor.php
