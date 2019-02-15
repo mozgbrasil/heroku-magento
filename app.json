@@ -27,11 +27,14 @@
     },
     "image":"heroku/php",
     "addons":[
-        "scheduler:standard",
+        "trevor:trial",
+        "jawsdb:kitefin",
         "cleardb:ignite",
         "heroku-postgresql:hobby-dev",
+        "scheduler:standard",
         "semaphore:nano",
         "codeship:free",
+        "fixie-socks:grip",
         "sendgrid:starter"
     ],
     "buildpacks":[
