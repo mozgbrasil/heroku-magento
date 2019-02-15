@@ -26,13 +26,7 @@
         }
     },
     "image":"heroku/php",
-    "addons":[
-        "cleardb",
-        "heroku-postgresql",
-        "semaphore",
-        "codeship",
-        "sendgrid"
-    ],
+    "addons":[],
     "buildpacks":[
         {
             "url":"heroku/php"
