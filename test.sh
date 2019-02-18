@@ -5,7 +5,7 @@
 
 #
 
-echo 'Yo_postdeploy'
+echo 'Yo_environments'
 
 bash app.sh magento_sample_data_install >> app_log.txt
 
