@@ -52,6 +52,61 @@ Pode seguir as instruções a seguir para instalar o Magento
 
 (*) Em seguida você pode fazer um fork desse repositório e fazer as alterações necessárias, certifique de apontar o seu repositório na Heroku e habilitar a implantação automatica.
 
+## Implantando em ambiente local
+
+
+```
+git clone https://github.com/mozgbrasil/heroku-magento
+
+composer update
+
+bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magento/magento/' \
+--db_host="mysql" \
+--db_port="3306" \
+--db_name="heroku-magento-001" \
+--db_user="root" \
+--db_pass=""
+
+```
+
+## Magento
+
+Atualmente um projeto Magento ideal é gerenciado completamente pelo Composer, a fim de obter as seguintes melhorias
+
+- [✓] Magento sempre atualizado;
+- [✓] Módulos sempre atualizados;
+- [✓] Template sempre atualizado;
+
+Precisa de um projeto para ação de Comércio eletrônico, utilize a melhor plataforma, utilize o Magento, entre em contato conosco
+
+Conheça a nossa trajetória de sucesso construída com muito empenho, compromisso, ética e profissionalismo.
+
+[CEREBRUM](https://www.cerebrum.com.br/ "Magento")
+
+Quer aprender sobre Magento, acesse a Comunidade Magento
+
+[Comunidade Magento](https://www.comunidademagento.com.br/ "Magento")
+
+Precisa de módulos para Magento, instale os módulos da MOZG em seu projeto Magento
+
+[MOZG](http://mozg.com.br/catalogo/ "Magento")
+
+## Demonstração
+
+<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/admin/" target="_blank">Clique aqui para acesso ao backend</a>
+
+Utilize os seguintes dados para acesso
+
+    admin / 123456a
+
+<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/" target="_blank">Clique aqui para acesso ao frontend</a>
+
+## Recursos do projeto
+
+No uso do Composer todo os recursos é relacionado no manifesto do projeto
+
+<a href="http://heroku-magento-mozg.herokuapp.com/composer.json" target="_blank">Clique aqui para acesso manifesto do projeto</a>
+
 ## Sobre temas
 
 Pelo seguinte repositório

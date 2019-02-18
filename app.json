@@ -20,6 +20,19 @@
         "EMAIL":{
             "required":true
         },
+        "MAGE_DB_HOST":{
+            "required":false,
+            "description":"https://github.com/rossigee/magento-config-envvars",
+        },
+        "MAGE_DB_USER":{
+            "required":false
+        },
+        "MAGE_DB_PASS":{
+            "required":false
+        },
+        "MAGE_DB_NAME":{
+            "required":false
+        },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",
             "generator":"secret"

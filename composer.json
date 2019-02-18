@@ -37,7 +37,6 @@
         "rossigee/config-envvars" : "~1.0",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
-        "phpmyadmin/phpmyadmin": "dev-master",
         "mozgbrasil/magento-bundle-php_56": "dev-master"
     }
 }
