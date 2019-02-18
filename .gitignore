@@ -4,3 +4,4 @@ node_modules
 /vendor
 addon-manifest.json
 tests/backdoor.php
+app_log.txt
