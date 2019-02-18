@@ -21,8 +21,7 @@
             "required":true
         },
         "MAGE_DB_HOST":{
-            "required":false,
-            "description":"https://github.com/rossigee/magento-config-envvars",
+            "required":false
         },
         "MAGE_DB_USER":{
             "required":false
