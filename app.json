@@ -13,24 +13,25 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"echo 'Yo_postdeploy' ; bash app.sh magento_sample_data_install >> app.log ; ",
-        "pr-predestroy":"echo 'Yo_predestroy' ; bash app.sh teardown >> app.log ; "
+        "postdeploy":"echo 'Yo_postdeploy';bash -x app.sh magento_sample_data_install >> app.log;",
+        "pr-predestroy":"echo 'Yo_predestroy';bash -x app.sh teardown >> app.log;"
     },
     "env":{
-        "EMAIL":{
-            "required":true
-        },
         "MAGE_DB_HOST":{
-            "required":false
+          "description": "https://github.com/rossigee/magento-config-envvars",
+          "value": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306"
         },
         "MAGE_DB_USER":{
-            "required":false
+          "description": "",
+          "value": "seg9wu3lywh64pr8"
         },
         "MAGE_DB_PASS":{
-            "required":false
+          "description": "",
+          "value": "jtsjbhff20uy4n2k"
         },
         "MAGE_DB_NAME":{
-            "required":false
+          "description": "",
+          "value": "xd8ki6rwckxvre61"
         },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",
@@ -43,6 +44,11 @@
         "jawsdb:kitefin",
         "cleardb:ignite",
         "heroku-postgresql:hobby-dev",
+        "timber-logging:free",
+        "sumologic:free",
+        "logentries:le_tryit",
+        "logdna:quaco",
+        "librato:development",
         "scheduler:standard",
         "semaphore:nano",
         "codeship:free",
@@ -60,7 +66,7 @@
     "environments":{
         "test":{
             "scripts":{
-                "test":"echo 'Yo_environments' ; bash app.sh environments >> app.log ; "
+                "test":"echo 'Yo_environments';bash -x app.sh environments >> app.log;"
             }
         }
     },
