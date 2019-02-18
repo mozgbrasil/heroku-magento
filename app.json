@@ -13,7 +13,7 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"echo 'Yo_postdeploy' ; bash app.sh postdeploy >> app.log ; ",
+        "postdeploy":"echo 'Yo_postdeploy' ; bash app.sh bootstrap >> app.log ; ",
         "pr-predestroy":"echo 'Yo_predestroy' ; bash app.sh teardown >> app.log ; "
     },
     "env":{
