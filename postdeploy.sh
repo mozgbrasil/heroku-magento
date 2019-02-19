@@ -5,10 +5,9 @@
 
 #
 
-echo 'Yo_postdeploy'
+#RUN=$(bash app.sh postdeploy | curl -F 'sprunge=<-' http://sprunge.us)
+RUN=$(bash app.sh postdeploy | nc termbin.com 9999)
 
-RUN=$(bash app.sh -x postdeploy | curl -F 'sprunge=<-' http://sprunge.us)
-
-curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${RUN}"
+curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_postdeploy :: ${RUN}"
 
 #
