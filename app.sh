@@ -226,13 +226,13 @@ echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
-dot_profile () {
+profile () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} dot_profile () ${NORMAL}"
+echo -e "${ONYELLOW} profile () ${NORMAL}"
 
 # https://devcenter.heroku.com/articles/dynos#startup
 
@@ -653,7 +653,7 @@ case $1 in
         echo
         ;;
 
-    postdeploy)
+    _postdeploy)
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
@@ -664,11 +664,11 @@ case $1 in
         echo
         ;;
 
-    dot_profile)
+    _profile)
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-          dot_profile
+          profile
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
