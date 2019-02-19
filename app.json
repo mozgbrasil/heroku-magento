@@ -23,7 +23,7 @@
         },
         "MAGE_DB_PORT":{
           "description": "",
-          "value": ""
+          "value": "3306"
         },
         "MAGE_DB_NAME":{
           "description": "",

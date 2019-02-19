@@ -7,7 +7,7 @@
 
 echo 'Yo_environments'
 
-bash app.sh magento_sample_data_install >> app_log.txt
+bash app.sh testi > app_log.txt
 
 LOGFILE=$(<app_log.txt)
 echo "$LOGFILE"
