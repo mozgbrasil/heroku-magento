@@ -470,6 +470,14 @@ case $1 in
         echo
         ;;
 
+    postdeploy)
+        echo "${BOLD} Processing... ${NORMAL}"
+        postdeploy
+        echo
+        echo "${BOLD} Process complete! ${NORMAL}"
+        echo
+        ;;
+
     *|help)
         default
         ;;
