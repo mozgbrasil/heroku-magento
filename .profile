@@ -7,7 +7,7 @@
 
 echo 'Yo_profile'
 
-bash app.sh dot_profile > app_log.txt
+bash app.sh dot_profile > app_log.txt 2>&1
 
 #LOGFILE=$(<app_log.txt)
 #echo "$LOGFILE"

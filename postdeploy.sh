@@ -7,7 +7,7 @@
 
 echo 'Yo_postdeploy'
 
-bash app.sh postdeploy > app_log.txt
+bash app.sh postdeploy > app_log.txt 2>&1
 
 #LOGFILE=$(<app_log.txt)
 #echo "$LOGFILE"

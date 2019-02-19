@@ -66,22 +66,17 @@ DATE_PT_BR=$(date '+%d/%m/%Y %H:%M:%S')
 #
 
 functionBefore() {
-
-    DATA_HORA_INICIAL=$(date '+%d/%m/%Y %H:%M:%S')
-
-    DATA_HORA_EN_US=$(date '+%Y-%m-%d %H:%M:%S')
+DATA_HORA_INICIAL=$(date '+%d/%m/%Y %H:%M:%S')
+DATA_HORA_EN_US=$(date '+%Y-%m-%d %H:%M:%S')
 }
 
 functionAfter() {
-
-    DATA_HORA_FINAL=$(date '+%d/%m/%Y %H:%M:%S')
-
-    echo
-    echo "${BOLD} DATA_HORA_INICIAL: $DATA_HORA_INICIAL ${NORMAL}"
-    echo
-    echo "${BOLD} DATA_HORA_FINAL: $DATA_HORA_FINAL ${NORMAL}"
-    echo
-
+DATA_HORA_FINAL=$(date '+%d/%m/%Y %H:%M:%S')
+echo
+echo "${BOLD} DATA_HORA_INICIAL: $DATA_HORA_INICIAL ${NORMAL}"
+echo
+echo "${BOLD} DATA_HORA_FINAL: $DATA_HORA_FINAL ${NORMAL}"
+echo
 }
 
 showVars () {
@@ -122,7 +117,7 @@ postdeploy () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} postdeploy ${NORMAL}"
+echo -e "${ONYELLOW} postdeploy () ${NORMAL}"
 
 magento_sample_data_install
 
@@ -132,7 +127,7 @@ check_in_database () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} Check In Database ${NORMAL}"
+echo -e "${ONYELLOW} check_in_database () ${NORMAL}"
 
 get_db_vars
 
@@ -144,11 +139,11 @@ download_install () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} Checando banco de dados ${NORMAL}"
+echo -e "${ONYELLOW} download_install () ${NORMAL}"
 
 check_in_database
 
-echo -e "${ONYELLOW} Criando arquivo composer.json ${NORMAL}"
+echo -e "${ONYELLOW} cat > composer.json <<- _EOF_ ${NORMAL}"
 
 cat > composer.json <<- _EOF_
 {
@@ -179,15 +174,15 @@ cat > composer.json <<- _EOF_
 }
 _EOF_
 
-echo -e "${ONYELLOW} Verificando integridade do arquivo composer.json ${NORMAL}"
+echo -e "${ONYELLOW} composer diagnose ${NORMAL}"
 
 composer diagnose
 
-echo -e "${ONYELLOW} Obtendo as versões mais recentes das dependências ${NORMAL}"
+echo -e "${ONYELLOW} composer update ${NORMAL}"
 
 composer update
 
-echo -e "${ONYELLOW} Processando Sample Data e Install ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data_install ${NORMAL}"
 
 magento_sample_data_install
 
@@ -197,15 +192,11 @@ magento_sample_data_install () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} Checando banco de dados ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data_install () ${NORMAL}"
 
 check_in_database
 
-echo -e "${ONYELLOW} Processando Sample Data ${NORMAL}"
-
 magento_sample_data
-
-echo -e "${ONYELLOW} Processando instalação ${NORMAL}"
 
 magento_install
 
@@ -214,6 +205,8 @@ magento_install
 dot_profile () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
+
+echo -e "${ONYELLOW} dot_profile () ${NORMAL}"
 
 # https://devcenter.heroku.com/articles/dynos#startup
 
@@ -259,6 +252,8 @@ sed -i -e "s/{{admin_frontname}}/<![CDATA[admin]]>/" app/etc/local.xml
 get_db_vars () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
+
+echo -e "${ONYELLOW} get_db_vars () ${NORMAL}"
 
 # -n String, True if the length of String is nonzero.
 # -z String, True if string is empty.
@@ -382,7 +377,7 @@ check_out_database () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} Check Out Database ${NORMAL}"
+echo -e "${ONYELLOW} check_out_database () ${NORMAL}"
 
 MYSQL_RETURN=`mysql -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} -p${DB_PASS} ${DB_NAME} -v -e "SHOW TABLES"`
 
@@ -401,7 +396,7 @@ magento_sample_data () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} Pacote ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data () ${NORMAL}"
 
 FILE_CACHE=$FOLDER_CACHE'/magento-sample-data-1.9.2.4-fix.tar.gz'
 
@@ -412,15 +407,11 @@ if [ -f "$FILE_CACHE" ];then
     cp $FILE_CACHE .
 else
     echo -e "${ONYELLOW} Arquivo não se encontra em cache ${NORMAL}"
-
     wget -q https://ufpr.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
 
     if [ -d "$FOLDER_CACHE" ]; then
-
       cp magento-sample-data-1.9.2.4-fix.tar.gz $FOLDER_CACHE
-
     fi
-
 fi
 
 echo -e "${ONYELLOW} Descompactando arquivo ${NORMAL}"
@@ -447,21 +438,21 @@ magento_install () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} Checando banco de dados ${NORMAL}"
+echo -e "${ONYELLOW} magento_install () ${NORMAL}"
 
 check_in_database
 
-echo -e "${ONYELLOW} Sobre o diretório 'magento' ${NORMAL}"
+echo -e "${ONYELLOW} pwd ${NORMAL}"
 
 pwd
 
 ls -lah
 
-echo -e "${ONYELLOW} Aplicando permissões ${NORMAL}"
+#echo -e "${ONYELLOW} Aplicando permissões ${NORMAL}"
 
 #chmod 777 -R .
 
-echo -e "${ONYELLOW} Magento Install ${NORMAL}"
+echo -e "${ONYELLOW} magento/install.php ${NORMAL}"
 
 php -f magento/install.php -- \
 --license_agreement_accepted "yes" \
@@ -484,7 +475,7 @@ php -f magento/install.php -- \
 --admin_username "admin" \
 --admin_password "123456a"
 
-echo -e "${ONYELLOW} Magento Run ${NORMAL}"
+echo -e "${ONYELLOW} magento/index.php ${NORMAL}"
 
 php magento/index.php
 
@@ -592,63 +583,63 @@ fi
 
 case $1 in
     download_install)
-        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
-        functionBefore ##
-        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
-        download_install
-        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
-        functionAfter ##
         echo
-        echo "${BOLD}Process complete!${NORMAL}"
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        functionBefore
+          download_install
+        functionAfter
+        echo
+        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     magento_sample_data_install)
-        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
-        functionBefore ##
-        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
-        magento_sample_data_install
-        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
-        functionAfter ##
         echo
-        echo "${BOLD}Process complete!${NORMAL}"
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        functionBefore
+          magento_sample_data_install
+        functionAfter
+        echo
+        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     magento_install)
-        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
-        functionBefore ##
-        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
-        magento_install
-        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
-        functionAfter ##
         echo
-        echo "${BOLD}Process complete!${NORMAL}"
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        functionBefore
+          magento_install
+        functionAfter
+        echo
+        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     postdeploy)
-        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
-        functionBefore ##
-        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
-        showVars
-        postdeploy
-        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
-        functionAfter ##
         echo
-        echo "${BOLD}Process complete!${NORMAL}"
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        functionBefore
+          showVars
+          postdeploy
+        functionAfter
+        echo
+        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     *|help)
-        echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
-        functionBefore ##
-        echo "${BOLD} 2/3 | >>> ...${NORMAL}"
-        showVars
-        echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
-        functionAfter ##
         echo
-        echo "${BOLD}Process complete!${NORMAL}"
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        functionBefore
+          showVars
+        functionAfter
+        echo
+        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 esac

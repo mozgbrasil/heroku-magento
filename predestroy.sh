@@ -7,7 +7,7 @@
 
 echo 'Yo_predestroy'
 
-bash app.sh teardown > app_log.txt
+bash app.sh teardown > app_log.txt 2>&1
 
 #LOGFILE=$(<app_log.txt)
 #echo "$LOGFILE"

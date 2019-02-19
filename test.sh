@@ -7,7 +7,7 @@
 
 echo 'Yo_environments'
 
-bash app.sh testi > app_log.txt
+bash app.sh testi > app_log.txt 2>&1
 
 #LOGFILE=$(<app_log.txt)
 #echo "$LOGFILE"
