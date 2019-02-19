@@ -98,13 +98,21 @@ pwd
 
 ls
 
-echo -e "${ONYELLOW} whoami ${NORMAL}"
+echo -e "${ONYELLOW} whoami - print effective userid ${NORMAL}"
 
 whoami
 
-echo -e "${ONYELLOW} printenv ${NORMAL}"
+echo -e "${ONYELLOW} printenv - print all or part of environment ${NORMAL}"
 
 printenv
+
+echo -e "${ONYELLOW} ps - report a snapshot of the current processes ${NORMAL}"
+
+ps aux
+
+echo -e "${ONYELLOW} will list all the commands you could run. ${NORMAL}"
+
+compgen -A function -abck
 
 }
 
@@ -124,7 +132,7 @@ echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} Check In Database ${NORMAL}"
 
-is_heroku
+get_db_vars
 
 check_out_database
 
@@ -201,15 +209,16 @@ magento_install
 
 }
 
-is_heroku () {
+get_db_vars () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-if [ -z ${JAWSDB_URL} ]; then
+# -n String, True if the length of String is nonzero.
+# -z String, True if string is empty.
 
-    echo -e "${RED} Is Local ${NORMAL}"
+if [ -n ${DB_HOST} ]; then # Arguments localhost
 
-    #
+    echo -e "${RED} DB_HOST ${NORMAL}"
 
     echo -e "${BLUE} URL: ${URL} ${NORMAL}"
     echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
@@ -239,68 +248,84 @@ if [ -z ${JAWSDB_URL} ]; then
 
 else
 
-    echo -e "${RED} Is Heroku ${NORMAL}"
-
-    # https://regex101.com/r/EeO9HR/2
-
-    REGEX_EXPR='postgres:\/\/(.+):(.+)@(.+):(5432| )\/(.+)'
-    #$DATABASE_URL # PostgreSQL
-
-    REGEX_EXPR='mysql:\/\/(.+):(.+)@(.+):(3306| )\/(.+)'
-    #$JAWSDB_URL # MySQL
-
-    if [[ $JAWSDB_URL =~ $REGEX_EXPR ]]
-    then
-
-        echo -e "${GREEN} Get Regex JAWSDB_URL ${NORMAL}"
-
-        #echo The regex matches!
-        #echo $BASH_REMATCH
-        #echo ${BASH_REMATCH[1]}
-        #echo ${BASH_REMATCH[2]}
-        #echo ${BASH_REMATCH[3]}
-        #echo ${BASH_REMATCH[4]}
-        #echo ${BASH_REMATCH[5]}
-
-        DB_HOST=${BASH_REMATCH[3]}
-        DB_PORT=${BASH_REMATCH[4]}
-        DB_NAME=${BASH_REMATCH[5]}
-        DB_USER=${BASH_REMATCH[1]}
-        DB_PASS=${BASH_REMATCH[2]}
-
-        echo -e "${BLUE} URL: ${URL} ${NORMAL}"
-        echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
-        echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
-        echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
-        echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
-        echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
-
-    else
-        echo -e "${RED} Regex Failed ${NORMAL}"
-    fi
-
-    if [ -z ${MAGE_DB_HOST} ]; then
-
-        echo -e "${GREEN} Get env MAGE_DB_HOST ${NORMAL}"
-
-        DB_HOST=$MAGE_DB_HOST
-        DB_PORT=$MAGE_DB_PORT
-        DB_NAME=$MAGE_DB_NAME
-        DB_USER=$MAGE_DB_USER
-        DB_PASS=$MAGE_DB_PASS
-
-        echo -e "${BLUE} URL: ${URL} ${NORMAL}"
-        echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
-        echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
-        echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
-        echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
-        echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
-
-    else 
-        echo -e "${RED} ENV Failed ${NORMAL}"
-    fi
+    echo -e "${RED} DB_HOST Failed ${NORMAL}"
 
 fi
+
+#
+
+if [ -n ${JAWSDB_URL} ]; then
+
+  echo -e "${RED} JAWSDB ${NORMAL}"
+
+  # https://regex101.com/r/EeO9HR/2
+
+  REGEX_EXPR='postgres:\/\/(.+):(.+)@(.+):(5432| )\/(.+)'
+  #$DATABASE_URL # PostgreSQL
+
+  REGEX_EXPR='mysql:\/\/(.+):(.+)@(.+):(3306| )\/(.+)'
+  #$JAWSDB_URL # MySQL
+
+  if [[ $JAWSDB_URL =~ $REGEX_EXPR ]]
+  then
+
+      echo -e "${GREEN} Get Regex ${NORMAL}"
+
+      #echo The regex matches!
+      #echo $BASH_REMATCH
+      #echo ${BASH_REMATCH[1]}
+      #echo ${BASH_REMATCH[2]}
+      #echo ${BASH_REMATCH[3]}
+      #echo ${BASH_REMATCH[4]}
+      #echo ${BASH_REMATCH[5]}
+
+      URL='x'
+      DB_HOST=${BASH_REMATCH[3]}
+      DB_PORT=${BASH_REMATCH[4]}
+      DB_NAME=${BASH_REMATCH[5]}
+      DB_USER=${BASH_REMATCH[1]}
+      DB_PASS=${BASH_REMATCH[2]}
+
+      echo -e "${BLUE} URL: ${URL} ${NORMAL}"
+      echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
+      echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
+      echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
+      echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
+      echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
+
+  else
+      echo -e "${RED} Regex Failed ${NORMAL}"
+  fi
+
+else 
+    echo -e "${RED} JAWSDB Failed ${NORMAL}"
+fi
+
+#
+
+if [ -n ${MAGE_DB_HOST} ]; then
+
+    echo -e "${GREEN} Get ENV ${NORMAL}"
+
+    URL='x'
+    DB_HOST=${MAGE_DB_HOST}
+    DB_PORT=${MAGE_DB_PORT}
+    DB_NAME=${MAGE_DB_NAME}
+    DB_USER=${MAGE_DB_USER}
+    DB_PASS=${MAGE_DB_PASS}
+
+    echo -e "${BLUE} URL: ${URL} ${NORMAL}"
+    echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
+    echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
+    echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
+    echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
+    echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
+
+else 
+    echo -e "${RED} ENV Failed ${NORMAL}"
+fi
+
+#
 
 }
 
@@ -458,11 +483,13 @@ bash ./mage list-upgrades
 
 }
 
-# Parse the command line arguments
+#
+
+
 
 #
 
-for ARGUMENT in "$@"
+for ARGUMENT in "$@" # Parse the command line arguments
 do
 
     KEY=$(echo $ARGUMENT | cut -f1 -d=)
