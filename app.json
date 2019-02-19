@@ -55,7 +55,6 @@
         "scheduler:standard",
         "semaphore:nano",
         "codeship:free",
-        "fixie-socks:grip",
         "sendgrid:starter"
     ],
     "buildpacks":[

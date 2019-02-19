@@ -110,9 +110,9 @@ echo -e "${ONYELLOW} ps - report a snapshot of the current processes ${NORMAL}"
 
 ps aux
 
-echo -e "${ONYELLOW} will list all the commands you could run. ${NORMAL}"
+#echo -e "${ONYELLOW} will list all the commands you could run. ${NORMAL}"
 
-compgen -A function -abck
+#compgen -A function -abck
 
 }
 
