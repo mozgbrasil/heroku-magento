@@ -261,6 +261,8 @@ echo -e "${ONWHITE} - ${NORMAL}"
 # -n String, True if the length of String is nonzero.
 # -z String, True if string is empty.
 
+echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
+
 if [ -n ${DB_HOST} ]; then # Arguments localhost
 
     echo -e "${RED} DB_HOST ${NORMAL}"
@@ -282,12 +284,12 @@ if [ -n ${DB_HOST} ]; then # Arguments localhost
 
     #
 
-    read -e -p "Confirme que os dados acima está correto [S/N]: " -i "S" accept
+    #read -e -p "Confirme que os dados acima está correto [S/N]: " -i "S" accept
 
-    if [ "$accept" != "S" ];then
-        echo -e "${RED} Processo abortado ${NORMAL}"
-        exit
-    fi
+    #if [ "$accept" != "S" ];then
+    #    echo -e "${RED} Processo abortado ${NORMAL}"
+    #    exit
+    #fi
 
     #
 
@@ -534,8 +536,14 @@ bash ./mage list-upgrades
 
 #
 
-for ARGUMENT in "$@" # Parse the command line arguments
-do
+if [ "$#" -eq  "0" ]
+   then
+     echo "No arguments supplied"
+ else
+     echo "Arguments supplied"
+
+    for ARGUMENT in "$@" # Parse the command line arguments
+    do
 
     KEY=$(echo $ARGUMENT | cut -f1 -d=)
     VALUE=$(echo $ARGUMENT | cut -f2 -d=)
@@ -545,16 +553,32 @@ do
     echo $VALUE
 
     case "$KEY" in
-            --db_host) DB_HOST=${VALUE} ;;
-            --db_port) DB_PORT=${VALUE} ;;
-            --db_name) DB_NAME=${VALUE} ;;
-            --db_user) DB_USER=${VALUE} ;;
-            --db_pass) DB_PASS=${VALUE} ;;
-            --url) URL=${VALUE} ;;
-            *)
+    --db_host)
+      DB_HOST=${VALUE}
+    ;;
+    --db_port)
+      DB_PORT=${VALUE}
+    ;;
+    --db_name)
+      DB_NAME=${VALUE}
+    ;;
+    --db_user)
+      DB_USER=${VALUE}
+    ;;
+    --db_pass)
+      DB_PASS=${VALUE}
+    ;;
+    --url)
+      URL=${VALUE}
+    ;;
+    *)
+      NADA='NULO'
+    ;;
     esac
 
-done
+    done
+
+fi  
 
 #
 
