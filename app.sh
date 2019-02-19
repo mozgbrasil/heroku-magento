@@ -121,7 +121,8 @@ echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} postdeploy () ${NORMAL}"
 
-magento_sample_data_install
+#magento_sample_data_install
+magento_install
 
 }
 
@@ -195,8 +196,6 @@ magento_sample_data_install () {
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} magento_sample_data_install () ${NORMAL}"
-
-check_in_database
 
 magento_sample_data
 
@@ -400,6 +399,10 @@ echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} magento_sample_data () ${NORMAL}"
 
+echo -e "${ONYELLOW} check_in_database ${NORMAL}"
+
+check_in_database
+
 FILE_CACHE=$FOLDER_CACHE'/magento-sample-data-1.9.2.4-fix.tar.gz'
 
 echo -e "${ONYELLOW} ${FILE_CACHE} ${NORMAL}"
@@ -409,8 +412,7 @@ if [ -f "$FILE_CACHE" ];then
     cp $FILE_CACHE .
 else
     echo -e "${ONYELLOW} Arquivo não se encontra em cache ${NORMAL}"
-    wget -q https://ufpr.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
-
+    wget https://ufpr.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
     if [ -d "$FOLDER_CACHE" ]; then
       cp magento-sample-data-1.9.2.4-fix.tar.gz $FOLDER_CACHE
     fi
@@ -441,6 +443,8 @@ magento_install () {
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} magento_install () ${NORMAL}"
+
+echo -e "${ONYELLOW} check_in_database ${NORMAL}"
 
 check_in_database
 
