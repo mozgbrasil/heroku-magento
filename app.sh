@@ -637,6 +637,18 @@ case $1 in
         echo
         ;;
 
+    dot_profile)
+        echo
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        functionBefore
+          dot_profile
+        functionAfter
+        echo
+        echo "${BOLD} . ${NORMAL}"
+        echo
+        ;;
+
     *|help)
         echo
         echo "${BOLD} . ${NORMAL}"
