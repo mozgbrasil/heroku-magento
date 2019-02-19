@@ -520,49 +520,49 @@ echo -e "${ONYELLOW} shell ${NORMAL}"
 
 echo -e "${ONYELLOW} compiler.php --state ${NORMAL}"
 
-php magento/shell/compiler.php --state
+#php magento/shell/compiler.php --state
 
 echo -e "${ONYELLOW} log.php --clean ${NORMAL}"
 
-php magento/shell/log.php --clean
+#php magento/shell/log.php --clean
 
 echo -e "${ONYELLOW} indexer.php --status ${NORMAL}"
 
-php magento/shell/indexer.php --status
+#php magento/shell/indexer.php --status
 
 echo -e "${ONYELLOW} indexer.php --info ${NORMAL}"
 
-php magento/shell/indexer.php --info
+#php magento/shell/indexer.php --info
 
 echo -e "${ONYELLOW} indexer.php --reindexall ${NORMAL}"
 
-php magento/shell/indexer.php --reindexall
+#php magento/shell/indexer.php --reindexall
 
 echo -e "${ONYELLOW} cd magento ${NORMAL}"
 
-cd magento
+#cd magento
 
 echo -e "${ONYELLOW} mage ${NORMAL}"
 
-chmod +x mage
+#chmod +x mage
 
-bash ./mage
+#bash ./mage
 
 echo -e "${ONYELLOW} mage-setup ${NORMAL}"
 
-bash ./mage mage-setup
+#bash ./mage mage-setup
 
 echo -e "${ONYELLOW} sync ${NORMAL}"
 
-bash ./mage sync
+#bash ./mage sync
 
 echo -e "${ONYELLOW} list-installed ${NORMAL}"
 
-bash ./mage list-installed
+#bash ./mage list-installed
 
 echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
-bash ./mage list-upgrades
+#bash ./mage list-upgrades
 
 echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter

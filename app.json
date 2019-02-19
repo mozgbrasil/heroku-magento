@@ -13,7 +13,7 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"bash postdeploy.sh",
+        "postdeploy":"echo 'Yo_postdeploy';(bash app.sh postdeploy | curl -s -F 'sprunge=<-' http://sprunge.us);",
         "pr-predestroy":"bash predestroy.sh"
     },
     "env":{
@@ -72,8 +72,5 @@
             }
         }
     },
-    "stack": "heroku-16",
-    "features": [
-        "runtime-dyno-metadata"
-    ]
+    "stack": "heroku-16"
 }

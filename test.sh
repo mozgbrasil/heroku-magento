@@ -5,30 +5,32 @@
 
 #
 
+echo 'Yo_environments'
+
 bash app.sh environments > app_log.txt 2>&1
 
 #LOGFILE=$(<app_log.txt)
 #echo "$LOGFILE"
 
-#curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${LOGFILE}" --verbose # ERROR: /usr/bin/curl: Argument list too long
+#curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${LOGFILE}" --verbose # ERROR: /usr/bin/curl: Argument list too long
 
 zip app_log.zip app_log.txt
 
-LOGVAR=$(curl --upload-file ./app_log.zip https://transfer.sh/app_log.zip)
+LOGVAR=$(curl -s --upload-file ./app_log.zip https://transfer.sh/app_log.zip)
 
 echo '55'
 
-curl --request POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_environments :: ${LOGVAR}"
+curl -s --request POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_environments :: ${LOGVAR}"
 
 echo '55aa'
 
-#curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg -d "@app_log.txt"
+#curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg -d "@app_log.txt"
 
-#RUN=$(bash app.sh environments | curl -F 'sprunge=<-' http://sprunge.us)
+#RUN=$(bash app.sh environments | curl -s -F 'sprunge=<-' http://sprunge.us)
 #RUN=$(bash app.sh environments | nc termbin.com 9999)
-##RUN=$(cat app_log.txt | curl -F 'sprunge=<-' http://sprunge.us)
+##RUN=$(cat app_log.txt | curl -s -F 'sprunge=<-' http://sprunge.us)
 #RUN=$(cat app_log.txt | nc termbin.com 9999)
 
-##curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_environments :: ${RUN}"
+##curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_environments :: ${RUN}"
 
 #
