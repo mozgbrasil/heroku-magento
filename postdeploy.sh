@@ -5,12 +5,7 @@
 
 #
 
-#RUN=$(bash app.sh postdeploy | curl -F 'sprunge=<-' http://sprunge.us)
-#RUN=$(bash app.sh postdeploy | nc termbin.com 9999)
-
-#curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_predestroy ::${RUN}"
-
-bash app.sh -x postdeploy > app_log.txt 2>&1
+bash app.sh postdeploy > app_log.txt 2>&1
 
 #LOGFILE=$(<app_log.txt)
 #echo "$LOGFILE"
@@ -24,6 +19,8 @@ bash app.sh -x postdeploy > app_log.txt 2>&1
 
 #curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg -d "@app_log.txt"
 
+#RUN=$(bash app.sh postdeploy | curl -F 'sprunge=<-' http://sprunge.us)
+#RUN=$(bash app.sh postdeploy | nc termbin.com 9999)
 RUN=$(cat ~/app_log.txt | nc termbin.com 9999)
 
 curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_postdeploy :: ${RUN}"
