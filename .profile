@@ -18,11 +18,7 @@ zip app_log.zip app_log.txt
 
 LOGVAR=$(curl -s --upload-file ./app_log.zip https://transfer.sh/app_log.zip)
 
-echo '55'
-
 curl -s --request POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_profile :: ${LOGVAR}"
-
-echo '55aa'
 
 #curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg -d "@app_log.txt"
 
@@ -30,8 +26,6 @@ echo '55aa'
 #RUN=$(bash app.sh _profile | nc termbin.com 9999)
 ##RUN=$(cat app_log.txt | curl -s -F 'sprunge=<-' http://sprunge.us)
 #RUN=$(cat app_log.txt | nc termbin.com 9999)
-
-(echo 'xx' | nc termbin.com 9999) | curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_profile :: $*"
 
 ##curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_profile :: ${RUN}"
 
