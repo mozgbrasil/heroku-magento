@@ -18,7 +18,7 @@
     },
     "env":{
         "MAGE_DB_HOST":{
-          "description": "",
+          "description": "aws-rds-db-instance.cvk6jh7epmda.sa-east-1.rds.amazonaws.com",
           "value": ""
         },
         "MAGE_DB_PORT":{
@@ -27,15 +27,15 @@
         },
         "MAGE_DB_NAME":{
           "description": "",
-          "value": ""
+          "value": "db_heroku_mage1"
         },
         "MAGE_DB_USER":{
           "description": "",
-          "value": ""
+          "value": "u_heroku_mage1"
         },
         "MAGE_DB_PASS":{
           "description": "",
-          "value": ""
+          "value": "p_heroku_mage1"
         },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",

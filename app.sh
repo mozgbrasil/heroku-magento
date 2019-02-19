@@ -82,11 +82,11 @@ functionAfter() {
 
 }
 
-default () {
+showVars () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "Default"
+echo -e "showVars"
 
 echo -e "${ONYELLOW} date ${NORMAL}"
 
@@ -527,6 +527,7 @@ case $1 in
         echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
         functionBefore ##
         echo "${BOLD} 2/3 | >>> ...${NORMAL}"
+        showVars
         postdeploy
         echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
         functionAfter ##
@@ -539,7 +540,7 @@ case $1 in
         echo "${BOLD} 1/3 | functionBefore...${NORMAL}"
         functionBefore ##
         echo "${BOLD} 2/3 | >>> ...${NORMAL}"
-        default
+        showVars
         echo "${BOLD} 3/3 | functionAfter...${NORMAL}"
         functionAfter ##
         echo
