@@ -30,8 +30,10 @@ BASE_PATH_USER=~
 FOLDER_CACHE=$BASE_PATH_USER'/dados/softwares'
 
 # Define text styles
-BOLD=`tput bold`
-NORMAL=`tput sgr0`
+#BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
+#NORMAL=`tput sgr0`
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
 
 # Reset
 RESETCOLOR='\e[0m'       # Text Reset
@@ -410,6 +412,7 @@ if [ -f "$FILE_CACHE" ];then
     cp $FILE_CACHE .
 else
     echo -e "${ONYELLOW} Arquivo não se encontra em cache ${NORMAL}"
+
     wget https://ufpr.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
 
     if [ -d "$FOLDER_CACHE" ]; then
