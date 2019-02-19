@@ -14,11 +14,11 @@ bash app.sh teardown > app_log.txt 2>&1
 
 #curl --request POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${LOGFILE}" --verbose # ERROR: /usr/bin/curl: Argument list too long
 
-#LOGVAR=$(curl --upload-file ./app_log.txt https://transfer.sh/app_log.txt)
+LOGVAR=$(curl --upload-file ./app_log.txt https://transfer.sh/app_log.txt)
 #echo "$LOGVAR"
 
-#curl --request POST 'https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg' --data $LOGVAR
+curl --request POST 'https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg' --data $LOGVAR
 
-curl -d "@app_log.txt" -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg
+#curl -d "@app_log.txt" -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg
 
 #

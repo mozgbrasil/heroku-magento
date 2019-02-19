@@ -85,7 +85,7 @@ showVars () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "showVars"
+echo -e "showVars ()"
 
 echo -e "${ONYELLOW} date ${NORMAL}"
 
@@ -105,9 +105,9 @@ echo -e "${ONYELLOW} printenv - print all or part of environment ${NORMAL}"
 
 printenv
 
-echo -e "${ONYELLOW} ps - report a snapshot of the current processes ${NORMAL}"
+#echo -e "${ONYELLOW} ps - report a snapshot of the current processes ${NORMAL}"
 
-ps aux
+#ps aux
 
 #echo -e "${ONYELLOW} will list all the commands you could run. ${NORMAL}"
 
