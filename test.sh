@@ -7,18 +7,8 @@
 
 echo 'Yo_environments'
 
-bash app.sh testi > app_log.txt 2>&1
+RUN=$(bash app.sh -x testt | curl -F 'sprunge=<-' http://sprunge.us)
 
-#LOGFILE=$(<app_log.txt)
-#echo "$LOGFILE"
-
-#curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${LOGFILE}" --verbose # ERROR: /usr/bin/curl: Argument list too long
-
-LOGVAR=$(curl --upload-file ./app_log.txt https://transfer.sh/app_log.txt)
-#echo "$LOGVAR"
-
-curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data $LOGVAR
-
-#curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg -d "@app_log.txt"
+curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${RUN}"
 
 #
