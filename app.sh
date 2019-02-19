@@ -32,8 +32,10 @@ FOLDER_CACHE=$BASE_PATH_USER'/dados/softwares'
 # Define text styles
 #BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
 #NORMAL=`tput sgr0`
-BOLD=$(tput bold)
-NORMAL=$(tput sgr0)
+#BOLD=$(tput bold)
+#NORMAL=$(tput sgr0)
+BOLD=''
+NORMAL=''
 
 # Reset
 RESETCOLOR='\e[0m'       # Text Reset
