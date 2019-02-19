@@ -72,5 +72,8 @@
             }
         }
     },
-    "stack": "heroku-16"
+    "stack": "heroku-16",
+    "labs": [
+        "runtime-dyno-metadata"
+    ],
 }
