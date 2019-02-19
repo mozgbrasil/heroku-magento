@@ -21,9 +21,9 @@ bash app.sh environments > app_log.txt 2>&1
 
 #RUN=$(bash app.sh environments | curl -F 'sprunge=<-' http://sprunge.us)
 #RUN=$(bash app.sh environments | nc termbin.com 9999)
-RUN=$(cat app_log.txt | curl -F 'sprunge=<-' http://sprunge.us)
+##RUN=$(cat app_log.txt | curl -F 'sprunge=<-' http://sprunge.us)
 #RUN=$(cat app_log.txt | nc termbin.com 9999)
 
-curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_environments :: ${RUN}"
+##curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_environments :: ${RUN}"
 
 #

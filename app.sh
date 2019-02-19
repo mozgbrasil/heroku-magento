@@ -70,6 +70,9 @@ DATE_PT_BR=$(date '+%d/%m/%Y %H:%M:%S')
 functionBefore() {
 DATA_HORA_INICIAL=$(date '+%d/%m/%Y %H:%M:%S')
 DATA_HORA_EN_US=$(date '+%Y-%m-%d %H:%M:%S')
+echo
+echo "${BOLD} DATA_HORA_INICIAL: $DATA_HORA_INICIAL ${NORMAL}"
+echo
 }
 
 functionAfter() {
