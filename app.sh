@@ -279,8 +279,8 @@ else
         echo -e "${RED} Regex Failed ${NORMAL}"
     fi
 
-    if [ -z "$MAGE_DB_HOST" ]
-    then
+    if [ -z ${MAGE_DB_HOST} ]; then
+
         echo -e "${GREEN} Get env MAGE_DB_HOST ${NORMAL}"
 
         DB_HOST=$MAGE_DB_HOST
