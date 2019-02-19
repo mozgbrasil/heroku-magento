@@ -91,6 +91,16 @@ curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data "${RET
 
 }
 
+postdeploy () {
+
+echo -e "${ONWHITE} - ${NORMAL}"
+
+echo -e "${ONYELLOW} postdeploy ${NORMAL}"
+
+magento_sample_data_install
+
+}
+
 check_in_database () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
@@ -330,7 +340,7 @@ echo -e "${ONYELLOW} Aplicando permissões ${NORMAL}"
 
 #chmod 777 -R .
 
-echo -e "${ONYELLOW} Instalando o Magento ${NORMAL}"
+echo -e "${ONYELLOW} Magento Install ${NORMAL}"
 
 php -f magento/install.php -- \
 --license_agreement_accepted "yes" \
@@ -352,6 +362,8 @@ php -f magento/install.php -- \
 --admin_email "user@example.com" \
 --admin_username "admin" \
 --admin_password "123456a"
+
+echo -e "${ONYELLOW} Magento Run ${NORMAL}"
 
 php magento/index.php
 

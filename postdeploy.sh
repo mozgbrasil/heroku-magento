@@ -7,7 +7,7 @@
 
 echo 'Yo_postdeploy'
 
-bash app.sh magento_sample_data_install >> app_log.txt
+bash app.sh postdeploy >> app_log.txt
 
 LOGGI=$(curl --upload-file ./app_log.txt https://transfer.sh/app_log.txt)
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2acac6da420efb17035b07883f8b7639",
+    "content-hash": "0c0f88b54977e70323de7b55d23d732e",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -3404,35 +3404,6 @@
                 "replace"
             ],
             "time": "2016-02-13T23:25:14+00:00"
-        },
-        {
-            "name": "rossigee/config-envvars",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rossigee/magento-config-envvars.git",
-                "reference": "9576e43b1b44a4ab3cfd6df59fdb380678c25fe2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rossigee/magento-config-envvars/zipball/9576e43b1b44a4ab3cfd6df59fdb380678c25fe2",
-                "reference": "9576e43b1b44a4ab3cfd6df59fdb380678c25fe2",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "3.*"
-            },
-            "type": "magento-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Adds the possibility to use environment variables in the local.xml file to make multiple deployments easier.",
-            "homepage": "https://github.com/rossigee/magento-config-envvars",
-            "support": {
-                "source": "https://github.com/rossigee/magento-config-envvars/tree/1.0.6",
-                "issues": "https://github.com/rossigee/magento-config-envvars/issues"
-            },
-            "time": "2017-12-04T10:53:03+00:00"
         },
         {
             "name": "sebastian/diff",

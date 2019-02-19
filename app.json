@@ -18,20 +18,20 @@
     },
     "env":{
         "MAGE_DB_HOST":{
-          "description": "https://github.com/rossigee/magento-config-envvars",
-          "value": "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306"
+          "description": "",
+          "value": ""
         },
         "MAGE_DB_USER":{
           "description": "",
-          "value": "seg9wu3lywh64pr8"
+          "value": ""
         },
         "MAGE_DB_PASS":{
           "description": "",
-          "value": "00001111122222"
+          "value": ""
         },
         "MAGE_DB_NAME":{
           "description": "",
-          "value": "xd8ki6rwckxvre61"
+          "value": ""
         },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",
