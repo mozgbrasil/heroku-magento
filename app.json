@@ -18,8 +18,8 @@
     },
     "env":{
         "MAGE_DB_HOST":{
-          "description": "aws-rds-db-instance.cvk6jh7epmda.sa-east-1.rds.amazonaws.com",
-          "value": ""
+          "description": "",
+          "value": "aws-rds-db-instance.cvk6jh7epmda.sa-east-1.rds.amazonaws.com"
         },
         "MAGE_DB_PORT":{
           "description": "",
