@@ -45,7 +45,6 @@
     "image":"heroku/php",
     "addons":[
         "trevor:trial",
-        "jawsdb:kitefin",
         "cleardb:ignite",
         "heroku-postgresql:hobby-dev",
         "timber-logging:free",
