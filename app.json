@@ -21,15 +21,19 @@
           "description": "",
           "value": ""
         },
+        "MAGE_DB_PORT":{
+          "description": "",
+          "value": ""
+        },
+        "MAGE_DB_NAME":{
+          "description": "",
+          "value": ""
+        },
         "MAGE_DB_USER":{
           "description": "",
           "value": ""
         },
         "MAGE_DB_PASS":{
-          "description": "",
-          "value": ""
-        },
-        "MAGE_DB_NAME":{
           "description": "",
           "value": ""
         },

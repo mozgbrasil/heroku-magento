@@ -65,6 +65,8 @@ DATE_PT_BR=$(date '+%d/%m/%Y %H:%M:%S')
 
 default () {
 
+echo -e "${ONWHITE} - ${NORMAL}"
+
 echo -e "Default"
 
 ARRAY=([0]="05/07/2017 12:16:22" [1]=$1 [2]=`pwd` [3]=`ls` [4]=`printenv` )
@@ -234,6 +236,9 @@ else
 
     if [[ $JAWSDB_URL =~ $REGEX_EXPR ]]
     then
+
+        echo -e "${GREEN} Get Regex JAWSDB_URL ${NORMAL}"
+
         #echo The regex matches!
         #echo $BASH_REMATCH
         #echo ${BASH_REMATCH[1]}
@@ -256,7 +261,28 @@ else
         echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
 
     else
-        echo -e "${RED} Unable to parse STRING from config ${NORMAL}"
+        echo -e "${RED} Regex Failed ${NORMAL}"
+    fi
+
+    if [ -z "$MAGE_DB_HOST" ]
+    then
+        echo -e "${GREEN} Get env MAGE_DB_HOST ${NORMAL}"
+
+        DB_HOST=$MAGE_DB_HOST
+        DB_PORT=$MAGE_DB_PORT
+        DB_NAME=$MAGE_DB_NAME
+        DB_USER=$MAGE_DB_USER
+        DB_PASS=$MAGE_DB_PASS
+
+        echo -e "${BLUE} URL: ${URL} ${NORMAL}"
+        echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
+        echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
+        echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
+        echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
+        echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
+
+    else 
+        echo -e "${RED} ENV Failed ${NORMAL}"
     fi
 
 fi
