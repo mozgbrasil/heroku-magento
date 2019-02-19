@@ -412,7 +412,7 @@ else
     echo -e "${ONYELLOW} Arquivo não se encontra em cache ${NORMAL}"
     wget https://ufpr.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
 
-    if [ -d "$FOLDER_CACHE" ];then
+    if [ -d "$FOLDER_CACHE" ]; then
 
       cp magento-sample-data-1.9.2.4-fix.tar.gz $FOLDER_CACHE
 
@@ -422,7 +422,7 @@ fi
 
 echo -e "${ONYELLOW} Descompactando arquivo ${NORMAL}"
 
-tar xvzf magento-sample-data-1.9.2.4-fix.tar.gz
+tar xzf magento-sample-data-1.9.2.4-fix.tar.gz
 
 echo -e "${ONYELLOW} Copiando arquivos ${NORMAL}"
 
