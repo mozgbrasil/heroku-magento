@@ -84,6 +84,8 @@ echo
 showVars () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
+echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "showVars ()"
 
@@ -113,16 +115,26 @@ printenv
 
 #compgen -A function -abck
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionAfter
+echo -e "${ONWHITE} - ${NORMAL}"
+
 }
 
 postdeploy () {
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} postdeploy () ${NORMAL}"
 
 #magento_sample_data_install
 magento_install
+
+echo -e "${ONWHITE} - ${NORMAL}"
+functionAfter
+echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
@@ -140,6 +152,8 @@ check_out_database
 
 download_install () {
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} download_install () ${NORMAL}"
@@ -194,6 +208,8 @@ magento_sample_data_install
 magento_sample_data_install () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
+echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} magento_sample_data_install () ${NORMAL}"
 
@@ -201,10 +217,16 @@ magento_sample_data
 
 magento_install
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionAfter
+echo -e "${ONWHITE} - ${NORMAL}"
+
 }
 
 dot_profile () {
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} dot_profile () ${NORMAL}"
@@ -247,6 +269,10 @@ sed -i -e "s/{{db_init_statemants}}/<![CDATA[SET NAMES utf8]]>/" app/etc/local.x
 sed -i -e "s/{{session_save}}/<![CDATA[db]]>/" app/etc/local.xml
 
 sed -i -e "s/{{admin_frontname}}/<![CDATA[admin]]>/" app/etc/local.xml
+
+echo -e "${ONWHITE} - ${NORMAL}"
+functionAfter
+echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
@@ -441,6 +467,8 @@ rm -fr magento-sample-data-1.9.2.4-fix.tar.gz magento-sample-data-1.9.2.4
 magento_install () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
+echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} magento_install () ${NORMAL}"
 
@@ -533,6 +561,10 @@ echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
 bash ./mage list-upgrades
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionAfter
+echo -e "${ONWHITE} - ${NORMAL}"
+
 }
 
 #
@@ -592,9 +624,7 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-        functionBefore
           download_install
-        functionAfter
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
@@ -604,9 +634,7 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-        functionBefore
           magento_sample_data_install
-        functionAfter
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
@@ -616,9 +644,7 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-        functionBefore
           magento_install
-        functionAfter
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
@@ -628,10 +654,8 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-        functionBefore
           showVars
           postdeploy
-        functionAfter
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
@@ -641,9 +665,7 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-        functionBefore
           dot_profile
-        functionAfter
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
@@ -653,9 +675,7 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-        functionBefore
           showVars
-        functionAfter
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
