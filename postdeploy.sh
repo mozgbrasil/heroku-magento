@@ -16,7 +16,11 @@ zip app_log.zip app_log.txt
 
 LOGVAR=$(curl --upload-file ./app_log.zip https://transfer.sh/app_log.zip)
 
-curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data $LOGVAR
+echo '55'
+
+curl --request POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "Yo_postdeploy :: ${LOGVAR}"
+
+echo '55aa'
 
 #curl -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg -d "@app_log.txt"
 
