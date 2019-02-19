@@ -75,5 +75,5 @@
     "stack": "heroku-16",
     "labs": [
         "runtime-dyno-metadata"
-    ],
+    ]
 }
