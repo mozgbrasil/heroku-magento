@@ -46,6 +46,155 @@ Clique no botão "View"
 
 Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento para utilizar a plataforma
 
+---
+
+## Deploy to **Heroku**
+
+<img align="right" width="100px" height="auto" src="https://cdn.worldvectorlogo.com/logos/heroku.svg" alt="Heroku">
+
+Heroku is a free hosting service for hosting small projects. Easy setup and deploy from the command line via _git_.
+
+###### Pros
+
+* Easy setup
+* Free
+
+###### Cons
+
+* App has to sleep a couple of hours every day.
+* "Powers down" after 30 mins of inactivity. Starts back up when you visit the site but it takes a few extra seconds. Can maybe be solved with [**Kaffeine**](http://kaffeine.herokuapp.com/)
+
+---
+
+### Install Heroku
+
+1 . [Create your database](#create-your-database)
+
+2 . Create an account on <br/>[https://heroku.com](https://heroku.com)
+
+3 . Install the Heroku CLI on your computer: <br/>[https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
+
+4 . Connect the Heroku CLI to your account by writing the following command in your terminal and follow the instructions on the command line:
+```bash
+heroku login
+```
+
+5 . Then create a remote heroku project, kinda like creating a git repository on GitHub. This will create a project on Heroku with a random name. If you want to name your app you have to supply your own name like `heroku create project-name`:
+```bash
+heroku create project-name
+```
+
+6 . Push your app to __Heroku__ (you will see a wall of code)
+```bash
+git push heroku master
+```
+
+7 . Visit your newly create app by opening it via heroku:
+```bash
+heroku open
+```
+
+8 . For debugging if something went wrong:
+```bash
+heroku logs --tail
+```
+
+---
+
+## Deploy to **now**
+
+1 . [Create your database](#create-your-database)
+
+2 . Install now cli-tool globally
+```bash
+npm install -g now
+```
+
+3 . Run the `now` command in this folder/repo where your project is. If you run it for the first time, you will be prompted to login, after login, run the command again:
+```
+now --public --docker
+```
+_`--public` is to skip the prompt telling you that you will open source your project if you deploy it to now_
+
+4 . The URL will be copied automatically and you can just paste it into your browser.
+
+5. **Optional**: Rename the deployment:
+```bash
+now alias https://your-deployed-name.now.sh new-name
+```
+_first argument is the deployed site, second argument is the new name to give it_
+
+---
+
+## Deploy to **Azure**
+
+<img align="right" width="100px" height="auto" src="https://docs.microsoft.com/en-us/azure/media/index/azure-germany.svg" alt="Azure">
+
+You can also use _Microsoft Azure_ to deploy a smaller app for free to the Azure platform. The service is not as easy as _Heroku_ and you might go insane because the documentation is really really bad at some times and it's hard to troubleshoot.
+
+The **pros** are that on _Azure_ the app **will not be forced to sleep**. It will sleep automatically on inactivity but you can just visit it and it will start up.
+
+## Installation
+
+1 . Create a Microsoft Account that you can use on Azure: </br>
+https://azure.microsoft.com/
+
+2 . Install the `azure-cli`: <br/>
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
+_This might cause some trouble, you will see. Remember to restart your terminal or maybe your computer if the commands after this does not work_
+
+3 . Login to the service via the command line and follow the instructions: </br>
+```bash
+az login
+```
+_You will be prompted to visit a website and paste a confirmation code_
+
+
+## Create the project
+
+1 . [Create your database](#create-your-database)
+
+2 . Create a resource group for your projects, replace the name to whatever you want just be sure to use the same group name in all commands to come. You only have to create the resource group and service plan once, then you can use the same group and plan for all other apps you create if you like.
+
+```bash
+az group create -n NameOfResourceGroup -l northeurope
+```
+
+3 . Create a service plan:
+
+```
+az appservice plan create -n NameOfServicePlan -g NameOfResourceGroup
+```
+
+4 . Create the actual app and supply the service plan and resource group
+```bash
+az webapp create -n NameOfApp -g NameOfResourceGroup --plan NameOfServicePlan
+```
+
+5 . Create deployment details. A git-repo is not created automatically so we have to create it with a command:
+
+```bash
+az webapp deployment source config-local-git -n NameOfApp -g NameOfResourceGroup
+```
+
+6 . From the command in step 5 you should get a **url** in return. Copy this url and add it as a remote to your local git project, for example:
+
+```bash
+git remote add azure https://jesperorb@deploy-testing.scm.azurewebsites.net/deploy-testing.git
+```
+
+7 . Now you should be able to push your app:
+```bash
+git push azure master
+```
+
+You should be prompted to supply a password, this should be the pass to your account. If not, you can choose a different password at your Dashboard for Azure: **[https://portal.azure.com/](https://portal.azure.com/)**
+
+Choose **App Services** in the sidebar to the left and the choose your app in the list that appears then go to **Deployment Credentials** to change your password for deployment:<br>
+https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
+
+---
+
 ## Implantando em ambiente local
 
 
@@ -62,6 +211,64 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 --db_pass=""
 
 ```
+
+  # Deploy :: https://dashboard.heroku.com/apps
+
+  heroku --version
+  heroku --help 
+
+  heroku regions
+
+  heroku apps:create --region us --stack heroku-16
+
+  git --version
+  git config --list
+
+  git var -l
+  git status
+  git add --all
+  git commit -m "commit automatic"
+  git status
+  git push -fu origin master --verbose
+
+  git remote -v
+  git push heroku master --verbose
+
+  heroku open
+  heroku logs --tail
+
+  heroku run 'pwd && ls -lah' --app heroku-magento-mozg
+
+  heroku ps
+
+  #heroku pipelines:setup pipe-magento mozgbrasil/heroku-magento
+
+  heroku apps
+  heroku apps:destroy --app=heroku-magento-mozg --confirm=heroku-magento-mozg
+  heroku apps:errors
+  heroku apps:info
+
+  heroku plugins
+  heroku plugins:install api
+  heroku plugins:install heroku-builds
+
+  # Deploy :: https://zeit.co/dashboard
+  # https://github.com/zeit/now-examples
+  # https://zeit.co/docs/v2/deployments/official-builders/python-now-python/
+
+  # [CONTRA:] Não permite uso de sub pastas e não tem automação do Composer
+
+  now ls
+
+  now
+
+  #now billing ls
+  #now logs magento-mozg-gqbu0x061.now.sh
+
+  now rm magento-mozg
+
+  # xx
+
 
 ## Magento
 

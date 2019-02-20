@@ -19,7 +19,7 @@
     "env":{
         "MAGE_DB_HOST":{
           "description": "",
-          "value": "aws-rds-db-instance.cvk6jh7epmda.sa-east-1.rds.amazonaws.com"
+          "value": "db4free.net"
         },
         "MAGE_DB_PORT":{
           "description": "",
@@ -27,15 +27,15 @@
         },
         "MAGE_DB_NAME":{
           "description": "",
-          "value": "db_heroku_mage1"
+          "value": "hdb4free"
         },
         "MAGE_DB_USER":{
           "description": "",
-          "value": "u_heroku_mage1"
+          "value": "udb4free"
         },
         "MAGE_DB_PASS":{
           "description": "",
-          "value": "p_heroku_mage1"
+          "value": "sdb4free"
         },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",

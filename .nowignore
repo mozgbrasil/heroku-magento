@@ -1,0 +1,7 @@
+node_modules
+*.dev.md
+/magento
+/vendor
+addon-manifest.json
+tests/backdoor.php
+app_log.txt

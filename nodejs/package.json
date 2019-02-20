@@ -1,0 +1,25 @@
+{
+  "name": "@mozg/magento-mozg",
+  "version": "1.0.0",
+  "description": "@mozg/magento-mozg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mozgbrasil/mozgbrasil.github.io.git"
+  },
+  "keywords": [],
+  "author": "Marcio dos Santos Amorim",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/mozgbrasil/mozgbrasil.github.io/issues"
+  },
+  "homepage": "http://mozg.com.br/",
+  "dependencies": {
+    "anchor-js": "^4.0.0"
+  },
+  "devDependencies": {
+  }
+}

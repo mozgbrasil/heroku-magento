@@ -1,0 +1,16 @@
+{
+  "name": "magento-mozg",
+  "version": 2,
+  "public": true,
+  "regions": ["all"],
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" },
+    { "src": "static/**", "use": "@now/static" },
+    { "src": "go/*.go", "use": "@now/go" },
+    { "src": "bash/*.sh", "use": "@now/bash" },
+    { "src": "nodejs/*.js", "use": "@now/node" },
+    { "src": "php-7/*.php", "use": "@now/php" },
+    { "src": "python/*.py", "use": "@now/python", "config": { "maxLambdaSize": "10mb" } },
+    { "src": "mdx-deck/*.mdx", "use": "@now/mdx-deck" }
+  ]
+}
