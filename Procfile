@@ -1,4 +1,4 @@
-release: bash release-tasks.sh
+release: bash release-tasks.sh release
 web: vendor/bin/heroku-php-apache2
-worker: echo "#@@# Running worker"
-urgentworker: echo "#@@# Running urgentworker"
+worker: bash release-tasks.sh worker
+urgentworker: bash release-tasks.sh urgentworker

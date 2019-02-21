@@ -233,7 +233,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git status
   git push -fu origin master
 
-  git remote -v
+  #git remote -v
   git push heroku master
   
 
