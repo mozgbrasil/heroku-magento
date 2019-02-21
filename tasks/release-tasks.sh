@@ -5,7 +5,7 @@
 
 #
 
-echo "#@@# Running: $1"
+echo "#@@# Running: $1 "
 
 bash app.sh $1 >> app_log.txt 2>&1
 
