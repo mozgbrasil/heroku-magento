@@ -227,6 +227,8 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git status
   git push -fu origin master
 
+  heroku apps:create magento-mozg --region us --stack heroku-16
+  # Via Web criar o Deploy via Github
 
   git remote -v
   git push heroku master
@@ -238,7 +240,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   heroku regions
   heroku sessions
 
-  heroku apps:create heroku-magento-mozg --region us --stack heroku-16
+  
   heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
 
   heroku apps
