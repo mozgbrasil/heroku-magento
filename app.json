@@ -13,8 +13,8 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"bash postdeploy.sh",
-        "pr-predestroy":"bash predestroy.sh"
+        "postdeploy":"bash tasks/postdeploy.sh",
+        "pr-predestroy":"bash tasks/predestroy.sh"
     },
     "env":{
         "MAGE_DB_HOST":{

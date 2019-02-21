@@ -246,7 +246,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
 
   heroku apps
-  heroku apps:destroy --app=heroku-magento-staging --confirm=heroku-magento-staging
+  heroku apps:destroy --app=boiling-spire-33216 --confirm=boiling-spire-33216
   heroku apps:destroy --app=magento-mozg --confirm=magento-mozg
   heroku apps:destroy --app=magento-mozg-staging --confirm=magento-mozg-staging
   heroku apps:errors
