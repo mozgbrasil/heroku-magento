@@ -213,13 +213,14 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 ```
 
   # Deploy :: https://dashboard.heroku.com/apps
+  # https://devcenter.heroku.com/articles/git#deploying-code
 
   heroku --version
   heroku --help 
 
   heroku regions
 
-  heroku apps:create --region us --stack heroku-16
+  heroku apps:create heroku-magento-mozg --region us --stack heroku-16
 
   git --version
   git config --list
@@ -227,12 +228,12 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git var -l
   git status
   git add --all
-  git commit -m "commit automatic $(date '+%d/%m/%Y %H:%M:%S')"
+  git commit -m "commit - $(date '+%d/%m/%Y %H:%M:%S')"
   git status
-  git push -fu origin master --verbose
+  git push -fu origin master
 
   git remote -v
-  git push heroku master --verbose
+  git push heroku master
 
   heroku open
   heroku logs --tail
