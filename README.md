@@ -225,6 +225,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git --version
   git config --list
 
+
   git var -l
   git status
   git add --all
@@ -234,10 +235,12 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
   git remote -v
   git push heroku master
+  
 
   heroku open
   heroku logs --tail
 
+  heroku releases
   heroku run 'pwd && ls -lah' --app heroku-magento-mozg
 
   heroku ps
