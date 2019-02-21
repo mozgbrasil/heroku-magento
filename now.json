@@ -4,13 +4,12 @@
   "public": true,
   "regions": ["all"],
   "builds": [
-    { "src": "package.json", "use": "@now/static-build" },
-    { "src": "static/**", "use": "@now/static" },
-    { "src": "go/*.go", "use": "@now/go" },
-    { "src": "bash/*.sh", "use": "@now/bash" },
-    { "src": "nodejs/*.js", "use": "@now/node" },
-    { "src": "php-7/*.php", "use": "@now/php" },
-    { "src": "python/*.py", "use": "@now/python", "config": { "maxLambdaSize": "10mb" } },
-    { "src": "mdx-deck/*.mdx", "use": "@now/mdx-deck" }
+    { "src": "now/static/**", "use": "@now/static" },
+    { "src": "now/go/*.go", "use": "@now/go" },
+    { "src": "now/bash/*.sh", "use": "@now/bash" },
+    { "src": "now/nodejs/*.js", "use": "@now/node" },
+    { "src": "now/php-7/*.php", "use": "@now/php" },
+    { "src": "now/python/*.py", "use": "@now/python", "config": { "maxLambdaSize": "10mb" } },
+    { "src": "now/mdx-deck/*.mdx", "use": "@now/mdx-deck" }
   ]
 }

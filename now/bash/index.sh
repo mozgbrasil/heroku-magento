@@ -28,4 +28,8 @@ handler() {
   cd .. && ls -lah && composer update
   echo ""
 
+
+  echo "$ compgen -A function -abck"
+  compgen -A function -abck
+
 }

@@ -227,7 +227,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git var -l
   git status
   git add --all
-  git commit -m "commit automatic"
+  git commit -m "commit automatic $(date '+%d/%m/%Y %H:%M:%S')"
   git status
   git push -fu origin master --verbose
 
