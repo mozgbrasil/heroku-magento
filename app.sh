@@ -353,7 +353,7 @@ if [ -n ${JAWSDB_URL} ]; then
       #echo ${BASH_REMATCH[4]}
       #echo ${BASH_REMATCH[5]}
 
-      URL="https://heroku-magento-mozg.herokuapp.com/"
+      URL=""
       DB_HOST=${BASH_REMATCH[3]}
       DB_PORT=${BASH_REMATCH[4]}
       DB_NAME=${BASH_REMATCH[5]}
@@ -381,7 +381,7 @@ if [ -n ${MAGE_DB_HOST} ]; then
 
     echo -e "${GREEN} Get ENV ${NORMAL}"
 
-    URL="https://heroku-magento-mozg.herokuapp.com/"
+    URL=""
     DB_HOST=${MAGE_DB_HOST}
     DB_PORT=${MAGE_DB_PORT}
     DB_NAME=${MAGE_DB_NAME}
@@ -686,3 +686,5 @@ case $1 in
 esac
 
 #
+
+curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data $1

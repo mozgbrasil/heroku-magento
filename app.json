@@ -13,8 +13,8 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"echo 'Yo_postdeploy';bash app.sh _postdeploy >> log_postdeploy.txt;",
-        "pr-predestroy":"echo 'Yo_predestroy';bash app.sh _predestroy >> log_predestroy.txt;"
+        "postdeploy":"echo 'Yo_postdeploy';bash app.sh _postdeploy >> app_log.txt 2>&1;",
+        "pr-predestroy":"echo 'Yo_predestroy';bash app.sh _predestroy >> app_log.txt 2>&1;"
     },
     "env":{
         "MAGE_DB_HOST":{
@@ -68,9 +68,12 @@
     "environments":{
         "test":{
             "scripts":{
-                "test":"echo 'Yo_environments';bash app.sh _environments >> log_scripts.txt;"
+                "test":"echo 'Yo_environments';bash app.sh _environments >> app_log.txt 2>&1;"
             }
         }
     },
-    "stack": "heroku-16"
+    "stack": "heroku-16",
+    "features": [
+        "runtime-dyno-metadata"
+    ]
 }
