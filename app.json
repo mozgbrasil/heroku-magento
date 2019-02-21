@@ -1,5 +1,5 @@
 {
-    "name":"mozgbrasil/heroku-magento",
+    "name":"magento-mozg",
     "description":"Magento App",
     "keywords":[
         "app.json",
@@ -13,8 +13,8 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"echo '#@@# Running: postdeploy json';bash app.sh _postdeploy >> app_log.txt 2>&1;",
-        "pr-predestroy":"echo '#@@# Running: predestroy json';bash app.sh _predestroy >> app_log.txt 2>&1;"
+        "postdeploy":"bash postdeploy.sh",
+        "pr-predestroy":"bash predestroy.sh"
     },
     "env":{
         "MAGE_DB_HOST":{
@@ -44,36 +44,9 @@
     },
     "image":"heroku/php",
     "addons":[
-        "trevor:trial",
-        "cleardb:ignite",
-        "heroku-postgresql:hobby-dev",
-        "timber-logging:free",
-        "sumologic:free",
-        "logentries:le_tryit",
-        "logdna:quaco",
-        "librato:development",
-        "scheduler:standard",
-        "semaphore:nano",
-        "codeship:free",
-        "sendgrid:starter"
+        "trevor:trial"
     ],
     "buildpacks":[
-        {
-            "url":"heroku/php"
-        },
-        {
-            "url":"https://github.com/gaumire/heroku-buildpack-mysql"
-        }
     ],
-    "environments":{
-        "test":{
-            "scripts":{
-                "test":"echo '#@@# Running: environments json';bash app.sh _environments >> app_log.txt 2>&1;"
-            }
-        }
-    },
-    "stack": "heroku-16",
-    "features": [
-        "runtime-dyno-metadata"
-    ]
+    "stack": "heroku-16"
 }

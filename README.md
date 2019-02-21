@@ -216,12 +216,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   # https://devcenter.heroku.com/articles/git#deploying-code
 
   heroku --version
-  heroku --help 
-
-  heroku regions
-  heroku sessions
-
-  heroku apps:create heroku-magento-mozg --region us --stack heroku-16
+  heroku --help
 
   git --version
   git config --list
@@ -236,20 +231,28 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git remote -v
   git push heroku master
 
-  heroku open
-  heroku logs --tail --app=pipe-magento
 
   heroku releases
   heroku run 'pwd && ls -lah' --app heroku-magento-mozg
-
   heroku ps
+  heroku regions
+  heroku sessions
 
-  #heroku pipelines:setup pipe-magento mozgbrasil/heroku-magento --yes
+  heroku apps:create heroku-magento-mozg --region us --stack heroku-16
+  heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
 
   heroku apps
-  heroku apps:destroy --app=heroku-magento-mozg --confirm=heroku-magento-mozg
+  heroku apps:destroy --app=heroku-magento-staging --confirm=heroku-magento-staging
+  heroku apps:destroy --app=magento-mozg --confirm=magento-mozg
+  heroku apps:destroy --app=magento-mozg-staging --confirm=magento-mozg-staging
   heroku apps:errors
   heroku apps:info
+
+  heroku open
+  heroku logs --tail --app=pipe-magento-staging
+
+  heroku labs
+  heroku labs:enable app-overview
 
   heroku plugins
   heroku plugins:install api

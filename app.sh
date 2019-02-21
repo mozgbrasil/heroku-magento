@@ -678,7 +678,8 @@ case $1 in
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
-          showVars
+          #showVars
+          echo 'sss'
         echo
         echo "${BOLD} . ${NORMAL}"
         echo
