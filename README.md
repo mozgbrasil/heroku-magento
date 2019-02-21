@@ -219,13 +219,12 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   heroku --help 
 
   heroku regions
+  heroku sessions
 
   heroku apps:create heroku-magento-mozg --region us --stack heroku-16
 
   git --version
   git config --list
-
-
   git var -l
   git status
   git add --all
@@ -234,8 +233,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   git push -fu origin master
 
   #git remote -v
-  git push heroku master
-  
+  #git push heroku master
 
   heroku open
   heroku logs --tail
@@ -245,7 +243,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
   heroku ps
 
-  #heroku pipelines:setup pipe-magento mozgbrasil/heroku-magento
+  #heroku pipelines:setup pipe-magento mozgbrasil/heroku-magento --yes
 
   heroku apps
   heroku apps:destroy --app=heroku-magento-mozg --confirm=heroku-magento-mozg
@@ -255,6 +253,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   heroku plugins
   heroku plugins:install api
   heroku plugins:install heroku-builds
+  heroku plugins:install heroku-releases-retry
 
   # Deploy :: https://zeit.co/dashboard
   # https://github.com/zeit/now-examples

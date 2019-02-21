@@ -7,6 +7,6 @@
 
 echo 'Yo_profile'
 
-bash app.sh _profile >> app_log.txt 2>&1
+bash app.sh _profile >> log_profile.txt
 
 #
