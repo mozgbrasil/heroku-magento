@@ -14,7 +14,7 @@ bash app.sh _postdeploy >> app_log.txt
 
 #curl -s -X POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "${LOGFILE}" --verbose # ERROR: /usr/bin/curl: Argument list too long
 
-LOGVAR=$(curl -s --upload-file ./app_log.zip https://transfer.sh/app_log.txt)
+LOGVAR=$(curl -s --upload-file app_log.txt https://transfer.sh/app_log.txt)
 
 curl -s --request POST https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg --data "#@@# Running: postdeploy : ${LOGVAR}"
 
