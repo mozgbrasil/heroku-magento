@@ -7,6 +7,6 @@
 
 echo '#@@# Running: predestroy'
 
-bash app.sh _predestroy >> app_log.txt 2>&1
+bash app.sh _predestroy >> app_log.txt
 
 #

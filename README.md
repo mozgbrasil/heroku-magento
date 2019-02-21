@@ -214,6 +214,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
   # Deploy :: https://dashboard.heroku.com/apps
   # https://devcenter.heroku.com/articles/git#deploying-code
+  # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
 
   heroku --version
   heroku --help
@@ -234,6 +235,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
   git remote -v
   git push heroku master # Build app
+  heroku run --app heroku-magento-mozg 'bash tasks/postdeploy.sh'
 
 
   heroku releases
@@ -242,13 +244,17 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
   heroku regions
   heroku sessions
 
+
+  heroku ps
+  heroku apps
+
+  curl -n https://api.heroku.com/apps/magento-herokucli/releases/ -H "Accept: application/vnd.heroku+json; version=3"
   
   heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
 
-  heroku apps
-  heroku apps:destroy --app=boiling-spire-33216 --confirm=boiling-spire-33216
+  heroku apps:destroy --app=magento-herokucli --confirm=magento-herokucli
   heroku apps:destroy --app=magento-mozg --confirm=magento-mozg
-  heroku apps:destroy --app=magento-mozg-staging --confirm=magento-mozg-staging
+  heroku apps:destroy --app=magento-mozg-02 --confirm=magento-mozg-02
   heroku apps:errors
   heroku apps:info
 
