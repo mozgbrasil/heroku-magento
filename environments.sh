@@ -5,7 +5,7 @@
 
 #
 
-echo 'Yo_environments'
+echo '#@@# Running: environments bash'
 
 bash app.sh _environments >> app_log.txt 2>&1
 

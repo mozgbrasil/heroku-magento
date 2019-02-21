@@ -5,8 +5,8 @@
 
 #
 
-echo 'Yo_profile'
+echo '#@@# Running: profile'
 
-bash app.sh _profile >> log_profile.txt
+bash app.sh _profile >> app_log.txt 2>&1
 
 #

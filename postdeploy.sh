@@ -5,7 +5,7 @@
 
 #
 
-echo 'Yo_postdeploy'
+echo '#@@# Running: postdeploy'
 
 bash app.sh _postdeploy >> app_log.txt 2>&1
 

@@ -23,13 +23,13 @@
     ],
     "scripts": {
         "post-install-cmd": [
-            "echo '#@@# composer::post-install-cmd'"
+            "echo '#@@# Running: composer::post-install-cmd'"
         ],
         "post-update-cmd": [
-            "echo '#@@# composer::post-update-cmd'"
+            "echo '#@@# Running: composer::post-update-cmd'"
         ],
         "post-create-project-cmd": [
-            "echo '#@@# composer::post-create-project-cmd'"
+            "echo '#@@# Running: composer::post-create-project-cmd'"
         ]
     },
     "extra":{
