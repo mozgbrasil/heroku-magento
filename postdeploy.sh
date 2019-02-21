@@ -7,6 +7,10 @@
 
 echo '#@@# Running: postdeploy'
 
+curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data 'postdeploy111'
+
 bash app.sh _postdeploy >> app_log.txt 2>&1
+
+curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data 'postdeploy222'
 
 #
