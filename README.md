@@ -229,7 +229,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
 
 
-  heroku apps:create magento-mozg --region us --stack heroku-16
+  heroku apps:create magento-herokucli --region us --stack heroku-16
   # Via Web criar o Deploy via Github
 
   git remote -v
