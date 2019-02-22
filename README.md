@@ -225,11 +225,14 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
         git status
         git push -fu origin master
 
-        heroku apps:create heroku-magento-mozg --region us --stack heroku-16
+        heroku apps:create heroku-magento-mozg --buildpack=https://github.com/gaumire/heroku-buildpack-mysql --region us --stack heroku-16 # connectar github
+
+        #heroku buildpacks:add https://github.com/Everlane/heroku-buildpack-mysql.git --app=heroku-magento-mozg
 
         git remote -v
         heroku releases
-        git push heroku master # Building source
+        git push heroku master # Run to create a new release
+
         heroku builds:create --app=heroku-magento-mozg # Deploy
 
         heroku run bash --app=heroku-magento-mozg
