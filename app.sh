@@ -75,7 +75,7 @@ echo
 functionAfter() {
 echo -e "${ONWHITE} - ${NORMAL}"
 echo
-echo -e "${BOLD} ${ONYELLOW} } ${NORMAL}"
+echo -e "${ONYELLOW}}${NORMAL}"
 echo
 echo -e "${ONWHITE} -------- ${NORMAL}"
 }

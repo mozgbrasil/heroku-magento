@@ -212,7 +212,6 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 --db_name="heroku-magento-002" \
 --db_user="root" \
 --db_pass=""
-
 ```
 
     # Deploy :: https://dashboard.heroku.com/apps
