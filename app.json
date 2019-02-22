@@ -47,6 +47,9 @@
         "trevor:trial"
     ],
     "buildpacks":[
+        {
+            "url":"https://github.com/gaumire/heroku-buildpack-mysql"
+        }
     ],
     "stack": "heroku-16"
 }

@@ -228,13 +228,14 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
         heroku apps:create heroku-magento-mozg --region us --stack heroku-16
 
         git remote -v
-        git push heroku master # Build app
+        heroku releases
+        git push heroku master # Building source
+        heroku builds:create --app=heroku-magento-mozg # Deploy
 
         heroku run bash --app=heroku-magento-mozg
             pwd && ls -lah
             whoami
-            cat tasks/postdeploy.sh
-            bash tasks/postdeploy.sh
+            bash -x postdeploy.sh
 
         heroku --version
         heroku ps
@@ -246,14 +247,11 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
         heroku releases
         heroku --help
 
-
         curl -n https://api.heroku.com/apps/heroku-magento-mozg/releases/ -H "Accept: application/vnd.heroku+json; version=3"
         
         #heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
 
-        heroku apps:destroy --app=magento-herokucli --confirm=magento-herokucli
-        heroku apps:destroy --app=magento-mozg --confirm=magento-mozg
-        heroku apps:destroy --app=magento-mozg-02 --confirm=magento-mozg-02
+        heroku apps:destroy --app=heroku-magento-mozg --confirm=heroku-magento-mozg
 
         heroku open
         heroku logs --tail --app=heroku-magento-mozg
