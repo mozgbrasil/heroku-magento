@@ -212,78 +212,79 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
 ```
 
-  # Deploy :: https://dashboard.heroku.com/apps
-  # https://devcenter.heroku.com/articles/git#deploying-code
-  # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
+    # Deploy :: https://dashboard.heroku.com/apps
+    # https://devcenter.heroku.com/articles/git#deploying-code
+    # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
 
-  heroku --version
-  heroku --help
+        git --version
+        git config --list
+        git var -l
+        git status
+        git add --all
+        git commit -m "commit - $(date '+%d/%m/%Y %H:%M:%S')"
+        git status
+        git push -fu origin master
 
-  git --version
-  git config --list
-  git var -l
-  git status
-  git add --all
-  git commit -m "commit - $(date '+%d/%m/%Y %H:%M:%S')"
-  git status
-  git push -fu origin master
+        heroku apps:create heroku-magento-mozg --region us --stack heroku-16
+
+        git remote -v
+        git push heroku master # Build app
+
+        heroku run bash --app=heroku-magento-mozg
+            pwd && ls -lah
+            whoami
+            cat tasks/postdeploy.sh
+            bash tasks/postdeploy.sh
+
+        heroku --version
+        heroku ps
+        heroku regions
+        heroku sessions
+        heroku apps
+        heroku apps:info --app=heroku-magento-mozg
+        heroku apps:errors --app=heroku-magento-mozg
+        heroku releases
+        heroku --help
 
 
-  heroku apps:create heroku-magento-mozg --region us --stack heroku-16
-  # Via Web criar o Deploy via Github
+        curl -n https://api.heroku.com/apps/heroku-magento-mozg/releases/ -H "Accept: application/vnd.heroku+json; version=3"
+        
+        #heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
 
-  git remote -v
-  git push heroku master # Build app
-  heroku run --app heroku-magento-mozg 'bash tasks/postdeploy.sh'
+        heroku apps:destroy --app=magento-herokucli --confirm=magento-herokucli
+        heroku apps:destroy --app=magento-mozg --confirm=magento-mozg
+        heroku apps:destroy --app=magento-mozg-02 --confirm=magento-mozg-02
 
+        heroku open
+        heroku logs --tail --app=heroku-magento-mozg
 
-  heroku releases
-  heroku run 'pwd && ls -lah' --app heroku-magento-mozg
-  heroku ps
-  heroku regions
-  heroku sessions
+        heroku labs
+        heroku labs:enable app-overview
 
+        heroku plugins
+        heroku plugins:install api
+        heroku plugins:install heroku-builds
+            heroku builds:create --app=heroku-magento-mozg
+            heroku builds:output --app=heroku-magento-mozg
+        heroku plugins:install heroku-releases-retry
+            heroku releases:retry --app=heroku-magento-mozg
 
-  heroku ps
-  heroku apps
+    # Deploy :: https://zeit.co/dashboard
+    # https://github.com/zeit/now-examples
+    # https://zeit.co/docs/v2/deployments/official-builders/python-now-python/
 
-  curl -n https://api.heroku.com/apps/magento-herokucli/releases/ -H "Accept: application/vnd.heroku+json; version=3"
-  
-  heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
+    # [CONTRA:] Não permite uso de sub pastas e não tem automação do Composer
 
-  heroku apps:destroy --app=magento-herokucli --confirm=magento-herokucli
-  heroku apps:destroy --app=magento-mozg --confirm=magento-mozg
-  heroku apps:destroy --app=magento-mozg-02 --confirm=magento-mozg-02
-  heroku apps:errors
-  heroku apps:info
+        now ls
 
-  heroku open
-  heroku logs --tail --app=pipe-magento-staging
+        now
 
-  heroku labs
-  heroku labs:enable app-overview
+        #now billing ls
+        #now logs magento-mozg-gqbu0x061.now.sh
 
-  heroku plugins
-  heroku plugins:install api
-  heroku plugins:install heroku-builds
-  heroku plugins:install heroku-releases-retry
+        now rm magento-mozg
 
-  # Deploy :: https://zeit.co/dashboard
-  # https://github.com/zeit/now-examples
-  # https://zeit.co/docs/v2/deployments/official-builders/python-now-python/
-
-  # [CONTRA:] Não permite uso de sub pastas e não tem automação do Composer
-
-  now ls
-
-  now
-
-  #now billing ls
-  #now logs magento-mozg-gqbu0x061.now.sh
-
-  now rm magento-mozg
-
-  # xx
+    # ???
 
 
 ## Magento
