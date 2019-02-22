@@ -215,6 +215,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
     # Deploy :: https://dashboard.heroku.com/apps
     # https://devcenter.heroku.com/articles/git#deploying-code
     # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
+    # 1
 
         git --version
         git config --list
