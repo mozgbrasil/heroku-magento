@@ -235,6 +235,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
         heroku builds:create --app=heroku-magento-mozg # Deploy
 
+        heroku run --app=heroku-magento-mozg 'mysql --version'
         heroku run bash --app=heroku-magento-mozg
             pwd && ls -lah
             whoami && composer --version && php --version && mysql --version && compgen -A function -abck
