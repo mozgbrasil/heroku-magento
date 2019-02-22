@@ -5,8 +5,8 @@
 
 #
 
-echo '#@@# Running: environments bash'
+echo '#@@# Running: profile'
 
-bash app.sh environments
+bash app.sh profile
 
 #

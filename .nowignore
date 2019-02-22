@@ -5,3 +5,4 @@ node_modules
 addon-manifest.json
 tests/backdoor.php
 app_log.txt
+config.txt

@@ -203,10 +203,13 @@ git clone https://github.com/mozgbrasil/heroku-magento
 
 composer update
 
+mysqladmin -h 'mysql' -u 'root' -p status
+mysqladmin -h 'mysql' -u root -p CREATE "heroku-magento-002"
+
 bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magento/magento/' \
 --db_host="mysql" \
 --db_port="3306" \
---db_name="heroku-magento-001" \
+--db_name="heroku-magento-002" \
 --db_user="root" \
 --db_pass=""
 
@@ -246,6 +249,10 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
             pwd && ls -lah
             whoami && composer --version && php --version && mysql --version
             bash -x postdeploy.sh
+
+        heroku config -s --app=heroku-magento-mozg > config.txt # export config app
+        cat config.txt | tr '\n' ' ' | xargs heroku config:set --app=heroku-magento-mozg # import config app
+        heroku config:set $(cat config.txt | sed '/^$/d; /#[[:print:]]*$/d') # import config app
 
         heroku --version
         heroku ps

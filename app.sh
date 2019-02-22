@@ -32,10 +32,10 @@ FOLDER_CACHE=$BASE_PATH_USER'/dados/softwares'
 # Define text styles
 #BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
 #NORMAL=`tput sgr0`
-#BOLD=$(tput bold)
-#NORMAL=$(tput sgr0)
-BOLD=''
-NORMAL=''
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+#BOLD=''
+#NORMAL=''
 
 # Reset
 RESETCOLOR='\e[0m'       # Text Reset
@@ -68,29 +68,22 @@ DATE_PT_BR=$(date '+%d/%m/%Y %H:%M:%S')
 #
 
 functionBefore() {
-DATA_HORA_INICIAL=$(date '+%d/%m/%Y %H:%M:%S')
-DATA_HORA_EN_US=$(date '+%Y-%m-%d %H:%M:%S')
-echo
-echo "${BOLD} DATA_HORA_INICIAL: $DATA_HORA_INICIAL ${NORMAL}"
+echo -e "${ONWHITE} - ${NORMAL}"
 echo
 }
 
 functionAfter() {
-DATA_HORA_FINAL=$(date '+%d/%m/%Y %H:%M:%S')
+echo -e "${ONWHITE} - ${NORMAL}"
 echo
-echo "${BOLD} DATA_HORA_INICIAL: $DATA_HORA_INICIAL ${NORMAL}"
+echo -e "${BOLD} ${ONYELLOW} } ${NORMAL}"
 echo
-echo "${BOLD} DATA_HORA_FINAL: $DATA_HORA_FINAL ${NORMAL}"
-echo
+echo -e "${ONWHITE} -------- ${NORMAL}"
 }
 
 showVars () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "showVars ()"
+echo -e "${ONYELLOW} showVars () { ${NORMAL}"
 
 echo -e "${ONYELLOW} date ${NORMAL}"
 
@@ -118,19 +111,14 @@ printenv
 
 #compgen -A function -abck
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter
-echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
 postdeploy () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} postdeploy () ${NORMAL}"
+echo -e "${ONYELLOW} postdeploy () { ${NORMAL}"
 
 if [ -d "magento" ];then
     echo -e "${ONGREEN} diretório encontrado ${NORMAL}"
@@ -140,31 +128,27 @@ else
     echo -e "${ONYELLOW} diretório NÃO encontrado ${NORMAL}"
 fi
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter
-echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
 check_in_database () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} check_in_database () ${NORMAL}"
+functionBefore
+echo -e "${ONYELLOW} check_in_database () { ${NORMAL}"
 
 get_db_vars
 
 check_out_database
 
+functionAfter
+
 }
 
 download_install () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} download_install () ${NORMAL}"
+echo -e "${ONYELLOW} download_install () { ${NORMAL}"
 
 check_in_database
 
@@ -211,37 +195,31 @@ echo -e "${ONYELLOW} magento_sample_data_install ${NORMAL}"
 
 magento_sample_data_install
 
+functionAfter
+
 }
 
 magento_sample_data_install () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} magento_sample_data_install () ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data_install () { ${NORMAL}"
 
 magento_sample_data
 
 magento_install
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter
-echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
 profile () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
 echo -e "${ONYELLOW} profile () ${NORMAL}"
 
 # https://devcenter.heroku.com/articles/dynos#startup
 
-# export envvars for psql
+# export envvars
 export DB_HOST=${MAGE_DB_HOST}
 export DB_PORT=${MAGE_DB_PORT}
 export DB_NAME=${MAGE_DB_NAME}
@@ -278,33 +256,34 @@ sed -i -e "s/{{session_save}}/<![CDATA[db]]>/" app/etc/local.xml
 
 sed -i -e "s/{{admin_frontname}}/<![CDATA[admin]]>/" app/etc/local.xml
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter
-echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
 get_db_vars () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} get_db_vars () ${NORMAL}"
+functionBefore
+echo -e "${ONYELLOW} get_db_vars () { ${NORMAL}"
 
 # -n String, True if the length of String is nonzero.
 # -z String, True if string is empty.
 
-echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
+echo -e "${ONBLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
 
-if [ -n ${DB_HOST} ]; then # Arguments localhost
+if [ -z $DB_HOST ]; then # Arguments localhost
 
-    echo -e "${RED} DB_HOST ${NORMAL}"
+    echo -e "${RED} DB_HOST Failed ${NORMAL}"
 
-    echo -e "${BLUE} URL: ${URL} ${NORMAL}"
-    echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
-    echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
-    echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
-    echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
-    echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
+else
+
+    echo -e "${ONGREEN} DB_HOST ${NORMAL}"
+
+    echo -e "${GREEN} URL: ${URL} ${NORMAL}"
+    echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
+    echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
+    echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
+    echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
+    echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
 
     echo -e "${ONPURPLE} - ${NORMAL}"
 
@@ -325,17 +304,17 @@ if [ -n ${DB_HOST} ]; then # Arguments localhost
 
     #
 
-else
-
-    echo -e "${RED} DB_HOST Failed ${NORMAL}"
-
 fi
 
 #
 
-if [ -n ${JAWSDB_URL} ]; then
+if [ -z $JAWSDB_URL ]; then
 
-  echo -e "${RED} JAWSDB ${NORMAL}"
+  echo -e "${RED} JAWSDB Failed ${NORMAL}"
+
+else 
+
+  echo -e "${ONGREEN} JAWSDB ${NORMAL}"
 
   # https://regex101.com/r/EeO9HR/2
 
@@ -365,26 +344,28 @@ if [ -n ${JAWSDB_URL} ]; then
       DB_USER=${BASH_REMATCH[1]}
       DB_PASS=${BASH_REMATCH[2]}
 
-      echo -e "${BLUE} URL: ${URL} ${NORMAL}"
-      echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
-      echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
-      echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
-      echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
-      echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
+      echo -e "${GREEN} URL: ${URL} ${NORMAL}"
+      echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
+      echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
+      echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
+      echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
+      echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
 
   else
       echo -e "${RED} Regex Failed ${NORMAL}"
   fi
 
-else 
-    echo -e "${RED} JAWSDB Failed ${NORMAL}"
 fi
 
 #
 
-if [ -n ${MAGE_DB_HOST} ]; then
+if [ -z $MAGE_DB_HOST ]; then
 
-    echo -e "${GREEN} Get ENV ${NORMAL}"
+    echo -e "${RED} ENV Failed ${NORMAL}"
+
+else 
+
+    echo -e "${ONGREEN} Get ENV ${NORMAL}"
 
     URL=""
     DB_HOST=${MAGE_DB_HOST}
@@ -393,26 +374,31 @@ if [ -n ${MAGE_DB_HOST} ]; then
     DB_USER=${MAGE_DB_USER}
     DB_PASS=${MAGE_DB_PASS}
 
-    echo -e "${BLUE} URL: ${URL} ${NORMAL}"
-    echo -e "${BLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
-    echo -e "${BLUE} DB_PORT: ${DB_PORT} ${NORMAL}"
-    echo -e "${BLUE} DB_NAME: ${DB_NAME} ${NORMAL}"
-    echo -e "${BLUE} DB_USER: ${DB_USER} ${NORMAL}"
-    echo -e "${BLUE} DB_PASS: ${DB_PASS} ${NORMAL}"
+    echo -e "${GREEN} URL: ${URL} ${NORMAL}"
+    echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
+    echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
+    echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
+    echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
+    echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
 
-else 
-    echo -e "${RED} ENV Failed ${NORMAL}"
 fi
 
 #
+
+functionAfter
 
 }
 
 check_out_database () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
+echo -e "${ONYELLOW} check_out_database () { ${NORMAL}"
 
-echo -e "${ONYELLOW} check_out_database () ${NORMAL}"
+echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
+echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
+echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
+echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
+echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
 
 MYSQL_RETURN=`mysql -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} -p${DB_PASS} ${DB_NAME} -v -e "SHOW TABLES"`
 
@@ -425,17 +411,14 @@ if [ "$MYSQL_RETURN" == "" ];then
     exit
 fi
 
+functionAfter
+
 }
 
 magento_sample_data () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} magento_sample_data () ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data () { ${NORMAL}"
 
 check_in_database
 
@@ -456,7 +439,7 @@ fi
 
 echo -e "${ONYELLOW} Descompactando arquivo ${NORMAL}"
 
-tar xzf magento-sample-data-1.9.2.4-fix.tar.gz
+tar xvzf magento-sample-data-1.9.2.4-fix.tar.gz
 
 echo -e "${ONYELLOW} Copiando arquivos ${NORMAL}"
 
@@ -472,35 +455,30 @@ echo -e "${ONYELLOW} Removendo arquivos ${NORMAL}"
 
 rm -fr magento-sample-data-1.9.2.4-fix.tar.gz magento-sample-data-1.9.2.4
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter
-echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
 magento_install () {
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionBefore
-echo -e "${ONWHITE} - ${NORMAL}"
-
-echo -e "${ONYELLOW} magento_install () ${NORMAL}"
+echo -e "${ONYELLOW} magento_install () { ${NORMAL}"
 
 check_in_database
 
-echo -e "${ONYELLOW} pwd ${NORMAL}"
+echo -e "${ONYELLOW} cd magento ${NORMAL}"
 
-pwd
-
-ls -lah
+pwd && ls -lah
+cd magento
+pwd && ls -lah
 
 #echo -e "${ONYELLOW} Aplicando permissões ${NORMAL}"
 
 #chmod 777 -R .
 
-echo -e "${ONYELLOW} magento/install.php ${NORMAL}"
+echo -e "${ONYELLOW} install.php ${NORMAL}"
 
-php -f magento/install.php -- \
+php -f install.php -- \
 --license_agreement_accepted "yes" \
 --locale "pt_BR" \
 --timezone "America/Sao_Paulo" \
@@ -523,59 +501,53 @@ php -f magento/install.php -- \
 
 echo -e "${ONYELLOW} magento/index.php ${NORMAL}"
 
-php magento/index.php
+php index.php
 
 echo -e "${ONYELLOW} shell ${NORMAL}"
 
 echo -e "${ONYELLOW} compiler.php --state ${NORMAL}"
 
-#php magento/shell/compiler.php --state
+php shell/compiler.php --state
 
 echo -e "${ONYELLOW} log.php --clean ${NORMAL}"
 
-#php magento/shell/log.php --clean
+php shell/log.php --clean
 
 echo -e "${ONYELLOW} indexer.php --status ${NORMAL}"
 
-#php magento/shell/indexer.php --status
+php shell/indexer.php --status
 
 echo -e "${ONYELLOW} indexer.php --info ${NORMAL}"
 
-#php magento/shell/indexer.php --info
+php shell/indexer.php --info
 
 echo -e "${ONYELLOW} indexer.php --reindexall ${NORMAL}"
 
-#php magento/shell/indexer.php --reindexall
-
-echo -e "${ONYELLOW} cd magento ${NORMAL}"
-
-#cd magento
+php shell/indexer.php --reindexall
 
 echo -e "${ONYELLOW} mage ${NORMAL}"
 
-#chmod +x mage
+chmod +x mage
 
-#bash ./mage
+bash ./mage
 
 echo -e "${ONYELLOW} mage-setup ${NORMAL}"
 
-#bash ./mage mage-setup
+bash ./mage mage-setup
 
 echo -e "${ONYELLOW} sync ${NORMAL}"
 
-#bash ./mage sync
+bash ./mage sync
 
 echo -e "${ONYELLOW} list-installed ${NORMAL}"
 
-#bash ./mage list-installed
+bash ./mage list-installed
 
 echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
-#bash ./mage list-upgrades
+bash ./mage list-upgrades
 
-echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter
-echo -e "${ONWHITE} - ${NORMAL}"
 
 }
 
@@ -597,9 +569,9 @@ if [ "$#" -eq  "0" ]
     KEY=$(echo $ARGUMENT | cut -f1 -d=)
     VALUE=$(echo $ARGUMENT | cut -f2 -d=)
 
-    echo "${BOLD} Arguments... ${NORMAL}"
-    echo $KEY
-    echo $VALUE
+    #echo "${BOLD} Arguments... ${NORMAL}"
+    #echo $KEY
+    #echo $VALUE
 
     case "$KEY" in
     --db_host)
@@ -634,62 +606,38 @@ fi
 case $1 in
     download_install)
         echo
-        echo "${BOLD} . ${NORMAL}"
-        echo
           download_install
-        echo
-        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     magento_sample_data_install)
         echo
-        echo "${BOLD} . ${NORMAL}"
-        echo
           magento_sample_data_install
-        echo
-        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     magento_install)
         echo
-        echo "${BOLD} . ${NORMAL}"
-        echo
           magento_install
-        echo
-        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
-    _postdeploy)
-        echo
-        echo "${BOLD} . ${NORMAL}"
+    postdeploy)
         echo
           showVars
           postdeploy
         echo
-        echo "${BOLD} . ${NORMAL}"
-        echo
         ;;
 
-    _profile)
-        echo
-        echo "${BOLD} . ${NORMAL}"
+    profile)
         echo
           profile
-        echo
-        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 
     *|help)
         echo
-        echo "${BOLD} . ${NORMAL}"
-        echo
           showVars
-        echo
-        echo "${BOLD} . ${NORMAL}"
         echo
         ;;
 esac

@@ -7,7 +7,7 @@
 
 echo '#@@# Running: postdeploy'
 
-bash app.sh _postdeploy
+bash app.sh postdeploy
 
 #RUN=$(bash app.sh _postdeploy)
 #echo "$RUN"

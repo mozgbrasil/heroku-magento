@@ -5,7 +5,7 @@
 
 #
 
-echo "#@@# Running: $1 "
+echo "#@@# Running: release "
 
 bash app.sh release
 
