@@ -132,8 +132,13 @@ echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} postdeploy () ${NORMAL}"
 
-#magento_sample_data_install
-magento_install
+if [ -d "magento" ];then
+    echo -e "${ONGREEN} diretório encontrado ${NORMAL}"
+    #magento_sample_data_install
+    magento_install
+else
+    echo -e "${ONYELLOW} diretório NÃO encontrado ${NORMAL}"
+fi
 
 echo -e "${ONWHITE} - ${NORMAL}"
 functionAfter

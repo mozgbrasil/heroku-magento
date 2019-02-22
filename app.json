@@ -1,5 +1,5 @@
 {
-    "name":"magento-mozg",
+    "name":"mozgbrasil/heroku-magento",
     "description":"Magento App",
     "keywords":[
         "app.json",
@@ -44,12 +44,36 @@
     },
     "image":"heroku/php",
     "addons":[
-        "trevor:trial"
+        "trevor:trial",
+        "cleardb:ignite",
+        "heroku-postgresql:hobby-dev",
+        "timber-logging:free",
+        "sumologic:free",
+        "logentries:le_tryit",
+        "logdna:quaco",
+        "librato:development",
+        "scheduler:standard",
+        "semaphore:nano",
+        "codeship:free",
+        "sendgrid:starter"
     ],
     "buildpacks":[
+        {
+            "url":"heroku/php"
+        },
         {
             "url":"https://github.com/gaumire/heroku-buildpack-mysql"
         }
     ],
-    "stack": "heroku-16"
+    "environments":{
+        "test":{
+            "scripts":{
+                "test":"bash environments.sh"
+            }
+        }
+    },
+    "stack": "heroku-16",
+    "labs": [
+        "runtime-dyno-metadata"
+    ]
 }

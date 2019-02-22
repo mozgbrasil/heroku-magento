@@ -21,17 +21,6 @@
             "url":"https://packages.firegento.com"
         }
     ],
-    "scripts": {
-        "post-install-cmd": [
-            "echo '#@@# Running: composer::post-install-cmd'"
-        ],
-        "post-update-cmd": [
-            "echo '#@@# Running: composer::post-update-cmd'"
-        ],
-        "post-create-project-cmd": [
-            "echo '#@@# Running: composer::post-create-project-cmd'"
-        ]
-    },
     "extra":{
         "magento-root-dir":"magento",
         "magento-deploystrategy": "copy",
