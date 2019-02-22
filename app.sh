@@ -134,8 +134,8 @@ echo -e "${ONYELLOW} postdeploy () ${NORMAL}"
 
 if [ -d "magento" ];then
     echo -e "${ONGREEN} diretório encontrado ${NORMAL}"
-    #magento_sample_data_install
-    magento_install
+    magento_sample_data_install
+    #magento_install
 else
     echo -e "${ONYELLOW} diretório NÃO encontrado ${NORMAL}"
 fi
@@ -431,9 +431,11 @@ magento_sample_data () {
 
 echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} magento_sample_data () ${NORMAL}"
+echo -e "${ONWHITE} - ${NORMAL}"
+functionBefore
+echo -e "${ONWHITE} - ${NORMAL}"
 
-echo -e "${ONYELLOW} check_in_database ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data () ${NORMAL}"
 
 check_in_database
 
@@ -470,6 +472,10 @@ echo -e "${ONYELLOW} Removendo arquivos ${NORMAL}"
 
 rm -fr magento-sample-data-1.9.2.4-fix.tar.gz magento-sample-data-1.9.2.4
 
+echo -e "${ONWHITE} - ${NORMAL}"
+functionAfter
+echo -e "${ONWHITE} - ${NORMAL}"
+
 }
 
 magento_install () {
@@ -479,8 +485,6 @@ functionBefore
 echo -e "${ONWHITE} - ${NORMAL}"
 
 echo -e "${ONYELLOW} magento_install () ${NORMAL}"
-
-echo -e "${ONYELLOW} check_in_database ${NORMAL}"
 
 check_in_database
 
