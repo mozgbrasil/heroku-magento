@@ -217,7 +217,8 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
     # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
     # 1
 
-        touch touch.txt > "commit - $(date '+%d/%m/%Y %H:%M:%S')"
+        touch touch.txt
+        echo "commit - $(date '+%d/%m/%Y %H:%M:%S')" > touch.txt
         git --version
         git config --list
         git var -l
@@ -229,8 +230,10 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
         git remote -v
         heroku releases --app=heroku-magento-mozg
-        git push heroku master # Run to create a new release, only use in Create CLi
+        git push heroku master # Deploy / New release, only use in Create CLi
         heroku releases --app=heroku-magento-mozg
+
+        heroku git:remote --app=heroku-magento-mozg
 
         heroku apps:create heroku-magento-mozg --buildpack=https://github.com/gaumire/heroku-buildpack-mysql --region us --stack heroku-16 # connectar github
 
@@ -238,12 +241,10 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
         heroku builds:create --app=heroku-magento-mozg # Deploy
 
-        heroku run --app=heroku-magento-mozg 'mysql --version'
+        heroku run --app=heroku-magento-mozg 'cat touch.txt'
         heroku run bash --app=heroku-magento-mozg
             pwd && ls -lah
-            cat postdeploy.sh
-            bash -x postdeploy.sh
-            whoami && composer --version && php --version && mysql --version && compgen -A function -abck
+            whoami && composer --version && php --version && mysql --version
             bash -x postdeploy.sh
 
         heroku --version
