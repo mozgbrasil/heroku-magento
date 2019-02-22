@@ -48,7 +48,7 @@
     ],
     "buildpacks":[
         {
-            "url":"https://github.com/gaumire/heroku-buildpack-mysql"
+            "url":"https://github.com/Everlane/heroku-buildpack-mysql"
         }
     ],
     "stack": "heroku-16"

@@ -243,6 +243,7 @@ bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magen
 
         heroku --version
         heroku ps
+        heroku ps:restart
         heroku regions
         heroku sessions
         heroku apps
