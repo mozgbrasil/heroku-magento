@@ -26,8 +26,8 @@
                 "name": "haifeng/magento-sample-data",
                 "version": "1.0.0",
                 "source":{
-                    "url":"git@github.com:haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
-                    "type":"git",
+                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data/archive/master.zip",
+                    "type":"zip",
                     "reference":"master"
                 }
             }
@@ -38,8 +38,8 @@
                 "name": "prasathmani/tinyfilemanager",
                 "version": "1.0.0",
                 "source":{
-                    "url":"git@github.com:prasathmani/tinyfilemanager.git",
-                    "type":"git",
+                    "url":"https://github.com/prasathmani/tinyfilemanager/archive/master.zip",
+                    "type":"zip",
                     "reference":"master"
                 }
             }

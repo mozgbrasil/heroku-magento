@@ -1,6 +1,3 @@
 ############################################
-## Case sensitivity fix for Magento 1.6.2.0, Fix: ERR_TOO_MANY_REDIRECTS
-SetEnvIf HTTPS On HTTPS=on
-
 # enable directory browsing
 Options +Indexes
