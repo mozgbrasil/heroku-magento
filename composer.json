@@ -19,30 +19,6 @@
         {
             "type":"composer",
             "url":"https://packages.firegento.com"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "haifeng/magento-sample-data",
-                "version": "1.0.0",
-                "source":{
-                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data/archive/master.zip",
-                    "type":"zip",
-                    "reference":"master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "prasathmani/tinyfilemanager",
-                "version": "1.0.0",
-                "source":{
-                    "url":"https://github.com/prasathmani/tinyfilemanager/archive/master.zip",
-                    "type":"zip",
-                    "reference":"master"
-                }
-            }
         }
     ],
     "require": {
