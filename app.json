@@ -19,7 +19,7 @@
     "env":{
         "MAGE_DB_HOST":{
           "description": "",
-          "value": "db4free.net"
+          "value": ""
         },
         "MAGE_DB_PORT":{
           "description": "",
@@ -27,15 +27,15 @@
         },
         "MAGE_DB_NAME":{
           "description": "",
-          "value": "hdb4free"
+          "value": ""
         },
         "MAGE_DB_USER":{
           "description": "",
-          "value": "udb4free"
+          "value": ""
         },
         "MAGE_DB_PASS":{
           "description": "",
-          "value": "sdb4free"
+          "value": ""
         },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",

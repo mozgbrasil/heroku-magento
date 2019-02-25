@@ -19,20 +19,85 @@
         {
             "type":"composer",
             "url":"https://packages.firegento.com"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "haifeng/magento-sample-data",
+                "version": "1.0.0",
+                "source":{
+                    "url":"git@github.com:haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "prasathmani/tinyfilemanager",
+                "version": "1.0.0",
+                "source":{
+                    "url":"git@github.com:prasathmani/tinyfilemanager.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
         }
     ],
-    "extra":{
-        "magento-root-dir":"magento",
-        "magento-deploystrategy": "copy",
-        "magento-force": true
-    },
     "require": {
         "php": ">=5.5.0 <7.3.0",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
+        "n98/magerun": "^1.102",
+        "haifeng/magento-sample-data": "1.0.*",
+        "prasathmani/tinyfilemanager": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
         "mozgbrasil/magento-bundle-php_56": "dev-master"
+    },
+    "extra":{
+        "magento-root-dir":"magento",
+        "magento-deploystrategy": "copy",
+        "magento-force": true
+    },
+    "scripts": {
+        "pre-install-cmd": [
+          "echo '#@@# pre-install-cmd';"
+        ],
+        "post-install-cmd": [
+          "echo '#@@# post-install-cmd';"
+        ],
+        "pre-update-cmd": [
+          "echo '#@@# pre-update-cmd';"
+        ],
+        "post-update-cmd": [
+          "echo '#@@# post-update-cmd';",
+          "php -r \"system('cp -fr '.getcwd().'/vendor/haifeng/magento-sample-data/media/* '.getcwd().'/magento/media/');\"",
+          "php -r \"system('cp -fr '.getcwd().'/vendor/haifeng/magento-sample-data/skin/* '.getcwd().'/magento/skin/');\"",
+          "php -r \"system('bash app.sh magento_config_xml');\""
+        ],
+        "post-status-cmd": [
+          "echo '#@@# post-status-cmd';"
+        ],
+        "pre-archive-cmd": [
+          "echo '#@@# pre-archive-cmd';"
+        ],
+        "post-archive-cmd": [
+          "echo '#@@# post-archive-cmd';"
+        ],
+        "pre-autoload-dump": [
+          "echo '#@@# pre-autoload-dump';"
+        ],
+        "post-autoload-dump": [
+          "echo '#@@# post-autoload-dump';"
+        ],
+        "post-root-package-install": [
+          "echo '#@@# post-root-package-install';"
+        ],
+        "post-create-project-cmd": [
+          "echo '#@@# post-create-project-cmd';"
+        ]
     }
 }

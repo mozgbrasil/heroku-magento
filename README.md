@@ -201,17 +201,7 @@ https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-creden
 ```
 git clone https://github.com/mozgbrasil/heroku-magento
 
-composer update
-
-mysqladmin -h 'mysql' -u 'root' -p status
-mysqladmin -h 'mysql' -u root -p CREATE "heroku-magento-002"
-
-bash app.sh magento_sample_data_install --url='http://localhost.loc/heroku-magento/magento/' \
---db_host="mysql" \
---db_port="3306" \
---db_name="heroku-magento-002" \
---db_user="root" \
---db_pass=""
+composer install -vvv
 ```
 
     # Deploy :: https://dashboard.heroku.com/apps

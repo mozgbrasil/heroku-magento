@@ -16,6 +16,11 @@ if [[ $UID -ne 0 ]]; then
   esac
 fi
 
+
+
+setVars () {
+echo -e "${ONYELLOW} setVars ${NORMAL}"
+
 WICH_7ZA=`which 7za`
 WICH_TAR=`which tar`
 WICH_MYSQL=`which mysql`
@@ -65,6 +70,10 @@ NOW_2_FILE=$(date +%Y-%m-%d_%H-%M-%S)
 DATE_EN_US=$(date '+%Y-%m-%d %H:%M:%S')
 DATE_PT_BR=$(date '+%d/%m/%Y %H:%M:%S')
 
+}
+
+setVars
+
 #
 
 functionBefore() {
@@ -73,11 +82,10 @@ echo
 }
 
 functionAfter() {
-echo -e "${ONWHITE} - ${NORMAL}"
 echo
 echo -e "${ONYELLOW}}${NORMAL}"
 echo
-echo -e "${ONWHITE} -------- ${NORMAL}"
+echo -e "${ONWHITE} - ${NORMAL}"
 }
 
 showVars () {
@@ -139,7 +147,22 @@ echo -e "${ONYELLOW} check_in_database () { ${NORMAL}"
 
 get_db_vars
 
-check_out_database
+echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
+echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
+echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
+echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
+echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
+
+MYSQL_RETURN=`mysql -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} -p${DB_PASS} ${DB_NAME} -v -e "SHOW TABLES"`
+
+echo -e "${ONPURPLE} - ${NORMAL}"
+
+echo $MYSQL_RETURN
+
+if [ "$MYSQL_RETURN" == "" ];then
+    echo -e "${RED} Processo abortado ${NORMAL}"
+    exit
+fi
 
 functionAfter
 
@@ -199,13 +222,24 @@ functionAfter
 
 }
 
+magento_sample_data () {
+
+functionBefore
+echo -e "${ONYELLOW} magento_sample_data () { ${NORMAL}"
+
+magento_sample_data_copy
+magento_sample_data_import
+
+functionAfter
+
+}
+
 magento_sample_data_install () {
 
 functionBefore
 echo -e "${ONYELLOW} magento_sample_data_install () { ${NORMAL}"
 
 magento_sample_data
-
 magento_install
 
 functionAfter
@@ -215,46 +249,68 @@ functionAfter
 profile () {
 
 functionBefore
-echo -e "${ONYELLOW} profile () ${NORMAL}"
+echo -e "${ONYELLOW} profile () { ${NORMAL}"
+
+magento_sample_data_copy
+magento_config_xml
+
+functionAfter
+
+}
+
+magento_config_xml () {
+
+functionBefore
+echo -e "${ONYELLOW} magento_config_xml () { ${NORMAL}"
+
+echo -e "${ONYELLOW} env DB_ ${NORMAL}"
+
+env | grep ^DB_
+
+echo -e "${ONYELLOW} .env ${NORMAL}"
+
+if [ ! -f .env ];then
+
+  echo -e "${ONYELLOW} .env failed ${NORMAL}"
+
+else
+
+  echo -e "${ONYELLOW} .env ok ${NORMAL}"
+
+  export $(cat .env | xargs)
+
+fi
+
+echo -e "${ONYELLOW} env MAGE_DB_ ${NORMAL}"
+
+env | grep ^MAGE_DB_
 
 # https://devcenter.heroku.com/articles/dynos#startup
 
-# export envvars
+echo -e "${ONYELLOW} export envvars${NORMAL}"
+
 export DB_HOST=${MAGE_DB_HOST}
 export DB_PORT=${MAGE_DB_PORT}
 export DB_NAME=${MAGE_DB_NAME}
 export DB_USER=${MAGE_DB_USER}
 export DB_PASS=${MAGE_DB_PASS}
 
-echo '- DB environment variables:'
+echo -e "${ONYELLOW} env DB_ ${NORMAL}"
 
 env | grep ^DB_
 
-echo '- Copy local.xml'
+echo -e "${ONYELLOW} local.xml ${NORMAL}"
 
-cd magento
+# if local not exits delete it
+if [ ! -f app/etc/local.xml ] ; then
 
-cp app/etc/local.xml.template app/etc/local.xml
+    ./vendor/bin/n98-magerun --version
 
-echo '- Populate values'
+    cd magento && pwd && ls
 
-sed -i -e "s/{{key}}/<![CDATA[$MAGENTO_CRYPT_KEY]]>/" app/etc/local.xml
-sed -i -e "s/{{date}}/<![CDATA[Thu, 11 Apr 2019 11:07:01 +0000]]>/" app/etc/local.xml
+   	../vendor/bin/n98-magerun local-config:generate "$DB_HOST:$DB_PORT" "$DB_USER" "$DB_PASS" "$DB_NAME" "files" "admin" "secret" -vvv
 
-sed -i -e "s/{{db_host}}/<![CDATA[$DB_HOST]]>/" app/etc/local.xml
-sed -i -e "s/{{db_user}}/<![CDATA[$DB_USER]]>/" app/etc/local.xml
-sed -i -e "s/{{db_pass}}/<![CDATA[$DB_PASS]]>/" app/etc/local.xml
-sed -i -e "s/{{db_name}}/<![CDATA[$DB_NAME]]>/" app/etc/local.xml
-
-sed -i -e "s/{{db_prefix}}/<![CDATA[]]>/" app/etc/local.xml
-sed -i -e "s/{{db_model}}/<![CDATA[mysql4]]>/" app/etc/local.xml
-sed -i -e "s/{{db_type}}/<![CDATA[pdo_mysql]]>/" app/etc/local.xml
-sed -i -e "s/{{db_pdo_type}}/<![CDATA[]]>/" app/etc/local.xml
-sed -i -e "s/{{db_init_statemants}}/<![CDATA[SET NAMES utf8]]>/" app/etc/local.xml
-
-sed -i -e "s/{{session_save}}/<![CDATA[db]]>/" app/etc/local.xml
-
-sed -i -e "s/{{admin_frontname}}/<![CDATA[admin]]>/" app/etc/local.xml
+fi
 
 functionAfter
 
@@ -389,36 +445,10 @@ functionAfter
 
 }
 
-check_out_database () {
+magento_sample_data_copy () {
 
 functionBefore
-echo -e "${ONYELLOW} check_out_database () { ${NORMAL}"
-
-echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
-echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
-echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
-echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
-echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
-
-MYSQL_RETURN=`mysql -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} -p${DB_PASS} ${DB_NAME} -v -e "SHOW TABLES"`
-
-echo -e "${ONPURPLE} - ${NORMAL}"
-
-echo $MYSQL_RETURN
-
-if [ "$MYSQL_RETURN" == "" ];then
-    echo -e "${RED} Processo abortado ${NORMAL}"
-    exit
-fi
-
-functionAfter
-
-}
-
-magento_sample_data () {
-
-functionBefore
-echo -e "${ONYELLOW} magento_sample_data () { ${NORMAL}"
+echo -e "${ONYELLOW} magento_sample_data_copy () { ${NORMAL}"
 
 check_in_database
 
@@ -446,6 +476,15 @@ echo -e "${ONYELLOW} Copiando arquivos ${NORMAL}"
 cp -fr magento-sample-data-1.9.2.4/media/* magento/media/
 
 cp -fr magento-sample-data-1.9.2.4/skin/* magento/skin/
+
+functionAfter
+
+}
+
+magento_sample_data_import () {
+
+functionBefore
+echo -e "${ONYELLOW} magento_sample_data_import () { ${NORMAL}"
 
 echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
 
@@ -601,46 +640,32 @@ if [ "$#" -eq  "0" ]
 
 fi  
 
+
 #
 
-case $1 in
-    download_install)
-        echo
-          download_install
-        echo
-        ;;
+echo -e "${ONYELLOW} .env loading in the shell ${NORMAL}"
 
-    magento_sample_data_install)
-        echo
-          magento_sample_data_install
-        echo
-        ;;
+dotenv () {
+  set -a
+  [ -f .env ] && . .env
+  set +a
+}
 
-    magento_install)
-        echo
-          magento_install
-        echo
-        ;;
+dotenv
 
-    postdeploy)
-        echo
-          showVars
-          postdeploy
-        echo
-        ;;
+echo -e "${ONYELLOW} env MAGE_DB_ ${NORMAL}"
 
-    profile)
-        echo
-          profile
-        echo
-        ;;
+env | grep ^MAGE_DB_
 
-    *|help)
-        echo
-          showVars
-        echo
-        ;;
-esac
+#
+
+METHOD=${1}
+
+if [ "$METHOD" ]; then
+  $METHOD
+else
+  echo -e "${ONRED} abort () { ${NORMAL}"
+fi
 
 #
 
