@@ -299,10 +299,10 @@ echo -e "${ONYELLOW} env DB_ ${NORMAL}"
 
 env | grep ^DB_
 
-echo -e "${ONYELLOW} local.xml ${NORMAL}"
+echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
 # if local not exits delete it
-if [ ! -f app/etc/local.xml ] ; then
+if [ ! -f "magento/app/etc/local.xml" ] ; then
 
     ./vendor/bin/n98-magerun --version
 

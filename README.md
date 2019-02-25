@@ -46,6 +46,113 @@ Clique no botão "View"
 
 Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento para utilizar a plataforma
 
+## Executando em ambiente local
+
+
+  git clone https://github.com/mozgbrasil/heroku-magento
+  cp env-example .env
+  nano .env
+  composer install -vvv
+
+  composer show -s -vvv && composer update -vvv
+
+## Magento
+
+Atualmente um projeto Magento ideal é gerenciado completamente pelo Composer, a fim de obter as seguintes melhorias
+
+- [✓] Magento sempre atualizado;
+- [✓] Módulos sempre atualizados;
+- [✓] Template sempre atualizado;
+
+Precisa de um projeto para ação de Comércio eletrônico, utilize a melhor plataforma, utilize o Magento, entre em contato conosco
+
+Conheça a nossa trajetória de sucesso construída com muito empenho, compromisso, ética e profissionalismo.
+
+[CEREBRUM](https://www.cerebrum.com.br/ "Magento")
+
+Quer aprender sobre Magento, acesse a Comunidade Magento
+
+[Comunidade Magento](https://www.comunidademagento.com.br/ "Magento")
+
+Precisa de módulos para Magento, instale os módulos da MOZG em seu projeto Magento
+
+[MOZG](http://mozg.com.br/catalogo/ "Magento")
+
+## Demonstração
+
+<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/admin/" target="_blank">Clique aqui para acesso ao backend</a>
+
+Utilize os seguintes dados para acesso
+
+    admin / 123456a
+
+<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/" target="_blank">Clique aqui para acesso ao frontend</a>
+
+## Recursos do projeto
+
+No uso do Composer todo os recursos é relacionado no manifesto do projeto
+
+<a href="http://heroku-magento-mozg.herokuapp.com/composer.json" target="_blank">Clique aqui para acesso manifesto do projeto</a>
+
+## Sobre temas
+
+Pelo seguinte repositório
+
+https://www.magentocommerce.com/magento-connect/themes.html
+
+Usando o Magento Connect podemos instalar módulos ou templates no Magento
+
+Mas não é recomendado o uso do Magento Connect quando se trabalha com o Composer, pois pode ser feito download do arquivo composer.json de módulos de terceiros, corrompendo o arquivo composer.json do projeto
+
+Portanto no uso do Composer com o Magento
+
+Podemos usar o seguinte repositório
+
+http://packages.firegento.com/
+
+Onde vemos diversos temas, pesquise por "theme", vemos que essas bibliotecas se trata das mesmas registrada no Magento Connect mas por esse repositório podemos instalar via Composer
+
+Ou
+
+Podemos usar o seguinte repositório
+
+https://packagist.org/
+
+Que se trata do repositório central de bibliotecas disponibilizada via Composer
+
+## Sobre o aplicativo para o Heroku
+
+Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
+
+# Considerações
+
+Se você gostou deste projeto, considere dar um 🌟 ou doar.
+
+- [![pagseguro](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/164x37-doar-assina.gif)](https://pagseguro.uol.com.br/checkout/v2/donation.html?currency=BRL&receiverEmail=mozgbrasil@gmail.com)
+- [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/stargazers)
+- [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/watchers)
+
+Verifique também minha [Conta GitHub](https://github.com/mozgbrasil), onde eu tenho outros artigos e aplicativos que você pode achar interessantes.
+
+## Para contratar 👨💻
+
+Se você quiser que eu o ajude, estou disponível para contratar.
+
+Entre em contato com suporte@mozg.com.br
+
+## Onde seguir
+
+Você pode me seguir nas mídias sociais 🐙😇, nos seguintes locais:
+
+- [GitHub](https://github.com/mozgbrasil)
+- [Twitter](https://twitter.com/mozgbrasil)
+
+## Mais sobre mim
+
+Eu não só vivo no GitHub, eu tento fazer muitas coisas para não me aborrecer 🙃. Para saber mais sobre mim, você pode visitar os seguintes links:
+
+- [Artigos](http://mozg.com.br/artigos/)
+
 ---
 
 ## Deploy to **Heroku**
@@ -194,199 +301,5 @@ Choose **App Services** in the sidebar to the left and the choose your app in th
 https://docs.microsoft.com/en-us/azure/app-service/app-service-deployment-credentials
 
 ---
-
-## Implantando em ambiente local
-
-
-```
-git clone https://github.com/mozgbrasil/heroku-magento
-
-composer install -vvv
-```
-
-    # Deploy :: https://dashboard.heroku.com/apps
-    # https://devcenter.heroku.com/articles/git#deploying-code
-    # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
-    # 
-
-        touch touch.txt
-        echo "commit - $(date '+%d/%m/%Y %H:%M:%S')" > touch.txt
-        git --version
-        git config --list
-        git var -l
-        git status
-        git add --all
-        git commit -m "commit - $(date '+%d/%m/%Y %H:%M:%S')"
-        git status
-        git push -fu origin master
-
-        git remote -v
-        heroku releases --app=heroku-magento-mozg
-        git push heroku master # Deploy / New release, only use in Create CLi
-        heroku releases --app=heroku-magento-mozg
-
-        heroku git:remote --app=heroku-magento-mozg
-
-        heroku apps:create heroku-magento-mozg --buildpack=https://github.com/gaumire/heroku-buildpack-mysql --region us --stack heroku-16 # connectar github
-
-        #heroku buildpacks:add https://github.com/Everlane/heroku-buildpack-mysql.git --app=heroku-magento-mozg
-
-        heroku builds:create --app=heroku-magento-mozg # Deploy
-
-        heroku run --app=heroku-magento-mozg 'cat touch.txt'
-        heroku run bash --app=heroku-magento-mozg
-            pwd && ls -lah
-            whoami && composer --version && php --version && mysql --version
-            bash -x postdeploy.sh
-
-        heroku config -s --app=heroku-magento-mozg > config.txt # export config app
-        cat config.txt | tr '\n' ' ' | xargs heroku config:set --app=heroku-magento-mozg # import config app
-        heroku config:set $(cat config.txt | sed '/^$/d; /#[[:print:]]*$/d') # import config app
-
-        heroku --version
-        heroku ps
-        heroku ps:restart
-        heroku regions
-        heroku sessions
-        heroku apps
-        heroku apps:info --app=heroku-magento-mozg
-        heroku apps:errors --app=heroku-magento-mozg
-        heroku releases
-        heroku --help
-
-        curl -n https://api.heroku.com/apps/heroku-magento-mozg/releases/ -H "Accept: application/vnd.heroku+json; version=3"
-        
-        #heroku pipelines:setup magento-mozg mozgbrasil/heroku-magento --yes
-
-        heroku apps:destroy --app=heroku-magento-mozg --confirm=heroku-magento-mozg
-
-        heroku open
-        heroku logs --tail --app=heroku-magento-mozg
-
-        heroku labs
-        heroku labs:enable app-overview
-
-        heroku plugins
-        heroku plugins:install api
-        heroku plugins:install heroku-builds
-            heroku builds:create --app=heroku-magento-mozg
-            heroku builds:output --app=heroku-magento-mozg
-        heroku plugins:install heroku-releases-retry
-            heroku releases:retry --app=heroku-magento-mozg
-
-    # Deploy :: https://zeit.co/dashboard
-    # https://github.com/zeit/now-examples
-    # https://zeit.co/docs/v2/deployments/official-builders/python-now-python/
-
-    # [CONTRA:] Não permite uso de sub pastas e não tem automação do Composer
-
-        now ls
-
-        now
-
-        #now billing ls
-        #now logs magento-mozg-gqbu0x061.now.sh
-
-        now rm magento-mozg
-
-    # ???
-
-
-## Magento
-
-Atualmente um projeto Magento ideal é gerenciado completamente pelo Composer, a fim de obter as seguintes melhorias
-
-- [✓] Magento sempre atualizado;
-- [✓] Módulos sempre atualizados;
-- [✓] Template sempre atualizado;
-
-Precisa de um projeto para ação de Comércio eletrônico, utilize a melhor plataforma, utilize o Magento, entre em contato conosco
-
-Conheça a nossa trajetória de sucesso construída com muito empenho, compromisso, ética e profissionalismo.
-
-[CEREBRUM](https://www.cerebrum.com.br/ "Magento")
-
-Quer aprender sobre Magento, acesse a Comunidade Magento
-
-[Comunidade Magento](https://www.comunidademagento.com.br/ "Magento")
-
-Precisa de módulos para Magento, instale os módulos da MOZG em seu projeto Magento
-
-[MOZG](http://mozg.com.br/catalogo/ "Magento")
-
-## Demonstração
-
-<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/admin/" target="_blank">Clique aqui para acesso ao backend</a>
-
-Utilize os seguintes dados para acesso
-
-    admin / 123456a
-
-<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/" target="_blank">Clique aqui para acesso ao frontend</a>
-
-## Recursos do projeto
-
-No uso do Composer todo os recursos é relacionado no manifesto do projeto
-
-<a href="http://heroku-magento-mozg.herokuapp.com/composer.json" target="_blank">Clique aqui para acesso manifesto do projeto</a>
-
-## Sobre temas
-
-Pelo seguinte repositório
-
-https://www.magentocommerce.com/magento-connect/themes.html
-
-Usando o Magento Connect podemos instalar módulos ou templates no Magento
-
-Mas não é recomendado o uso do Magento Connect quando se trabalha com o Composer, pois pode ser feito download do arquivo composer.json de módulos de terceiros, corrompendo o arquivo composer.json do projeto
-
-Portanto no uso do Composer com o Magento
-
-Podemos usar o seguinte repositório
-
-http://packages.firegento.com/
-
-Onde vemos diversos temas, pesquise por "theme", vemos que essas bibliotecas se trata das mesmas registrada no Magento Connect mas por esse repositório podemos instalar via Composer
-
-Ou
-
-Podemos usar o seguinte repositório
-
-https://packagist.org/
-
-Que se trata do repositório central de bibliotecas disponibilizada via Composer
-
-## Sobre o aplicativo para o Heroku
-
-Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
-
-# Considerações
-
-Se você gostou deste projeto, considere dar um 🌟 ou doar.
-
-- [![pagseguro](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/164x37-doar-assina.gif)](https://pagseguro.uol.com.br/checkout/v2/donation.html?currency=BRL&receiverEmail=mozgbrasil@gmail.com)
-- [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/stargazers)
-- [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/watchers)
-
-Verifique também minha [Conta GitHub](https://github.com/mozgbrasil), onde eu tenho outros artigos e aplicativos que você pode achar interessantes.
-
-## Para contratar 👨💻
-
-Se você quiser que eu o ajude, estou disponível para contratar.
-
-Entre em contato com suporte@mozg.com.br
-
-## Onde seguir
-
-Você pode me seguir nas mídias sociais 🐙😇, nos seguintes locais:
-
-- [GitHub](https://github.com/mozgbrasil)
-- [Twitter](https://twitter.com/mozgbrasil)
-
-## Mais sobre mim
-
-Eu não só vivo no GitHub, eu tento fazer muitas coisas para não me aborrecer 🙃. Para saber mais sobre mim, você pode visitar os seguintes links:
-
-- [Artigos](http://mozg.com.br/artigos/)
 
 :cat2:

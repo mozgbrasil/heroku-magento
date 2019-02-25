@@ -1,12 +1,18 @@
 {
     "name": "mozgbrasil/heroku-magento",
     "description": "App Heroku Magento ",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "version": "1.0.0",
+    "type": "project",
+    "keywords": [
+      "heroku",
+      "magento",
+      "mozg"
+    ],
+    "homepage": "http://mozg.com.br",
+    "time": "2019-02-25 19:58:34",
     "license": [
         "proprietary"
     ],
-    "type": "project",
     "authors": [
         {
             "name": "Marcio dos Santos Amorim",
@@ -15,18 +21,60 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "email": "suporte@mozg.com.br",
+        "issues": "https://github.com/mozgbrasil/heroku-magento/issues",
+        "forum": "http://mozg.com.br/forums/view/1",
+        "wiki": "http://wiki.mozg.com.br",
+        "irc": "irc://irc.freenode.org/mozgbrasil",
+        "source": "https://github.com/mozgbrasil/heroku-magento",
+        "docs": "https://github.com/mozgbrasil/heroku-magento/wiki",
+        "rss": "http://mozg.com.br/sitemap.xml"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories":[
         {
             "type":"composer",
             "url":"https://packages.firegento.com"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "haifeng/magento-sample-data",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "prasathmani/tinyfilemanager",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/prasathmani/tinyfilemanager.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
         }
     ],
+    "config": {
+        "preferred-install": "dist",
+        "process-timeout": 0
+    },
     "require": {
         "php": ">=5.5.0 <7.3.0",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
         "n98/magerun": "^1.102",
+        "haifeng/magento-sample-data": "1.0.*",
+        "prasathmani/tinyfilemanager": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
         "mozgbrasil/magento-bundle-php_56": "dev-master"
