@@ -207,7 +207,7 @@ composer install -vvv
     # Deploy :: https://dashboard.heroku.com/apps
     # https://devcenter.heroku.com/articles/git#deploying-code
     # https://devcenter.heroku.com/articles/heroku-button#debugging-heroku-buttons
-    # 1
+    # 
 
         touch touch.txt
         echo "commit - $(date '+%d/%m/%Y %H:%M:%S')" > touch.txt
