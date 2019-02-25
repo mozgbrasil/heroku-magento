@@ -27,8 +27,6 @@
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
         "n98/magerun": "^1.102",
-        "haifeng/magento-sample-data": "1.0.*",
-        "prasathmani/tinyfilemanager": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
         "mozgbrasil/magento-bundle-php_56": "dev-master"

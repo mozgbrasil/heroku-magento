@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acd76201eef4f865404f0b34ffeaeb93",
+    "content-hash": "f75bc03c4096f4bda147babce33e05ed",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -1358,16 +1358,6 @@
                 "url"
             ],
             "time": "2018-12-04T20:46:45+00:00"
-        },
-        {
-            "name": "haifeng/magento-sample-data",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
-                "reference": "master"
-            },
-            "type": "library"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3809,16 +3799,6 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
-        },
-        {
-            "name": "prasathmani/tinyfilemanager",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:prasathmani/tinyfilemanager.git",
-                "reference": "master"
-            },
-            "type": "library"
         },
         {
             "name": "psr/container",
