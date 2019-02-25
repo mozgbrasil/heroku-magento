@@ -76,22 +76,22 @@ setVars
 
 #
 
-functionBefore() {
+function_before() {
 echo -e "${ONWHITE} - ${NORMAL}"
 echo
 }
 
-functionAfter() {
+function_after() {
 echo
 echo -e "${ONYELLOW}}${NORMAL}"
 echo
 echo -e "${ONWHITE} - ${NORMAL}"
 }
 
-showVars () {
+show_vars () {
 
-functionBefore
-echo -e "${ONYELLOW} showVars () { ${NORMAL}"
+function_before
+echo -e "${ONYELLOW} show_vars () { ${NORMAL}"
 
 echo -e "${ONYELLOW} date ${NORMAL}"
 
@@ -99,17 +99,19 @@ echo $(date +%Y-%m-%d_%H-%M-%S)
 
 echo -e "${ONYELLOW} pwd ${NORMAL}"
 
-pwd
+pwd && ls
 
-ls
+df -h
+
+du -hsx * | sort -rh | head -10
 
 echo -e "${ONYELLOW} whoami - print effective userid ${NORMAL}"
 
 whoami
 
-echo -e "${ONYELLOW} printenv - print all or part of environment ${NORMAL}"
+##echo -e "${ONYELLOW} printenv - print all or part of environment ${NORMAL}"
 
-printenv
+#printenv
 
 #echo -e "${ONYELLOW} ps - report a snapshot of the current processes ${NORMAL}"
 
@@ -119,13 +121,13 @@ printenv
 
 #compgen -A function -abck
 
-functionAfter
+function_after
 
 }
 
 postdeploy () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} postdeploy () { ${NORMAL}"
 
 if [ -d "magento" ];then
@@ -136,13 +138,13 @@ else
     echo -e "${ONYELLOW} diretório NÃO encontrado ${NORMAL}"
 fi
 
-functionAfter
+function_after
 
 }
 
 check_in_database () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} check_in_database () { ${NORMAL}"
 
 get_db_vars
@@ -164,13 +166,13 @@ if [ "$MYSQL_RETURN" == "" ];then
     exit
 fi
 
-functionAfter
+function_after
 
 }
 
 download_install () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} download_install () { ${NORMAL}"
 
 check_in_database
@@ -218,49 +220,49 @@ echo -e "${ONYELLOW} magento_sample_data_install ${NORMAL}"
 
 magento_sample_data_install
 
-functionAfter
+function_after
 
 }
 
 magento_sample_data () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} magento_sample_data () { ${NORMAL}"
 
 magento_sample_data_copy
 magento_sample_data_import
 
-functionAfter
+function_after
 
 }
 
 magento_sample_data_install () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} magento_sample_data_install () { ${NORMAL}"
 
 magento_sample_data
 magento_install
 
-functionAfter
+function_after
 
 }
 
 profile () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} profile () { ${NORMAL}"
 
 magento_sample_data_copy
 magento_config_xml
 
-functionAfter
+function_after
 
 }
 
 magento_config_xml () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} magento_config_xml () { ${NORMAL}"
 
 echo -e "${ONYELLOW} env DB_ ${NORMAL}"
@@ -312,13 +314,13 @@ if [ ! -f "magento/app/etc/local.xml" ] ; then
 
 fi
 
-functionAfter
+function_after
 
 }
 
 get_db_vars () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} get_db_vars () { ${NORMAL}"
 
 # -n String, True if the length of String is nonzero.
@@ -441,13 +443,13 @@ fi
 
 #
 
-functionAfter
+function_after
 
 }
 
 magento_sample_data_copy () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} magento_sample_data_copy () { ${NORMAL}"
 
 check_in_database
@@ -477,13 +479,13 @@ cp -fr magento-sample-data-1.9.2.4/media/* magento/media/
 
 cp -fr magento-sample-data-1.9.2.4/skin/* magento/skin/
 
-functionAfter
+function_after
 
 }
 
 magento_sample_data_import () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} magento_sample_data_import () { ${NORMAL}"
 
 echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
@@ -494,13 +496,13 @@ echo -e "${ONYELLOW} Removendo arquivos ${NORMAL}"
 
 rm -fr magento-sample-data-1.9.2.4-fix.tar.gz magento-sample-data-1.9.2.4
 
-functionAfter
+function_after
 
 }
 
 magento_install () {
 
-functionBefore
+function_before
 echo -e "${ONYELLOW} magento_install () { ${NORMAL}"
 
 check_in_database
@@ -586,7 +588,7 @@ echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
 bash ./mage list-upgrades
 
-functionAfter
+function_after
 
 }
 

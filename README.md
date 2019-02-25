@@ -48,7 +48,6 @@ Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento 
 
 ## Executando em ambiente local
 
-
   git clone https://github.com/mozgbrasil/heroku-magento
   cp env-example .env
   nano .env

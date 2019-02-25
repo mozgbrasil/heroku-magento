@@ -1,6 +1,6 @@
 {
     "name": "mozgbrasil/heroku-magento",
-    "description": "App Heroku Magento ",
+    "description": "Heroku Magento Mozg",
     "version": "1.0.0",
     "type": "project",
     "keywords": [
@@ -9,7 +9,7 @@
       "mozg"
     ],
     "homepage": "http://mozg.com.br",
-    "time": "2019-02-25 19:58:34",
+    "time": "2019-02-25 19:59:31",
     "license": [
         "proprietary"
     ],
@@ -89,7 +89,8 @@
           "echo '#@@# pre-install-cmd';"
         ],
         "post-install-cmd": [
-          "echo '#@@# post-install-cmd';"
+          "echo '#@@# post-install-cmd';",
+          "php -r \"system('bash app.sh show_vars');\""
         ],
         "pre-update-cmd": [
           "echo '#@@# pre-update-cmd';"
