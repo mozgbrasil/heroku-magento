@@ -52,11 +52,11 @@ Em seguida clique no botão "Deploy"
 
 2. 
 
-Preencha a seguinte URL alterando
+A seguir temos um modelo que ao acessar já preenche os campos previamente, apenas cerfifique se de ter feito as devidas alterações
 
     https://heroku.com/deploy?env[MAGE_URL]=https://???.herokuapp.com/magento/&env[MAGE_DB_HOST]=remotemysql.com&env[MAGE_DB_NAME]=???&env[MAGE_DB_USER]=???&env[MAGE_DB_PASS]=???&template=https://github.com/mozgbrasil/heroku-magento
 
-Ao acessar a URL os campos relativo ao banco de dados já deve estar preenchido
+Acesse a URL informe o nome da aplicação
 
 Em seguida clique no botão "Deploy"
 

@@ -157,11 +157,6 @@ echo -e "${ONPURPLE} - ${NORMAL}"
 
 echo $MYSQL_RETURN
 
-if [ "$MYSQL_RETURN" == "" ];then
-    echo -e "${RED} Processo abortado ${NORMAL}"
-    exit
-fi
-
 function_after
 
 }
@@ -244,13 +239,31 @@ function_after
 
 }
 
-profile () {
+profile () { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
 
 function_before
 echo -e "${ONYELLOW} profile () { ${NORMAL}"
 
-magento_sample_data_copy
-magento_config_xml
+if type mysql >/dev/null 2>&1; then
+    echo "mysql installed"
+
+    #magento_sample_data_copy
+    #magento_sample_data_install
+
+    check_in_database
+    if [ "$MYSQL_RETURN" == "" ];then
+        echo -e "${RED} MYSQL_RETURN vazio ${NORMAL}"
+        magento_sample_data_import_haifeng
+        magento_install
+    fi
+
+    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+      magento_config_xml
+    fi
+
+else
+    echo "mysql not installed"
+fi
 
 function_after
 
@@ -316,9 +329,17 @@ if type mysql >/dev/null 2>&1; then
     echo "mysql installed"
 
     #magento_sample_data_install
-    magento_sample_data_import_haifeng
-    magento_install
-    magento_config_xml
+
+    check_in_database
+    if [ "$MYSQL_RETURN" == "" ];then
+        echo -e "${RED} MYSQL_RETURN vazio ${NORMAL}"
+        magento_sample_data_import_haifeng
+        magento_install
+    fi
+
+    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+      magento_config_xml
+    fi
 
 else
     echo "mysql not installed"
@@ -380,9 +401,6 @@ magento_config_xml () {
 function_before
 echo -e "${ONYELLOW} magento_config_xml () { ${NORMAL}"
 
-# if local not exits delete it
-if [ ! -f "magento/app/etc/local.xml" ] ; then
-
 dot_env
 
 echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
@@ -392,8 +410,6 @@ pwd && ls
 ../vendor/bin/n98-magerun --version
 
 ../vendor/bin/n98-magerun local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
-
-fi
 
 function_after
 
@@ -613,8 +629,6 @@ magento_install () {
 
 function_before
 echo -e "${ONYELLOW} magento_install () { ${NORMAL}"
-
-check_in_database
 
 echo -e "${ONYELLOW} cd magento ${NORMAL}"
 
