@@ -294,9 +294,18 @@ du -hsx vendor/* | sort -rh | head -10
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
 show_vars
-#magento_sample_data_import_haifeng
-magento_install
-magento_config_xml
+
+if [ -d magento ];then
+    echo -e "${ONGREEN} Diretório magento encontrado ${NORMAL}"
+    #magento_sample_data_install
+
+    #magento_sample_data_import_haifeng
+    ##magento_install
+else
+    echo -e "${ONRED} Diretório magento não encontrado ${NORMAL}"
+fi
+
+##magento_config_xml
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
