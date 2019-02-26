@@ -53,7 +53,7 @@ Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento 
   nano .env
   composer install -vvv
 
-  composer show -s -vvv && composer update -vvv
+  composer show -s -vvv && echo -e "_\n" && composer update -vvv && echo -e "_\n" && (du -hsx * | sort -rh | head -10) && echo -e "_\n" && (du -hsx vendor/* | sort -rh | head -10)
 
 ## Magento
 
