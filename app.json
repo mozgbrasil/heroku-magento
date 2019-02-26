@@ -44,18 +44,6 @@
     },
     "image":"heroku/php",
     "addons":[
-        "trevor:trial",
-        "cleardb:ignite",
-        "heroku-postgresql:hobby-dev",
-        "timber-logging:free",
-        "sumologic:free",
-        "logentries:le_tryit",
-        "logdna:quaco",
-        "librato:development",
-        "scheduler:standard",
-        "semaphore:nano",
-        "codeship:free",
-        "sendgrid:starter"
     ],
     "buildpacks":[
         {
