@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright © 2016 Mozg. All rights reserved.
+# Copyright © 2016-2019 Mozg. All rights reserved.
 # See LICENSE.txt for license details.
 
 # Check if we're root, if not show a warning
@@ -15,8 +15,6 @@ if [[ $UID -ne 0 ]]; then
       ;;
   esac
 fi
-
-
 
 setVars () {
 echo -e "${ONYELLOW} setVars ${NORMAL}"
@@ -151,7 +149,7 @@ echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
 echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
 echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
 
-MYSQL_RETURN=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} -v -e "SHOW TABLES"`
+MYSQL_RETURN=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} -N -e "SHOW TABLES"`
 
 echo -e "${ONPURPLE} - ${NORMAL}"
 
@@ -251,14 +249,16 @@ if type mysql >/dev/null 2>&1; then
     #magento_sample_data_install
 
     check_in_database
-    if [ "$MYSQL_RETURN" == "" ];then
+
+    if [ -z "${MYSQL_RETURN}" ]; then
         echo -e "${RED} MYSQL_RETURN vazio ${NORMAL}"
         magento_sample_data_import_haifeng
         magento_install
     fi
 
     if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-      magento_config_xml
+        echo -e "${RED} local vazio ${NORMAL}"
+        magento_config_xml
     fi
 
 else
@@ -270,7 +270,7 @@ function_after
 }
 
 post_update_cmd () { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
-# Na heroku o Mysql 5.1 ainda não foi instalado nesse ponto
+# Na heroku o Mysql ainda não foi instalado nesse ponto
 
 function_before
 echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
@@ -331,7 +331,7 @@ if type mysql >/dev/null 2>&1; then
     #magento_sample_data_install
 
     check_in_database
-    if [ "$MYSQL_RETURN" == "" ];then
+    if [ -z "${MYSQL_RETURN}" ]; then
         echo -e "${RED} MYSQL_RETURN vazio ${NORMAL}"
         magento_sample_data_import_haifeng
         magento_install
