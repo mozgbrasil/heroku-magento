@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0157b46e9f0cad578096f284309f317",
+    "content-hash": "e256eb8058bdf4c2a73d40f6295183ce",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -187,6 +187,16 @@
             ],
             "description": "Komerci is brazilian acquirer solution provided by Rede (former RedeCard) that accept payments with MasterCard, Visa and Diners Club International credit cards on the Internet",
             "time": "2017-05-05T13:16:41+00:00"
+        },
+        {
+            "name": "ceckoslab/CeckosLab_QuickLogin",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ceckoslab/CeckosLab_QuickLogin.git",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "composer/ca-bundle",
@@ -1358,6 +1368,16 @@
                 "url"
             ],
             "time": "2018-12-04T20:46:45+00:00"
+        },
+        {
+            "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "jakub-onderka/php-console-color",

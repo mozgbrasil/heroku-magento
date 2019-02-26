@@ -41,10 +41,34 @@
         {
             "type": "package",
             "package": {
+                "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "prasathmani/tinyfilemanager",
                 "version": "1.0.0",
                 "source":{
                     "url":"https://github.com/prasathmani/tinyfilemanager.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ceckoslab/CeckosLab_QuickLogin",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/ceckoslab/CeckosLab_QuickLogin.git",
                     "type":"git",
                     "reference":"master"
                 }
@@ -61,7 +85,9 @@
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
         "n98/magerun": "^1.102",
+        "haifeng-ben-zhang/magento1.9.2.4-sample-data": "1.0.*",
         "prasathmani/tinyfilemanager": "1.0.*",
+        "ceckoslab/CeckosLab_QuickLogin": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
         "mozgbrasil/magento-bundle-php_56": "dev-master"
@@ -84,8 +110,9 @@
         ],
         "post-update-cmd": [
           "echo '#@@# post-update-cmd';",
-          "php -r \"system('cp -fr '.getcwd().'/vendor/haifeng/magento-sample-data/media/* '.getcwd().'/magento/media/');\"",
-          "php -r \"system('cp -fr '.getcwd().'/vendor/haifeng/magento-sample-data/skin/* '.getcwd().'/magento/skin/');\"",
+          "php -r \"system('cp -fr '.getcwd().'/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* '.getcwd().'/magento/media/');\"",
+          "php -r \"system('cp -fr '.getcwd().'/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* '.getcwd().'/magento/skin/');\"",
+          "php -r \"system('cp -fr '.getcwd().'/vendor/ceckoslab/CeckosLab_QuickLogin/app/* '.getcwd().'/magento/app/');\"",
           "php -r \"system('bash app.sh magento_config_xml');\""
         ],
         "post-status-cmd": [

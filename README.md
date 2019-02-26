@@ -48,12 +48,15 @@ Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento 
 
 ## Executando em ambiente local
 
-  git clone https://github.com/mozgbrasil/heroku-magento
-  cp env-example .env
-  nano .env
-  composer install -vvv
+    git clone https://github.com/mozgbrasil/heroku-magento
+    cp env-example .env
+    nano .env
+    composer install -vvv 
 
-  composer show -s -vvv && echo -e "_\n" && composer update -vvv && echo -e "_\n" && (du -hsx * | sort -rh | head -10) && echo -e "_\n" && (du -hsx vendor/* | sort -rh | head -10)
+    composer show -s -vvv
+    composer update -vvv
+    (du -hsx * | sort -rh | head -10)
+    (du -hsx vendor/* | sort -rh | head -10)
 
 ## Magento
 
