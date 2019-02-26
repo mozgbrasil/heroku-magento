@@ -90,7 +90,7 @@
         ],
         "post-install-cmd": [
           "echo '#@@# post-install-cmd';",
-          "php -r \"system('bash app.sh show_vars');\""
+          "php -r \"system('bash app.sh post_install_cmd');\""
         ],
         "pre-update-cmd": [
           "echo '#@@# pre-update-cmd';"

@@ -260,17 +260,32 @@ function_after
 
 }
 
+post_install_cmd () {
+
+function_before
+echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
+
+post_update_cmd
+
+function_after
+
+}
+
 post_update_cmd () {
 
 function_before
 echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
 
+show_vars
+
 if [ -d "vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data" ]; then
+    echo -e "${ONYELLOW} haifeng-ben-zhang/magento1.9.2.4-sample-data ${NORMAL}"
     cp -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* magento/media/
     cp -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* magento/skin/
 fi
 
 if [ -d "vendor/ceckoslab/CeckosLab_QuickLogin" ]; then
+    echo -e "${ONYELLOW} ceckoslab/CeckosLab_QuickLogin ${NORMAL}"
     cp -fr vendor/ceckoslab/CeckosLab_QuickLogin/app/* magento/app/
 fi
 
