@@ -73,8 +73,9 @@ Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento 
     git clone https://github.com/mozgbrasil/heroku-magento
     cp env-example .env
     nano .env
-    composer install -vvv # local: pre-update-cmd, post-update-cmd: command is executed without a lock file present.
-    composer install -vvv # local: post-install-cmd: command has been executed with a lock file present.
+    composer install -vvv 
+      # 1 local: pre-update-cmd, post-update-cmd: command is executed without a lock file present.
+      # 2 local, heroku 2: post-install-cmd: command has been executed with a lock file present.
 
     composer show -s -vvv
     composer install -vvv

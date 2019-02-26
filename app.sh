@@ -271,6 +271,10 @@ cd ..
 
 pwd && ls && ls vendor
 
+du -hsx * | sort -rh | head -10
+
+du -hsx vendor/* | sort -rh | head -10
+
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
 if [ -d vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data ]; then
@@ -283,6 +287,10 @@ if [ -d vendor/ceckoslab/ceckoslab_quicklogin ]; then
     echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${NORMAL}"
     cp -fr vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
+
+rm -fr vendor/haifeng-ben-zhang vendor/ceckoslab
+
+du -hsx vendor/* | sort -rh | head -10
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
