@@ -17,6 +17,10 @@
         "pr-predestroy":"bash predestroy.sh"
     },
     "env":{
+        "MAGE_URL":{
+          "description": "",
+          "value": ""
+        },
         "MAGE_DB_HOST":{
           "description": "",
           "value": ""
