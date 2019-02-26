@@ -407,9 +407,9 @@ echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
 pwd && ls
 
-../vendor/bin/n98-magerun --version
+vendor/bin/n98-magerun --version
 
-../vendor/bin/n98-magerun local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
+vendor/bin/n98-magerun local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
 
 function_after
 
@@ -727,6 +727,10 @@ bash ./mage list-upgrades
 echo -e "${ONYELLOW} n98-magerun cache:disable ${NORMAL}"
 
 n98-magerun cache:disable --root-dir .
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
+cd ..
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
