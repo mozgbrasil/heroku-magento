@@ -257,13 +257,10 @@ function_after
 }
 
 post_update_cmd () { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
+# Na heroku o Mysql 5.1 ainda não foi instalado nesse ponto
 
 function_before
 echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
-
-show_vars
-magento_sample_data_import_haifeng
-magento_install
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
@@ -288,12 +285,17 @@ if [ -d vendor/ceckoslab/ceckoslab_quicklogin ]; then
     cp -fr vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
+rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
+rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
 rm -fr vendor/haifeng-ben-zhang vendor/ceckoslab
 
 du -hsx vendor/* | sort -rh | head -10
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
+show_vars
+#magento_sample_data_import_haifeng
+magento_install
 magento_config_xml
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
