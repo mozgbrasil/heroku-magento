@@ -3,6 +3,6 @@ node_modules
 /magento
 /vendor
 addon-manifest.json
-tests/backdoor.php
 app_log.txt
+.env
 config.txt
