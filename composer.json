@@ -41,18 +41,6 @@
         {
             "type": "package",
             "package": {
-                "name": "haifeng/magento-sample-data",
-                "version": "1.0.0",
-                "source":{
-                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
-                    "type":"git",
-                    "reference":"master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "prasathmani/tinyfilemanager",
                 "version": "1.0.0",
                 "source":{
@@ -73,7 +61,6 @@
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
         "n98/magerun": "^1.102",
-        "haifeng/magento-sample-data": "1.0.*",
         "prasathmani/tinyfilemanager": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",

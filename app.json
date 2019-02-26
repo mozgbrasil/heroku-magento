@@ -42,6 +42,12 @@
             "generator":"secret"
         }
     },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
     "image":"heroku/php",
     "addons":[
     ],
