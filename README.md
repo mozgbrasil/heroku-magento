@@ -30,15 +30,37 @@ Como a Heroku trabalha com o [Composer](https://getcomposer.org/), todas as depe
 
 Olá
 
-Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) em apenas 1 clique
+Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) de forma fácil
 
 ## Implantando na Heroku
 
-Clique abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/)
+Obtenha seu banco de dados MySQL com 100MB grátis para usar como quiser
+
+[![Deploy to Remotemysql](https://remotemysql.com/)](https://remotemysql.com/)
+
+A implantação na Heroku pode ser feito de qualquer de uma seguintes formas
+
+1. 
+
+Clique no botão abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/pricing) usando o plano gratuito
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/heroku-magento)
 
+Efetue o preenchimento dos campos relativo ao banco de dados
+
 Em seguida clique no botão "Deploy"
+
+2. 
+
+Preencha a seguinte URL alterando
+
+    https://heroku.com/deploy?env[MAGE_DB_HOST]=remotemysql.com&env[MAGE_DB_NAME]=???&env[MAGE_DB_USER]=???&env[MAGE_DB_PASS]=???&template=https://github.com/mozgbrasil/heroku-magento
+
+Ao acessar a URL os campos relativo ao banco de dados já deve estar preenchido
+
+Em seguida clique no botão "Deploy"
+
+.
 
 Ao finalizar a implantação do aplicativo será exibido a mensagem "Your app was successfully deployed."
 

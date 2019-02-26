@@ -623,6 +623,10 @@ echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
 bash ./mage list-upgrades
 
+echo -e "${ONYELLOW} n98-magerun cache:disable ${NORMAL}"
+
+n98-magerun cache:disable --root-dir . -vvv
+
 function_after
 
 }
@@ -706,4 +710,4 @@ fi
 
 # 
 
-curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data $1
+#curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data $1
