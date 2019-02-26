@@ -291,7 +291,14 @@ echo -e "${ONYELLOW} - { ${NORMAL}"
 
 rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
 rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
-rm -fr magento/media/downloadable # Slug Size is Too Large for Heroku
+
+# FIX: Heroku, Compiled slug size: xM is too large (max is 500M).
+
+du -hsx ./magento/media/* | sort -rh | head -10
+rm -fr ./magento/media/downloadable
+du -hsx ./magento/media/catalog/product/* | sort -rh | head -10
+rm -fr ./magento/media/catalog/product/p
+rm -fr ./magento/media/catalog/product/cache
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
@@ -306,7 +313,7 @@ echo -e "${ONYELLOW} - { ${NORMAL}"
 show_vars
 
 if type mysql >/dev/null 2>&1; then
-    echo "mysql installed" >>$LOGLOC
+    echo "mysql installed"
 
     #magento_sample_data_install
     magento_sample_data_import_haifeng
@@ -314,7 +321,7 @@ if type mysql >/dev/null 2>&1; then
     magento_config_xml
 
 else
-    echo "mysql not installed" >>$LOGLOC
+    echo "mysql not installed"
 fi
 
 ##
