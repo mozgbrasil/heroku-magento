@@ -103,7 +103,7 @@ pwd && ls
 
 df -h
 
-du -hsx * | sort -rh | head -10
+du -hsx ./* | sort -rh | head -10
 
 echo -e "${ONYELLOW} whoami - print effective userid ${NORMAL}"
 
@@ -264,9 +264,13 @@ echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
-pwd && ls && ls vendor
+pwd && ls
 
-du -hsx * | sort -rh | head -10
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
+du -hsx ./* | sort -rh | head -10
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
 
 du -hsx vendor/* | sort -rh | head -10
 
@@ -283,9 +287,17 @@ if [ -d vendor/ceckoslab/ceckoslab_quicklogin ]; then
     cp -fr vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
 rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
 rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
-rm -fr vendor/haifeng-ben-zhang vendor/ceckoslab
+rm -fr magento/media/downloadable # Slug Size is Too Large for Heroku
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
+du -hsx ./* | sort -rh | head -10
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
 
 du -hsx vendor/* | sort -rh | head -10
 
@@ -293,16 +305,19 @@ echo -e "${ONYELLOW} - { ${NORMAL}"
 
 show_vars
 
-if [ -d magento ];then
-    echo -e "${ONGREEN} Diretório magento encontrado ${NORMAL}"
+if type mysql >/dev/null 2>&1; then
+    echo "mysql installed" >>$LOGLOC
+
     #magento_sample_data_install
-    ##magento_sample_data_import_haifeng
-    ##magento_install
+    magento_sample_data_import_haifeng
+    magento_install
+    magento_config_xml
+
 else
-    echo -e "${ONRED} Diretório magento não encontrado ${NORMAL}"
+    echo "mysql not installed" >>$LOGLOC
 fi
 
-##magento_config_xml
+##
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
