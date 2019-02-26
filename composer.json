@@ -99,39 +99,39 @@
     },
     "scripts": {
         "pre-update-cmd": [
-          "echo '#@@# pre-update-cmd';"
+          "echo '#@@# pre-update-cmd';pwd;ls;"
         ],
         "post-update-cmd": [
-          "echo '#@@# post-update-cmd';",
+          "echo '#@@# post-update-cmd';pwd;ls;",
           "php -r \"system('bash app.sh post_update_cmd');\""
         ],
         "pre-install-cmd": [
-          "echo '#@@# pre-install-cmd';"
+          "echo '#@@# pre-install-cmd';pwd;ls;"
         ],
         "post-install-cmd": [
-          "echo '#@@# post-install-cmd';",
+          "echo '#@@# post-install-cmd';pwd;ls;",
           "php -r \"system('bash app.sh post_install_cmd');\""
         ],
         "post-status-cmd": [
-          "echo '#@@# post-status-cmd';"
+          "echo '#@@# post-status-cmd';pwd;ls;"
         ],
         "pre-archive-cmd": [
-          "echo '#@@# pre-archive-cmd';"
+          "echo '#@@# pre-archive-cmd';pwd;ls;"
         ],
         "post-archive-cmd": [
-          "echo '#@@# post-archive-cmd';"
+          "echo '#@@# post-archive-cmd';pwd;ls;"
         ],
         "pre-autoload-dump": [
-          "echo '#@@# pre-autoload-dump';"
+          "echo '#@@# pre-autoload-dump';pwd;ls;"
         ],
         "post-autoload-dump": [
-          "echo '#@@# post-autoload-dump';"
+          "echo '#@@# post-autoload-dump';pwd;ls;"
         ],
         "post-root-package-install": [
-          "echo '#@@# post-root-package-install';"
+          "echo '#@@# post-root-package-install';pwd;ls;"
         ],
         "post-create-project-cmd": [
-          "echo '#@@# post-create-project-cmd';"
+          "echo '#@@# post-create-project-cmd';pwd;ls;"
         ]
     }
 }

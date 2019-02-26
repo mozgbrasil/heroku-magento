@@ -298,14 +298,13 @@ show_vars
 if [ -d magento ];then
     echo -e "${ONGREEN} Diretório magento encontrado ${NORMAL}"
     #magento_sample_data_install
-
-    #magento_sample_data_import_haifeng
-    ##magento_install
+    magento_sample_data_import_haifeng
+    magento_install
 else
     echo -e "${ONRED} Diretório magento não encontrado ${NORMAL}"
 fi
 
-##magento_config_xml
+magento_config_xml
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
@@ -318,7 +317,7 @@ post_install_cmd () { # post-install-cmd: occurs after the install command has b
 function_before
 echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
 
-post_update_cmd
+#post_update_cmd
 
 function_after
 
