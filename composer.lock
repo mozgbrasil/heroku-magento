@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0febc36c322397dccd39b4d8eeb0240",
+    "content-hash": "363d7eec52a43b38b93a16d618007051",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -189,7 +189,7 @@
             "time": "2017-05-05T13:16:41+00:00"
         },
         {
-            "name": "ceckoslab/CeckosLab_QuickLogin",
+            "name": "ceckoslab/ceckoslab_quicklogin",
             "version": "1.0.0",
             "source": {
                 "type": "git",
@@ -1370,6 +1370,16 @@
             "time": "2018-12-04T20:46:45+00:00"
         },
         {
+            "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "v0.2",
             "source": {
@@ -2143,7 +2153,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T18:51:44+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-base-php_56",
@@ -2194,7 +2204,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-09-10T15:08:21+00:00"
+            "time": "2018-09-10T12:08:11+00:00"
         },
         {
             "name": "mozgbrasil/magento-boxpacker-php_56",
@@ -2239,7 +2249,7 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2018-08-24T18:51:54+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-bradesco-php_56",
@@ -2281,7 +2291,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T18:52:01+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-brasil-regions",
@@ -2321,7 +2331,7 @@
                 "mozg",
                 "regions"
             ],
-            "time": "2018-01-31T12:38:52+00:00"
+            "time": "2016-05-17T19:09:26+00:00"
         },
         {
             "name": "mozgbrasil/magento-braspag-php_56",
@@ -2363,7 +2373,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-09-03T15:23:24+00:00"
+            "time": "2018-09-03T12:22:38+00:00"
         },
         {
             "name": "mozgbrasil/magento-bundle-php_56",
@@ -2462,7 +2472,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-08-24T18:52:17+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-cielo-php_56",
@@ -2504,7 +2514,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-09-03T15:23:31+00:00"
+            "time": "2018-09-03T12:22:38+00:00"
         },
         {
             "name": "mozgbrasil/magento-clearsale-php_56",
@@ -2545,7 +2555,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-08-24T18:52:27+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-correios-php_56",
@@ -2589,7 +2599,7 @@
                 "sigep",
                 "transporte"
             ],
-            "time": "2018-08-24T18:52:31+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-customer-php_56",
@@ -2632,7 +2642,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-08-24T18:52:36+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-fee-php_56",
@@ -2672,7 +2682,7 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2018-08-24T18:52:41+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-itau-php_56",
@@ -2715,7 +2725,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T18:52:45+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-iwd-all",
@@ -2753,7 +2763,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-01-29T19:57:21+00:00"
+            "time": "2017-01-27T10:28:53+00:00"
         },
         {
             "name": "mozgbrasil/magento-iwd-opc",
@@ -2795,7 +2805,7 @@
                 "mozg",
                 "opc"
             ],
-            "time": "2018-05-29T17:39:58+00:00"
+            "time": "2017-01-27T10:29:01+00:00"
         },
         {
             "name": "mozgbrasil/magento-jadlog-php_56",
@@ -2838,7 +2848,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2018-08-24T18:52:50+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-jamef-php_56",
@@ -2881,7 +2891,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2018-08-24T18:52:54+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-locale-pt_br",
@@ -2921,7 +2931,7 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-04-16T16:20:39+00:00"
+            "time": "2018-04-12T16:06:40+00:00"
         },
         {
             "name": "mozgbrasil/magento-loggi-php_56",
@@ -2965,7 +2975,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2018-08-24T18:52:59+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-pagseguro-php_56",
@@ -3008,7 +3018,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T18:53:03+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-payment-php_56",
@@ -3050,7 +3060,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T18:53:11+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-product-page-shipping-php_56",
@@ -3093,7 +3103,7 @@
                 "shipestimation",
                 "shipping"
             ],
-            "time": "2018-08-24T18:53:17+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-rede-php_56",
@@ -3135,7 +3145,7 @@
                 "payment",
                 "rede"
             ],
-            "time": "2018-08-24T18:53:27+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-redecard-php_56",
@@ -3178,7 +3188,7 @@
                 "payment",
                 "redecard"
             ],
-            "time": "2018-08-24T18:53:22+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/magento-squidfacil-php_56",
@@ -3221,7 +3231,7 @@
                 "squidfacil",
                 "transportadora"
             ],
-            "time": "2018-08-24T18:53:35+00:00"
+            "time": "2018-08-24T15:49:06+00:00"
         },
         {
             "name": "mozgbrasil/php-framework-php_56",
@@ -3313,7 +3323,7 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2018-09-10T14:48:16+00:00"
+            "time": "2018-09-10T11:47:49+00:00"
         },
         {
             "name": "n98/junit-xml",

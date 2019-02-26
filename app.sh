@@ -125,18 +125,12 @@ function_after
 
 }
 
-postdeploy () {
+postdeploy () { # postdeploy command. Use this to run any one-time setup tasks that make the app, and any databases, ready and useful for testing.
 
 function_before
 echo -e "${ONYELLOW} postdeploy () { ${NORMAL}"
 
-if [ -d "magento" ];then
-    echo -e "${ONGREEN} diretório encontrado ${NORMAL}"
-    magento_sample_data_install
-    #magento_install
-else
-    echo -e "${ONYELLOW} diretório NÃO encontrado ${NORMAL}"
-fi
+post_update_cmd # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
 
 function_after
 
@@ -149,13 +143,15 @@ echo -e "${ONYELLOW} check_in_database () { ${NORMAL}"
 
 get_db_vars
 
-echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
-echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
-echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
-echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
-echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
+echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
 
-MYSQL_RETURN=`mysql -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} -p${DB_PASS} ${DB_NAME} -v -e "SHOW TABLES"`
+echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
+
+MYSQL_RETURN=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} -v -e "SHOW TABLES"`
 
 echo -e "${ONPURPLE} - ${NORMAL}"
 
@@ -260,49 +256,64 @@ function_after
 
 }
 
-post_install_cmd () {
-
-function_before
-echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
-
-post_update_cmd
-
-function_after
-
-}
-
-post_update_cmd () {
+post_update_cmd () { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
 
 function_before
 echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
 
 show_vars
+magento_sample_data_import_haifeng
+magento_install
 
-if [ -d "vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data" ]; then
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
+cd ..
+
+pwd && ls && ls vendor
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
+if [ -d vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data ]; then
     echo -e "${ONYELLOW} haifeng-ben-zhang/magento1.9.2.4-sample-data ${NORMAL}"
     cp -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* magento/media/
     cp -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* magento/skin/
 fi
 
-if [ -d "vendor/ceckoslab/CeckosLab_QuickLogin" ]; then
-    echo -e "${ONYELLOW} ceckoslab/CeckosLab_QuickLogin ${NORMAL}"
-    cp -fr vendor/ceckoslab/CeckosLab_QuickLogin/app/* magento/app/
+if [ -d vendor/ceckoslab/ceckoslab_quicklogin ]; then
+    echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${NORMAL}"
+    cp -fr vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
+echo -e "${ONYELLOW} - { ${NORMAL}"
+
 magento_config_xml
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
 
 function_after
 
 }
 
-magento_config_xml () {
+post_install_cmd () { # post-install-cmd: occurs after the install command has been executed with a lock file present.
 
 function_before
-echo -e "${ONYELLOW} magento_config_xml () { ${NORMAL}"
+echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
 
-echo -e "${ONYELLOW} env DB_ ${NORMAL}"
+# post_update_cmd
 
-env | grep ^DB_
+function_after
+
+}
+
+
+dot_env () {
+
+function_before
+echo -e "${ONYELLOW} dot_env () { ${NORMAL}"
+
+echo -e "${ONYELLOW} env MAGE_ ${NORMAL}"
+
+env | grep ^MAGE_
 
 echo -e "${ONYELLOW} .env ${NORMAL}"
 
@@ -318,34 +329,31 @@ else
 
 fi
 
-echo -e "${ONYELLOW} env MAGE_DB_ ${NORMAL}"
+echo -e "${ONYELLOW} env MAGE_ ${NORMAL}"
 
-env | grep ^MAGE_DB_
+env | grep ^MAGE_
 
-# https://devcenter.heroku.com/articles/dynos#startup
+function_after
 
-echo -e "${ONYELLOW} export envvars${NORMAL}"
+}
 
-export DB_HOST=${MAGE_DB_HOST}
-export DB_PORT=${MAGE_DB_PORT}
-export DB_NAME=${MAGE_DB_NAME}
-export DB_USER=${MAGE_DB_USER}
-export DB_PASS=${MAGE_DB_PASS}
+magento_config_xml () {
 
-echo -e "${ONYELLOW} env DB_ ${NORMAL}"
-
-env | grep ^DB_
-
-echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
+function_before
+echo -e "${ONYELLOW} magento_config_xml () { ${NORMAL}"
 
 # if local not exits delete it
 if [ ! -f "magento/app/etc/local.xml" ] ; then
 
-    ./vendor/bin/n98-magerun --version
+dot_env
 
-    cd magento && pwd && ls
+echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
-   	../vendor/bin/n98-magerun local-config:generate "$DB_HOST:$DB_PORT" "$DB_USER" "$DB_PASS" "$DB_NAME" "files" "admin" "secret" -vvv
+pwd && ls
+
+../vendor/bin/n98-magerun --version
+
+../vendor/bin/n98-magerun local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
 
 fi
 
@@ -371,12 +379,12 @@ else
 
     echo -e "${ONGREEN} DB_HOST ${NORMAL}"
 
-    echo -e "${GREEN} URL: ${URL} ${NORMAL}"
-    echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
-    echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
-    echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
-    echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
-    echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
+    echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
 
     echo -e "${ONPURPLE} - ${NORMAL}"
 
@@ -430,19 +438,19 @@ else
       #echo ${BASH_REMATCH[4]}
       #echo ${BASH_REMATCH[5]}
 
-      URL=""
-      DB_HOST=${BASH_REMATCH[3]}
-      DB_PORT=${BASH_REMATCH[4]}
-      DB_NAME=${BASH_REMATCH[5]}
-      DB_USER=${BASH_REMATCH[1]}
-      DB_PASS=${BASH_REMATCH[2]}
+      export MAGE_URL=""
+      export MAGE_DB_HOST=${BASH_REMATCH[3]}
+      export MAGE_DB_HOST=${BASH_REMATCH[4]}
+      export MAGE_DB_NAME=${BASH_REMATCH[5]}
+      export MAGE_DB_USER=${BASH_REMATCH[1]}
+      export MAGE_DB_PASS=${BASH_REMATCH[2]}
 
-      echo -e "${GREEN} URL: ${URL} ${NORMAL}"
-      echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
-      echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
-      echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
-      echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
-      echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
+      echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
+      echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+      echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+      echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+      echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+      echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
 
   else
       echo -e "${RED} Regex Failed ${NORMAL}"
@@ -460,19 +468,12 @@ else
 
     echo -e "${ONGREEN} Get ENV ${NORMAL}"
 
-    URL=""
-    DB_HOST=${MAGE_DB_HOST}
-    DB_PORT=${MAGE_DB_PORT}
-    DB_NAME=${MAGE_DB_NAME}
-    DB_USER=${MAGE_DB_USER}
-    DB_PASS=${MAGE_DB_PASS}
-
-    echo -e "${GREEN} URL: ${URL} ${NORMAL}"
-    echo -e "${GREEN} DB_HOST: ${DB_HOST} ${NORMAL}"
-    echo -e "${GREEN} DB_PORT: ${DB_PORT} ${NORMAL}"
-    echo -e "${GREEN} DB_NAME: ${DB_NAME} ${NORMAL}"
-    echo -e "${GREEN} DB_USER: ${DB_USER} ${NORMAL}"
-    echo -e "${GREEN} DB_PASS: ${DB_PASS} ${NORMAL}"
+    echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+    echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
 
 fi
 
@@ -518,6 +519,30 @@ function_after
 
 }
 
+magento_sample_data_import_haifeng () {
+
+function_before
+echo -e "${ONYELLOW} magento_sample_data_import_haifeng () { ${NORMAL}"
+
+echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
+
+get_db_vars
+
+echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
+
+echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
+
+mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql'
+
+function_after
+
+}
+
 magento_sample_data_import () {
 
 function_before
@@ -525,7 +550,18 @@ echo -e "${ONYELLOW} magento_sample_data_import () { ${NORMAL}"
 
 echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
 
-mysql -h ${DB_HOST} -P ${DB_PORT} -u ${DB_USER} -p${DB_PASS} ${DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql'
+get_db_vars
+
+echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
+
+echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
+
+mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql'
 
 echo -e "${ONYELLOW} Removendo arquivos ${NORMAL}"
 
@@ -552,6 +588,19 @@ pwd && ls -lah
 
 #chmod 777 -R .
 
+echo -e "${ONYELLOW} get_db_vars ${NORMAL}"
+
+get_db_vars
+
+echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
+
+echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
+echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
+
 echo -e "${ONYELLOW} install.php ${NORMAL}"
 
 php -f install.php -- \
@@ -559,11 +608,11 @@ php -f install.php -- \
 --locale "pt_BR" \
 --timezone "America/Sao_Paulo" \
 --default_currency "BRL" \
---db_host "${DB_HOST}:${DB_PORT}" \
---db_name "${DB_NAME}" \
---db_user "${DB_USER}" \
---db_pass "${DB_PASS}" \
---url "$URL" \
+--db_host "${MAGE_DB_HOST}:${MAGE_DB_PORT}" \
+--db_name "${MAGE_DB_NAME}" \
+--db_user "${MAGE_DB_USER}" \
+--db_pass "${MAGE_DB_PASS}" \
+--url "$MAGE_URL" \
 --skip_url_validation "yes" \
 --use_rewrites "yes" \
 --use_secure "no" \
@@ -625,7 +674,9 @@ bash ./mage list-upgrades
 
 echo -e "${ONYELLOW} n98-magerun cache:disable ${NORMAL}"
 
-n98-magerun cache:disable --root-dir . -vvv
+n98-magerun cache:disable --root-dir .
+
+echo -e "${ONYELLOW} - { ${NORMAL}"
 
 function_after
 
@@ -694,9 +745,9 @@ dotenv () {
 
 dotenv
 
-echo -e "${ONYELLOW} env MAGE_DB_ ${NORMAL}"
+echo -e "${ONYELLOW} env MAGE_ ${NORMAL}"
 
-env | grep ^MAGE_DB_
+env | grep ^MAGE_
 
 #
 

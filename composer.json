@@ -41,6 +41,18 @@
         {
             "type": "package",
             "package": {
+                "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "prasathmani/tinyfilemanager",
                 "version": "1.0.0",
                 "source":{
@@ -73,6 +85,7 @@
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
         "n98/magerun": "^1.102",
+        "haifeng-ben-zhang/magento1.9.2.4-sample-data": "1.0.*",
         "prasathmani/tinyfilemanager": "1.0.*",
         "ceckoslab/ceckoslab_quicklogin": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
@@ -85,19 +98,19 @@
         "magento-force": true
     },
     "scripts": {
-        "pre-install-cmd": [
-          "echo '#@@# pre-install-cmd';"
-        ],
-        "post-install-cmd": [
-          "echo '#@@# post-install-cmd';",
-          "php -r \"system('bash app.sh post_install_cmd');\""
-        ],
         "pre-update-cmd": [
           "echo '#@@# pre-update-cmd';"
         ],
         "post-update-cmd": [
           "echo '#@@# post-update-cmd';",
           "php -r \"system('bash app.sh post_update_cmd');\""
+        ],
+        "pre-install-cmd": [
+          "echo '#@@# pre-install-cmd';"
+        ],
+        "post-install-cmd": [
+          "echo '#@@# post-install-cmd';",
+          "php -r \"system('bash app.sh post_install_cmd');\""
         ],
         "post-status-cmd": [
           "echo '#@@# post-status-cmd';"
