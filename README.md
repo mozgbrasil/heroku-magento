@@ -36,7 +36,7 @@ Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) de fo
 
 Obtenha seu banco de dados MySQL com 100MB grátis para usar como quiser
 
-[![Deploy to Remotemysql](https://remotemysql.com/)](https://remotemysql.com/)
+[https://remotemysql.com/](https://remotemysql.com/)
 
 A implantação na Heroku pode ser feito de qualquer de uma seguintes formas
 
