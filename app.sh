@@ -307,7 +307,7 @@ post_install_cmd () { # post-install-cmd: occurs after the install command has b
 function_before
 echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
 
-# post_update_cmd
+post_update_cmd
 
 function_after
 
