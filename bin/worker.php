@@ -28,7 +28,7 @@ if ($argc < 2 )
     exit( "Usage: program <parameter1>\n" );
 }
 
-$process = new Process([$argv[1]]);
+$process = new Process($argv[1]);
 $process->start();
 
 while ($process->isRunning()) {
