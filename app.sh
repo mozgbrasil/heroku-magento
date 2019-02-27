@@ -272,9 +272,11 @@ if type mysql >/dev/null 2>&1; then
         fi   
     fi
 
-    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-        echo -e "${RED} local.xml:empty ${NORMAL}"
-        magento_config_xml
+    if [ ! -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
+      if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+          echo -e "${RED} local.xml:empty ${NORMAL}"
+          magento_config_xml
+      fi
     fi
 
 else
@@ -291,21 +293,21 @@ post_update_cmd () { # post-update-cmd: occurs after the update command has been
 function_before
 echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 pwd && ls
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 du -hsx ./* | sort -rh | head -10
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 du -hsx vendor/* | sort -rh | head -10
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
-if [ -d vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data ]; then
+if [ -d vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media ]; then
     echo -e "${ONYELLOW} haifeng-ben-zhang/magento1.9.2.4-sample-data ${NORMAL}"
     cp -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* magento/media/
     cp -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* magento/skin/
@@ -316,7 +318,7 @@ if [ -d vendor/ceckoslab/ceckoslab_quicklogin ]; then
     cp -fr vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
 rm -fr vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
@@ -329,15 +331,15 @@ du -hsx ./magento/media/catalog/product/* | sort -rh | head -10
 rm -fr ./magento/media/catalog/product/p
 rm -fr ./magento/media/catalog/product/cache
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 du -hsx ./* | sort -rh | head -10
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 du -hsx vendor/* | sort -rh | head -10
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 show_vars
 
@@ -345,7 +347,7 @@ profile
 
 ##
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 function_after
 
@@ -587,7 +589,13 @@ awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.
 
 echo -e "${ONYELLOW} Importando... ${NORMAL}"
 
-MYSQL_IMPORT=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'`
+STRING_MYSQL_IMPORT="mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'"
+
+echo -e "${ONYELLOW} $STRING_MYSQL_IMPORT ${NORMAL}"
+
+#MYSQL_IMPORT=`$STRING_MYSQL_IMPORT` # Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+
+php bin/worker.php '\'$STRING_MYSQL_IMPORT'\'
 
 echo -e "${ONPURPLE} MYSQL_IMPORT ${NORMAL}"
 
@@ -717,11 +725,11 @@ n98-magerun cache:disable --root-dir=.
 n98-magerun sys:check --root-dir=.
 n98-magerun admin:user:list --root-dir=.
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 cd ..
 
-echo -e "${ONYELLOW} - { ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 function_after
 

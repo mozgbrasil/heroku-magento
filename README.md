@@ -68,6 +68,10 @@ Clique no botão "View"
 
 Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento para utilizar a plataforma
 
+## Útil
+
+https://medium.com/elefante-yogue/usando-php-com-heroku-e7d4f2fee56a
+
 ## Executando em ambiente local
 
     git clone https://github.com/mozgbrasil/heroku-magento
