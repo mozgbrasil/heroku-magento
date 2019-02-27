@@ -260,20 +260,20 @@ if type mysql >/dev/null 2>&1; then
     mysql_show_tables
 
     if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
-        echo -e "${RED} MYSQL_SHOW_TABLES:false ${NORMAL}"
+        echo -e "${RED} MYSQL_SHOW_TABLES:empty ${NORMAL}"
         magento_sample_data_import_haifeng
     fi
 
     if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
-        echo -e "${RED} MYSQL_SELECT_ADMIN_USER:false ${NORMAL}"
+        echo -e "${RED} MYSQL_SELECT_ADMIN_USER:empty ${NORMAL}"
         if [ ! -z "${MYSQL_IMPORT}" ]; then
-            echo -e "${RED} MYSQL_IMPORT:true ${NORMAL}"
+            echo -e "${RED} MYSQL_IMPORT:!!!empty!!! ${NORMAL}"
             magento_install        
         fi   
     fi
 
     if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-        echo -e "${RED} local.xml:false ${NORMAL}"
+        echo -e "${RED} local.xml:empty ${NORMAL}"
         magento_config_xml
     fi
 
@@ -591,6 +591,8 @@ MYSQL_IMPORT=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p$
 
 echo -e "${ONPURPLE} MYSQL_IMPORT ${NORMAL}"
 
+echo $MYSQL_IMPORT
+MYSQL_IMPORT='true'
 echo $MYSQL_IMPORT
 
 echo -e "${ONYELLOW} Importado ... ${NORMAL}"
