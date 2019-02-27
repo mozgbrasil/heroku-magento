@@ -19,7 +19,7 @@
     "env":{
         "MAGE_URL":{
           "description": "",
-          "value": "https://APP_NAME.herokuapp.com/magento/"
+          "value": "http://APP_NAME.herokuapp.com/magento/"
         },
         "MAGE_DB_HOST":{
           "description": "",

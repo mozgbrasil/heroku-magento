@@ -70,6 +70,8 @@ Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento 
 
     O aplicativo ainda não suporta a importação do sample data, a melhor solução é importar o banco antes de implantar o aplicativo na Heroku
 
+    No uso do HTTPS não carrega o projeto ou é carregado com lentidão, não usar
+
 ## Útil
 
 https://medium.com/elefante-yogue/usando-php-com-heroku-e7d4f2fee56a

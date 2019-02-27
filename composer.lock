@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d4b511aee199cd5e688c2bfc6c08f33",
+    "content-hash": "40f1cf3323e4056437fcd717fa104315",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -982,6 +982,16 @@
                 "url"
             ],
             "time": "2018-12-04T20:46:45+00:00"
+        },
+        {
+            "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -3176,6 +3186,16 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "prasathmani/tinyfilemanager",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/prasathmani/tinyfilemanager.git",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "psr/container",
