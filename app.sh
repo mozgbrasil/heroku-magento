@@ -246,10 +246,34 @@ function_after
 
 }
 
+release () {
+
+function_before
+echo -e "${ONYELLOW} release () { ${NORMAL}"
+
+
+function_after
+
+}
+
+
 profile () { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
 
 function_before
 echo -e "${ONYELLOW} profile () { ${NORMAL}"
+
+echo -e "${ONYELLOW} check n98-magerun ${NORMAL}"
+
+timeProg=`which n98-magerun`
+if [ "$timeProg" = "" ]
+then
+  echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
+  wget https://files.magerun.net/n98-magerun.phar
+  chmod +x ./n98-magerun.phar
+  ./n98-magerun.phar --version
+fi
+
+echo -e "${ONYELLOW} check mysql ${NORMAL}"
 
 if type mysql >/dev/null 2>&1; then
     echo "mysql installed"
@@ -407,9 +431,9 @@ echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
 pwd
 
-vendor/bin/n98-magerun --version
+./n98-magerun.phar --version
 
-vendor/bin/n98-magerun --root-dir=magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
+./n98-magerun.phar --root-dir=magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
 
 function_after
 
@@ -595,7 +619,7 @@ echo -e "${ONYELLOW} $STRING_MYSQL_IMPORT ${NORMAL}"
 
 #MYSQL_IMPORT=`$STRING_MYSQL_IMPORT` # Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
 
-php bin/worker.php '\'$STRING_MYSQL_IMPORT'\'
+php bin/worker.php ''$STRING_MYSQL_IMPORT''
 
 echo -e "${ONPURPLE} MYSQL_IMPORT ${NORMAL}"
 
@@ -721,9 +745,9 @@ bash ./mage list-upgrades
 
 echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
 
-n98-magerun cache:disable --root-dir=.
-n98-magerun sys:check --root-dir=.
-n98-magerun admin:user:list --root-dir=.
+./n98-magerun.phar cache:disable --root-dir=.
+./n98-magerun.phar sys:check --root-dir=.
+./n98-magerun.phar admin:user:list --root-dir=.
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 

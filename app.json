@@ -1,6 +1,6 @@
 {
     "name":"mozgbrasil/heroku-magento",
-    "description":"Magento App - 25/02/2019 17:49:45",
+    "description":"Heroku Magento App",
     "keywords":[
         "app.json",
         "magento",
@@ -19,7 +19,7 @@
     "env":{
         "MAGE_URL":{
           "description": "",
-          "value": ""
+          "value": "https://APP_NAME.herokuapp.com/magento/"
         },
         "MAGE_DB_HOST":{
           "description": "",
