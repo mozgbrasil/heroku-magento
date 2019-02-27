@@ -134,18 +134,35 @@ function_after
 
 }
 
-check_in_database () {
+mysql_show_tables () {
 
 function_before
-echo -e "${ONYELLOW} check_in_database () { ${NORMAL}"
+echo -e "${ONYELLOW} mysql_show_tables () { ${NORMAL}"
 
 #show_db_vars
 
-MYSQL_RETURN=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} -N -e "SHOW TABLES"`
+MYSQL_SHOW_TABLES=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} -N -e "SHOW TABLES"`
 
 echo -e "${ONPURPLE} - ${NORMAL}"
 
-#echo $MYSQL_RETURN
+#echo $MYSQL_SHOW_TABLES
+
+function_after
+
+}
+
+mysql_select_admin_user () {
+
+function_before
+echo -e "${ONYELLOW} mysql_select_admin_user () { ${NORMAL}"
+
+#show_db_vars
+
+MYSQL_SELECT_ADMIN_USER=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} -N -e "SELECT * FROM admin_user"`
+
+echo -e "${ONPURPLE} - ${NORMAL}"
+
+#echo $MYSQL_SELECT_ADMIN_USER
 
 function_after
 
@@ -156,7 +173,7 @@ download_install () {
 function_before
 echo -e "${ONYELLOW} download_install () { ${NORMAL}"
 
-check_in_database
+mysql_show_tables
 
 echo -e "${ONYELLOW} cat > composer.json <<- _EOF_ ${NORMAL}"
 
@@ -240,12 +257,16 @@ if type mysql >/dev/null 2>&1; then
     #magento_sample_data_copy
     #magento_sample_data_install
 
-    check_in_database
+    mysql_show_tables
 
-    if [ -z "${MYSQL_RETURN}" ]; then
-        echo -e "${RED} MYSQL_RETURN vazio ${NORMAL}"
-        magento_sample_data_import_haifeng
-        magento_install
+    if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
+        echo -e "${RED} MYSQL_SHOW_TABLES vazio ${NORMAL}"
+        magento_sample_data_import_haifeng        
+    fi
+
+    if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
+        echo -e "${RED} MYSQL_SELECT_ADMIN_USER vazio ${NORMAL}"
+        magento_install        
     fi
 
     if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
@@ -317,25 +338,7 @@ echo -e "${ONYELLOW} - { ${NORMAL}"
 
 show_vars
 
-if type mysql >/dev/null 2>&1; then
-    echo "mysql installed"
-
-    #magento_sample_data_install
-
-    check_in_database
-    if [ -z "${MYSQL_RETURN}" ]; then
-        echo -e "${RED} MYSQL_RETURN vazio ${NORMAL}"
-        magento_sample_data_import_haifeng
-        magento_install
-    fi
-
-    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-      magento_config_xml
-    fi
-
-else
-    echo "mysql not installed"
-fi
+profile
 
 ##
 
@@ -534,7 +537,7 @@ magento_sample_data_copy () {
 function_before
 echo -e "${ONYELLOW} magento_sample_data_copy () { ${NORMAL}"
 
-check_in_database
+mysql_show_tables
 
 FILE_CACHE=$FOLDER_CACHE'/magento-sample-data-1.9.2.4-fix.tar.gz'
 
@@ -570,8 +573,6 @@ magento_sample_data_import_haifeng () {
 function_before
 echo -e "${ONYELLOW} magento_sample_data_import_haifeng () { ${NORMAL}"
 
-echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
-
 #show_db_vars
 
 #grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
@@ -580,6 +581,8 @@ echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
 awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql > vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
 
 #grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
+
+echo -e "${ONYELLOW} Importando... ${NORMAL}"
 
 mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'
 
@@ -699,9 +702,11 @@ echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
 bash ./mage list-upgrades
 
-echo -e "${ONYELLOW} n98-magerun cache:disable ${NORMAL}"
+echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
 
 n98-magerun cache:disable --root-dir=.
+n98-magerun sys:check --root-dir=.
+n98-magerun admin:user:list --root-dir=.
 
 echo -e "${ONYELLOW} - { ${NORMAL}"
 
