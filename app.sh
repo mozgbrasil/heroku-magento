@@ -153,7 +153,7 @@ MYSQL_RETURN=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p$
 
 echo -e "${ONPURPLE} - ${NORMAL}"
 
-echo $MYSQL_RETURN
+#echo $MYSQL_RETURN
 
 function_after
 
@@ -405,20 +405,20 @@ dot_env
 
 echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
-pwd && ls
+pwd
 
 vendor/bin/n98-magerun --version
 
-vendor/bin/n98-magerun local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
+vendor/bin/n98-magerun --root-dir magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
 
 function_after
 
 }
 
-get_db_vars () {
+show_db_vars () {
 
 function_before
-echo -e "${ONYELLOW} get_db_vars () { ${NORMAL}"
+echo -e "${ONYELLOW} show_db_vars () { ${NORMAL}"
 
 # -n String, True if the length of String is nonzero.
 # -z String, True if string is empty.
@@ -580,23 +580,14 @@ echo -e "${ONYELLOW} magento_sample_data_import_haifeng () { ${NORMAL}"
 
 echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
 
-get_db_vars
+#show_db_vars
 
-echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
+#grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
 
-echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
-
-grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
-
-# FIX: permission LOCK TABLE
+# FIX: permission, LOCK TABLE
 awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql > vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
 
-grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
+#grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
 
 mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'
 
@@ -611,16 +602,7 @@ echo -e "${ONYELLOW} magento_sample_data_import () { ${NORMAL}"
 
 echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
 
-get_db_vars
-
-echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
-
-echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
+#show_db_vars
 
 mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql'
 
@@ -650,18 +632,7 @@ pwd && ls -lah
 
 #chmod 777 -R .
 
-echo -e "${ONYELLOW} get_db_vars ${NORMAL}"
-
-get_db_vars
-
-echo -e "${ONYELLOW} Show DB_ ${NORMAL}"
-
-echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
-echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
+#show_db_vars
 
 echo -e "${ONYELLOW} install.php ${NORMAL}"
 
