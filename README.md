@@ -38,7 +38,7 @@ Obtenha seu banco de dados MySQL com 100MB grátis para usar como quiser
 
 [https://remotemysql.com/](https://remotemysql.com/)
 
-A implantação na Heroku pode ser feito de qualquer de uma seguintes formas
+A implantação na Heroku pode ser feito de qualquer uma das 2 formas a seguir
 
 1. 
 
