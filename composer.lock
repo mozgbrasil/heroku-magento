@@ -1,0 +1,4604 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "40f1cf3323e4056437fcd717fa104315",
+    "packages": [
+        {
+            "name": "aoepeople/aoe_scheduler",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AOEpeople/Aoe_Scheduler.git",
+                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AOEpeople/Aoe_Scheduler/zipball/9510692d6155feb3345e32151e5cd6492f162ce5",
+                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*",
+                "php": ">=5.3"
+            },
+            "replace": {
+                "fbrnc/aoe_scheduler": "*"
+            },
+            "type": "magento-module",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabrizio Branca",
+                    "email": "firstname.lastname@aoe.com",
+                    "role": "Author/Maintainer"
+                },
+                {
+                    "name": "Lee Saferite",
+                    "email": "lee.saferite@aoe.com",
+                    "role": "Contributor/Maintainer"
+                }
+            ],
+            "description": "Magento Cron Scheduler",
+            "homepage": "https://github.com/AOEpeople/Aoe_Scheduler",
+            "support": {
+                "source": "https://github.com/AOEpeople/Aoe_Scheduler/tree/v1.5.1",
+                "issues": "https://github.com/AOEpeople/Aoe_Scheduler/issues"
+            },
+            "time": "2016-12-14T14:42:05+00:00"
+        },
+        {
+            "name": "aschroder/smtp_pro",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension.git",
+                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aschroder/Magento-SMTP-Pro-Email-Extension/zipball/5101ed278d4aba05279fc1e53c3811983be8adda",
+                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "extra": {
+                "map": [
+                    [
+                        "app/etc/modules/Aschroder_SMTPPro.xml",
+                        "app/etc/modules/Aschroder_SMTPPro.xml"
+                    ],
+                    [
+                        "app/code/local/Aschroder/SMTPPro",
+                        "app/code/local/Aschroder/SMTPPro"
+                    ],
+                    [
+                        "app/design/adminhtml/base/default/template/smtppro",
+                        "app/design/adminhtml/default/default/template/smtppro"
+                    ],
+                    [
+                        "app/locale/en_US/Aschroder_SMTPPro.csv",
+                        "app/locale/en_US/Aschroder_SMTPPro.csv"
+                    ]
+                ]
+            },
+            "authors": [
+                {
+                    "name": "aschroder"
+                }
+            ],
+            "description": "sending Magento mail through an external smtp-server",
+            "homepage": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension",
+            "support": {
+                "source": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/tree/2.0.7",
+                "issues": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/issues"
+            },
+            "time": "2015-10-30T09:33:29+00:00"
+        },
+        {
+            "name": "aydin-hassan/magento-core-composer-installer",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AydinHassan/magento-core-composer-installer.git",
+                "reference": "3e986ad18ff57847f543a850bc48b62ece411a23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AydinHassan/magento-core-composer-installer/zipball/3e986ad18ff57847f543a850bc48b62ece411a23",
+                "reference": "3e986ad18ff57847f543a850bc48b62ece411a23",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "~1.0",
+                "php": "^5.5 | ^7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.3@dev",
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "\\AydinHassan\\MagentoCoreComposerInstaller\\CoreManager"
+            },
+            "autoload": {
+                "psr-4": {
+                    "AydinHassan\\MagentoCoreComposerInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aydin Hassan",
+                    "email": "aydin@hotmail.co.uk"
+                }
+            ],
+            "description": "A composer plugin for managing Magento Core",
+            "time": "2017-08-27T12:18:04+00:00"
+        },
+        {
+            "name": "byjg/omnipay-komerci",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byjg/omnipay-komerci.git",
+                "reference": "063fdefa193a5f3da527d708f3997bf2d35f80a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/byjg/omnipay-komerci/zipball/063fdefa193a5f3da527d708f3997bf2d35f80a4",
+                "reference": "063fdefa193a5f3da527d708f3997bf2d35f80a4",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "~2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "omnipay/tests": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Omnipay\\Komerci\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jg",
+                    "email": "joao@byjg.com.br"
+                }
+            ],
+            "description": "Komerci is brazilian acquirer solution provided by Rede (former RedeCard) that accept payments with MasterCard, Visa and Diners Club International credit cards on the Internet",
+            "time": "2017-05-05T13:16:41+00:00"
+        },
+        {
+            "name": "ceckoslab/ceckoslab_quicklogin",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ceckoslab/CeckosLab_QuickLogin.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "container-interop/container-interop",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/container-interop/container-interop.git",
+                "reference": "79cbf1341c22ec75643d841642dd5d6acd83bdb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/container-interop/container-interop/zipball/79cbf1341c22ec75643d841642dd5d6acd83bdb8",
+                "reference": "79cbf1341c22ec75643d841642dd5d6acd83bdb8",
+                "shasum": ""
+            },
+            "require": {
+                "psr/container": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Interop\\Container\\": "src/Interop/Container/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
+            "homepage": "https://github.com/container-interop/container-interop",
+            "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "dilneiss/itaubankline",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dilneiss/itaubankline.git",
+                "reference": "96604885f4fed2f0193c813a05d884f26c2a77b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dilneiss/itaubankline/zipball/96604885f4fed2f0193c813a05d884f26c2a77b6",
+                "reference": "96604885f4fed2f0193c813a05d884f26c2a77b6",
+                "shasum": ""
+            },
+            "require": {
+                "nategood/httpful": "^0.2.19",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ItauBankline": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dilnei Soethe Spancerski",
+                    "email": "dilnei.soethe@gmail.com"
+                }
+            ],
+            "description": "Modulo de integracao com o Itau Bankline para emissao de boletos",
+            "keywords": [
+                "Bank",
+                "bankline",
+                "composer",
+                "cripto",
+                "itaú",
+                "php"
+            ],
+            "time": "2016-12-20T13:32:40+00:00"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/54cacc9b81758b14e3ce750f205a393d52339e97",
+                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2017-02-24T16:22:25+00:00"
+        },
+        {
+            "name": "doctrine/collections",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/collections.git",
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "~0.1@dev",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Collections\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Collections Abstraction library",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "array",
+                "collections",
+                "iterator"
+            ],
+            "time": "2017-01-03T10:49:41+00:00"
+        },
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3,<8.0-DEV"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1.8",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://github.com/doctrine/instantiator",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2015-06-14T21:17:01+00:00"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "dvdoug/boxpacker",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dvdoug/BoxPacker.git",
+                "reference": "9c54beb8800ce6343602bc17158aa4dc56567a14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dvdoug/BoxPacker/zipball/9c54beb8800ce6343602bc17158aa4dc56567a14",
+                "reference": "9c54beb8800ce6343602bc17158aa4dc56567a14",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.4",
+                "leanphp/behat-code-coverage": "^3.0",
+                "monolog/monolog": "^1.0",
+                "phpunit/phpunit": "^4.8.35||^5.0||^6.0||^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DVDoug\\BoxPacker\\": "src/",
+                    "DVDoug\\BoxPacker\\Test\\": "tests/Test"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Doug Wright",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An implementation of the 3D (actually 4D) bin packing/knapsack problem (aka creating parcels by putting items into boxes)",
+            "homepage": "http://boxpacker.io/",
+            "keywords": [
+                "bin packing",
+                "binpacking",
+                "box",
+                "boxes",
+                "boxpacking",
+                "container",
+                "knapsack",
+                "packaging",
+                "packing",
+                "parcel",
+                "parcelpacking",
+                "shipping"
+            ],
+            "time": "2018-11-20T21:54:11+00:00"
+        },
+        {
+            "name": "eloquent/composer-config-reader",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eloquent/composer-config-reader.git",
+                "reference": "ee83a1cad8f68508f05b30c376003045a7cdfcd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eloquent/composer-config-reader/zipball/ee83a1cad8f68508f05b30c376003045a7cdfcd8",
+                "reference": "ee83a1cad8f68508f05b30c376003045a7cdfcd8",
+                "shasum": ""
+            },
+            "require": {
+                "eloquent/enumeration": "^5",
+                "justinrainbow/json-schema": "^4",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "eloquent/liberator": "^2",
+                "eloquent/phony": "0.14.4",
+                "phpunit/phpunit": "^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eloquent\\Composer\\Configuration\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Millard",
+                    "email": "ezzatron@gmail.com",
+                    "homepage": "http://ezzatron.com/"
+                }
+            ],
+            "description": "A light-weight component for reading Composer configuration files.",
+            "homepage": "https://github.com/eloquent/composer-config-reader",
+            "keywords": [
+                "composer",
+                "configuration",
+                "parser",
+                "reader"
+            ],
+            "time": "2017-11-02T01:07:08+00:00"
+        },
+        {
+            "name": "eloquent/enumeration",
+            "version": "5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eloquent/enumeration.git",
+                "reference": "0242859435d9b135939816858348556d3cde9e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eloquent/enumeration/zipball/0242859435d9b135939816858348556d3cde9e3c",
+                "reference": "0242859435d9b135939816858348556d3cde9e3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "icecave/archer": "dev-develop",
+                "phpunit/phpunit": "^4",
+                "sami/sami": "^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eloquent\\Enumeration\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Millard",
+                    "email": "ezzatron@gmail.com",
+                    "homepage": "http://ezzatron.com/"
+                }
+            ],
+            "description": "An enumeration implementation for PHP.",
+            "homepage": "https://github.com/eloquent/enumeration",
+            "keywords": [
+                "class",
+                "enum",
+                "enumeration",
+                "multiton",
+                "set",
+                "type"
+            ],
+            "time": "2015-11-03T22:21:38+00:00"
+        },
+        {
+            "name": "firegento/magento",
+            "version": "v1.9.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firegento/magento.git",
+                "reference": "509d3cb1a483ecb212aa55af2478dfb536665be7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firegento/magento/zipball/509d3cb1a483ecb212aa55af2478dfb536665be7",
+                "reference": "509d3cb1a483ecb212aa55af2478dfb536665be7",
+                "shasum": ""
+            },
+            "type": "magento-core",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Magento CE",
+            "support": {
+                "source": "https://github.com/firegento/magento/tree/v1.9.4.0",
+                "issues": "https://github.com/firegento/magento/issues"
+            },
+            "time": "2018-11-29T08:26:58+00:00"
+        },
+        {
+            "name": "guzzle/guzzle",
+            "version": "v3.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle3.git",
+                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
+                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3",
+                "symfony/event-dispatcher": "~2.1"
+            },
+            "replace": {
+                "guzzle/batch": "self.version",
+                "guzzle/cache": "self.version",
+                "guzzle/common": "self.version",
+                "guzzle/http": "self.version",
+                "guzzle/inflection": "self.version",
+                "guzzle/iterator": "self.version",
+                "guzzle/log": "self.version",
+                "guzzle/parser": "self.version",
+                "guzzle/plugin": "self.version",
+                "guzzle/plugin-async": "self.version",
+                "guzzle/plugin-backoff": "self.version",
+                "guzzle/plugin-cache": "self.version",
+                "guzzle/plugin-cookie": "self.version",
+                "guzzle/plugin-curlauth": "self.version",
+                "guzzle/plugin-error-response": "self.version",
+                "guzzle/plugin-history": "self.version",
+                "guzzle/plugin-log": "self.version",
+                "guzzle/plugin-md5": "self.version",
+                "guzzle/plugin-mock": "self.version",
+                "guzzle/plugin-oauth": "self.version",
+                "guzzle/service": "self.version",
+                "guzzle/stream": "self.version"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.3",
+                "monolog/monolog": "~1.0",
+                "phpunit/phpunit": "3.7.*",
+                "psr/log": "~1.0",
+                "symfony/class-loader": "~2.1",
+                "zendframework/zend-cache": "2.*,<2.3",
+                "zendframework/zend-log": "2.*,<2.3"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle": "src/",
+                    "Guzzle\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Guzzle Community",
+                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                }
+            ],
+            "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "abandoned": "guzzlehttp/guzzle",
+            "time": "2015-03-18T18:23:50+00:00"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.4",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+                "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.3-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2018-04-22T15:46:56+00:00"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-12-20T10:07:11+00:00"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
+                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "time": "2018-12-04T20:46:45+00:00"
+        },
+        {
+            "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.78",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "0f91f34d375ddd5d7034b9eaf6b74acd0b2a0ed6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/0f91f34d375ddd5d7034b9eaf6b74acd0b2a0ed6",
+                "reference": "0f91f34d375ddd5d7034b9eaf6b74acd0b2a0ed6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5",
+                "satooshi/php-coveralls": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "time": "2019-01-15T21:21:27+00:00"
+        },
+        {
+            "name": "jenssegers/agent",
+            "version": "v2.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/agent.git",
+                "reference": "bcb895395e460478e101f41cdab139c48dc721ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/agent/zipball/bcb895395e460478e101f41cdab139c48dc721ce",
+                "reference": "bcb895395e460478e101f41cdab139c48dc721ce",
+                "shasum": ""
+            },
+            "require": {
+                "jaybizzle/crawler-detect": "^1.2",
+                "mobiledetect/mobiledetectlib": "^2.7.6",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5.0|^6.0|^7.0"
+            },
+            "suggest": {
+                "illuminate/support": "^4.0|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Jenssegers\\Agent\\AgentServiceProvider"
+                    ],
+                    "aliases": {
+                        "Agent": "Jenssegers\\Agent\\Facades\\Agent"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Agent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "Desktop/mobile user agent parser with support for Laravel, based on Mobiledetect",
+            "homepage": "https://github.com/jenssegers/agent",
+            "keywords": [
+                "Agent",
+                "browser",
+                "desktop",
+                "laravel",
+                "mobile",
+                "platform",
+                "user agent",
+                "useragent"
+            ],
+            "time": "2019-01-19T21:32:55+00:00"
+        },
+        {
+            "name": "jms/metadata",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/metadata.git",
+                "reference": "e5854ab1aa643623dc64adde718a8eec32b957a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/e5854ab1aa643623dc64adde718a8eec32b957a8",
+                "reference": "e5854ab1aa643623dc64adde718a8eec32b957a8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.0",
+                "symfony/cache": "~3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Metadata\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                },
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Class/method/property metadata management in PHP",
+            "keywords": [
+                "annotations",
+                "metadata",
+                "xml",
+                "yaml"
+            ],
+            "time": "2018-10-26T12:40:10+00:00"
+        },
+        {
+            "name": "jms/parser-lib",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/parser-lib.git",
+                "reference": "c509473bc1b4866415627af0e1c6cc8ac97fa51d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/parser-lib/zipball/c509473bc1b4866415627af0e1c6cc8ac97fa51d",
+                "reference": "c509473bc1b4866415627af0e1c6cc8ac97fa51d",
+                "shasum": ""
+            },
+            "require": {
+                "phpoption/phpoption": ">=0.9,<2.0-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "JMS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "description": "A library for easily creating recursive-descent parsers.",
+            "time": "2012-11-18T18:08:43+00:00"
+        },
+        {
+            "name": "jms/serializer",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/serializer.git",
+                "reference": "00863e1d55b411cc33ad3e1de09a4c8d3aae793c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/00863e1d55b411cc33ad3e1de09a4c8d3aae793c",
+                "reference": "00863e1d55b411cc33ad3e1de09a4c8d3aae793c",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "doctrine/instantiator": "^1.0.3",
+                "jms/metadata": "^1.3",
+                "jms/parser-lib": "1.*",
+                "php": "^5.5|^7.0",
+                "phpcollection/phpcollection": "~0.1",
+                "phpoption/phpoption": "^1.1"
+            },
+            "conflict": {
+                "twig/twig": "<1.12"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.1",
+                "doctrine/phpcr-odm": "^1.3|^2.0",
+                "ext-pdo_sqlite": "*",
+                "jackalope/jackalope-doctrine-dbal": "^1.1.5",
+                "phpunit/phpunit": "^4.8|^5.0",
+                "propel/propel1": "~1.7",
+                "psr/container": "^1.0",
+                "symfony/dependency-injection": "^2.7|^3.3|^4.0",
+                "symfony/expression-language": "^2.6|^3.0",
+                "symfony/filesystem": "^2.1",
+                "symfony/form": "~2.1|^3.0",
+                "symfony/translation": "^2.1|^3.0",
+                "symfony/validator": "^2.2|^3.0",
+                "symfony/yaml": "^2.1|^3.0",
+                "twig/twig": "~1.12|~2.0"
+            },
+            "suggest": {
+                "doctrine/cache": "Required if you like to use cache functionality.",
+                "doctrine/collections": "Required if you like to use doctrine collection types as ArrayCollection.",
+                "symfony/yaml": "Required if you'd like to serialize data to YAML format."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "JMS\\Serializer": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                },
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Library for (de-)serializing data of any complexity; supports XML, JSON, and YAML.",
+            "homepage": "http://jmsyst.com/libs/serializer",
+            "keywords": [
+                "deserialization",
+                "jaxb",
+                "json",
+                "serialization",
+                "xml"
+            ],
+            "time": "2018-07-25T13:58:54+00:00"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
+                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpdocumentor/phpdocumentor": "~2",
+                "phpunit/phpunit": "^4.8.22"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2016-12-22T16:43:46+00:00"
+        },
+        {
+            "name": "league/csv",
+            "version": "8.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "fa8bc05f64eb6c66b96edfaf60648f022ecb5f55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/fa8bc05f64eb6c66b96edfaf60648f022ecb5f55",
+                "reference": "fa8bc05f64eb6c66b96edfaf60648f022ecb5f55",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Csv data manipulation made easy in PHP",
+            "homepage": "http://csv.thephpleague.com",
+            "keywords": [
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "write"
+            ],
+            "time": "2017-07-12T07:18:20+00:00"
+        },
+        {
+            "name": "magento-hackathon/magento-composer-installer",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cotya/magento-composer-installer.git",
+                "reference": "fad9b319b425c14d9173732100c829bb310eb050"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cotya/magento-composer-installer/zipball/fad9b319b425c14d9173732100c829bb310eb050",
+                "reference": "fad9b319b425c14d9173732100c829bb310eb050",
+                "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "vendor",
+                    "/tests/FullStackTest/"
+                ]
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "eloquent/composer-config-reader": "2.*",
+                "php": ">=5.5",
+                "symfony/console": "^2.5|^3.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "cotya/composer-test-framework": "dev-master",
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "~2.3",
+                "squizlabs/php_codesniffer": "~2.1",
+                "symfony/process": "~2.5"
+            },
+            "suggest": {
+                "colinmollenhour/modman": "*",
+                "theseer/autoload": "~1.14"
+            },
+            "bin": [
+                "bin/magento-composer-installer.php"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "class": "MagentoHackathon\\Composer\\Magento\\Plugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "MagentoHackathon\\Composer": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-0": {
+                    "MagentoHackathon\\Composer\\Magento": "tests/"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Fahlke aka Flyingmana",
+                    "email": "flyingmana@googlemail.com"
+                },
+                {
+                    "name": "Jörg Weller",
+                    "email": "weller@flagbit.de"
+                },
+                {
+                    "name": "Karl Spies",
+                    "email": "karl.spies@gmx.net"
+                },
+                {
+                    "name": "Tobias Vogt",
+                    "email": "tobi@webguys.de"
+                },
+                {
+                    "name": "David Fuhr",
+                    "email": "fuhr@flagbit.de"
+                },
+                {
+                    "name": "Vinai Kopp",
+                    "email": "vinai@netzarbeiter.com"
+                }
+            ],
+            "description": "Composer installer for Magento modules",
+            "homepage": "https://github.com/magento-hackathon/magento-composer-installer",
+            "keywords": [
+                "composer-installer",
+                "magento"
+            ],
+            "support": {
+                "source": "https://github.com/Cotya/magento-composer-installer/tree/master",
+                "issues": "https://github.com/Cotya/magento-composer-installer/issues"
+            },
+            "time": "2018-12-05T23:01:45+00:00"
+        },
+        {
+            "name": "mobiledetect/mobiledetectlib",
+            "version": "2.8.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serbanghita/Mobile-Detect.git",
+                "reference": "cd385290f9a0d609d2eddd165a1e44ec1bf12102"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/cd385290f9a0d609d2eddd165a1e44ec1bf12102",
+                "reference": "cd385290f9a0d609d2eddd165a1e44ec1bf12102",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.35||~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Mobile_Detect.php"
+                ],
+                "psr-0": {
+                    "Detection": "namespaced/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serban Ghita",
+                    "email": "serbanghita@gmail.com",
+                    "homepage": "http://mobiledetect.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
+            "homepage": "https://github.com/serbanghita/Mobile-Detect",
+            "keywords": [
+                "detect mobile devices",
+                "mobile",
+                "mobile detect",
+                "mobile detector",
+                "php mobile detect"
+            ],
+            "time": "2018-09-01T15:05:15+00:00"
+        },
+        {
+            "name": "moneyphp/money",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moneyphp/money.git",
+                "reference": "f6085de6c565e98d2f9a7311a605987b54e06d5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/f6085de6c565e98d2f9a7311a605987b54e06d5e",
+                "reference": "f6085de6c565e98d2f9a7311a605987b54e06d5e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "cache/taggable-cache": "^0.4.0",
+                "doctrine/instantiator": "^1.0.5",
+                "ext-bcmath": "*",
+                "ext-gmp": "*",
+                "ext-intl": "*",
+                "florianv/exchanger": "^1.0",
+                "florianv/swap": "^3.0",
+                "leanphp/phpspec-code-coverage": "^3.0 || ^4.0",
+                "moneyphp/iso-currencies": "^3.0",
+                "php-http/message": "^1.4",
+                "php-http/mock-client": "^1.0.0",
+                "phpspec/phpspec": "^3.0",
+                "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
+                "psr/cache": "^1.0",
+                "symfony/phpunit-bridge": "^4"
+            },
+            "suggest": {
+                "ext-bcmath": "Calculate without integer limits",
+                "ext-gmp": "Calculate without integer limits",
+                "ext-intl": "Format Money objects with intl",
+                "florianv/exchanger": "Exchange rates library for PHP",
+                "florianv/swap": "Exchange rates library for PHP",
+                "psr/cache-implementation": "Used for Currency caching"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Money\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                },
+                {
+                    "name": "Mathias Verraes",
+                    "email": "mathias@verraes.net",
+                    "homepage": "http://verraes.net"
+                },
+                {
+                    "name": "Frederik Bosch",
+                    "email": "f.bosch@genkgo.nl"
+                }
+            ],
+            "description": "PHP implementation of Fowler's Money pattern",
+            "homepage": "http://moneyphp.org",
+            "keywords": [
+                "Value Object",
+                "money",
+                "vo"
+            ],
+            "time": "2019-02-07T18:01:35+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-bancodobrasil-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-bancodobrasil-php_56.git",
+                "reference": "f0a6c8fe2bcd4b134594525d9b6b68b021bb97ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bancodobrasil-php_56/zipball/f0a6c8fe2bcd4b134594525d9b6b68b021bb97ba",
+                "reference": "f0a6c8fe2bcd4b134594525d9b6b68b021bb97ba",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao bancodobrasil",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "bancodobrasil",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-base-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-base-php_56.git",
+                "reference": "0f129ad9c9778972a406f34e752c5c509de515a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php_56/zipball/0f129ad9c9778972a406f34e752c5c509de515a3",
+                "reference": "0f129ad9c9778972a406f34e752c5c509de515a3",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "~3.0",
+                "mozgbrasil/php-framework-php_56": "dev-master"
+            },
+            "suggest": {
+                "aoepeople/aoe_scheduler": "Magento Cron Scheduler",
+                "aschroder/smtp_pro": "sending Magento mail through an external smtp-server",
+                "connect20/mage_locale_pt_br": "pt_BR locale",
+                "husseycoding/customordergrid": "Sort and filter the sales order grid by many different columns.",
+                "jayelkaake/enhancedgrid": "Improves the existing Magento admin product management grid. It adds some useful, customizable features to the admin product management grid including new columns and tools.",
+                "magento-hackathon/hackathon_magemonitoring": "Magento Monitoring Module to get information about the current installation (Server,Cache,PHP,Rewrites,Logs,...)"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Módulo base para Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Bridge",
+                "api",
+                "cerebrum",
+                "email",
+                "magento",
+                "mozg"
+            ],
+            "time": "2018-09-10T12:08:11+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-boxpacker-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-boxpacker-php_56.git",
+                "reference": "9540949887df2d2a16b2b3f320d50d0a5700ede9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php_56/zipball/9540949887df2d2a16b2b3f320d50d0a5700ede9",
+                "reference": "9540949887df2d2a16b2b3f320d50d0a5700ede9",
+                "shasum": ""
+            },
+            "require": {
+                "dvdoug/boxpacker": "*",
+                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-product-page-shipping-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Módulo de Gerenciamento de Embalagem/Caixa requerido para funcionamento dos métodos de entrega",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "correios",
+                "entrega",
+                "magento",
+                "mozg",
+                "shipping",
+                "transporte"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-bradesco-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-bradesco-php_56.git",
+                "reference": "f5feca732ebc5b0310590f7b9f00812b1c368440"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php_56/zipball/f5feca732ebc5b0310590f7b9f00812b1c368440",
+                "reference": "f5feca732ebc5b0310590f7b9f00812b1c368440",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao bradesco",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "bradesco",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-brasil-regions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-brasil-regions.git",
+                "reference": "3f550f5a21cc9593e5da1b8d47c32bb8ab8489b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-brasil-regions/zipball/3f550f5a21cc9593e5da1b8d47c32bb8ab8489b5",
+                "reference": "3f550f5a21cc9593e5da1b8d47c32bb8ab8489b5",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adiciona o suporte aos 27 estados do Brasil ao Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "brasil",
+                "cerebrum",
+                "mozg",
+                "regions"
+            ],
+            "time": "2016-05-17T19:09:26+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-braspag-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-braspag-php_56.git",
+                "reference": "67cea467396a3c24d6a4ba0aa53373a08afd3297"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php_56/zipball/67cea467396a3c24d6a4ba0aa53373a08afd3297",
+                "reference": "67cea467396a3c24d6a4ba0aa53373a08afd3297",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao braspag",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "braspag",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-09-03T12:22:38+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-bundle-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-bundle-php_56.git",
+                "reference": "4c9fcba11bbe5fa2b7ec2e18e51ee12c936a4ec3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php_56/zipball/4c9fcba11bbe5fa2b7ec2e18e51ee12c936a4ec3",
+                "reference": "4c9fcba11bbe5fa2b7ec2e18e51ee12c936a4ec3",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-bancodobrasil-php_56": "dev-master",
+                "mozgbrasil/magento-bradesco-php_56": "dev-master",
+                "mozgbrasil/magento-brasil-regions": "dev-master",
+                "mozgbrasil/magento-braspag-php_56": "dev-master",
+                "mozgbrasil/magento-checkout-filters-php_56": "dev-master",
+                "mozgbrasil/magento-cielo-php_56": "dev-master",
+                "mozgbrasil/magento-clearsale-php_56": "dev-master",
+                "mozgbrasil/magento-correios-php_56": "dev-master",
+                "mozgbrasil/magento-customer-php_56": "dev-master",
+                "mozgbrasil/magento-itau-php_56": "dev-master",
+                "mozgbrasil/magento-iwd-opc": "dev-master",
+                "mozgbrasil/magento-jadlog-php_56": "dev-master",
+                "mozgbrasil/magento-jamef-php_56": "dev-master",
+                "mozgbrasil/magento-locale-pt_br": "dev-master",
+                "mozgbrasil/magento-loggi-php_56": "dev-master",
+                "mozgbrasil/magento-pagseguro-php_56": "dev-master",
+                "mozgbrasil/magento-rede-php_56": "dev-master",
+                "mozgbrasil/magento-redecard-php_56": "dev-master",
+                "mozgbrasil/magento-squidfacil-php_56": "dev-master"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Este é um meta pacote que instala todos os módulos da Mozg no Magento",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "magento",
+                "metapackage",
+                "mozg"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-checkout-filters-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php_56.git",
+                "reference": "0ef1aaf43bd0ed1b29696d4f158f541c7e689401"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php_56/zipball/0ef1aaf43bd0ed1b29696d4f158f541c7e689401",
+                "reference": "0ef1aaf43bd0ed1b29696d4f158f541c7e689401",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Checkout Filters",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "checkout",
+                "filters",
+                "magento",
+                "mozg"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-cielo-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-cielo-php_56.git",
+                "reference": "a57629c6a05d84c54108b115adf99005347b8ef8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php_56/zipball/a57629c6a05d84c54108b115adf99005347b8ef8",
+                "reference": "a57629c6a05d84c54108b115adf99005347b8ef8",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao cielo",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "cielo",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-09-03T12:22:38+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-clearsale-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-clearsale-php_56.git",
+                "reference": "964690fd888607d62feb5f5ba464a486a0157c9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php_56/zipball/964690fd888607d62feb5f5ba464a486a0157c9c",
+                "reference": "964690fd888607d62feb5f5ba464a486a0157c9c",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Clearsale",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "ClearSale",
+                "anti-fraud",
+                "cerebrum",
+                "magento",
+                "mozg"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-correios-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-correios-php_56.git",
+                "reference": "b374f637c43fe806ca075bf9e7b36fb86155c59e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php_56/zipball/b374f637c43fe806ca075bf9e7b36fb86155c59e",
+                "reference": "b374f637c43fe806ca075bf9e7b36fb86155c59e",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao Correios",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "correios",
+                "entrega",
+                "magento",
+                "mozg",
+                "shipping",
+                "sigep",
+                "transporte"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-customer-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-customer-php_56.git",
+                "reference": "fc1f3885e58fe01ded9c2281529a6a739874bfdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php_56/zipball/fc1f3885e58fe01ded9c2281529a6a739874bfdc",
+                "reference": "fc1f3885e58fe01ded9c2281529a6a739874bfdc",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-brasil-regions": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Personalização dos formulários de clientes",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "attributes",
+                "cerebrum",
+                "customer",
+                "form",
+                "magento",
+                "mozg"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-fee-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-fee-php_56.git",
+                "reference": "e33cac8095f5f749dda129ee531510db1c97f6d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php_56/zipball/e33cac8095f5f749dda129ee531510db1c97f6d5",
+                "reference": "e33cac8095f5f749dda129ee531510db1c97f6d5",
+                "shasum": ""
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao fee",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "fee",
+                "magento",
+                "mozg",
+                "shipping",
+                "transporte"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-itau-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-itau-php_56.git",
+                "reference": "c1506778ed63a6361d34482bfaa72d460e57515e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php_56/zipball/c1506778ed63a6361d34482bfaa72d460e57515e",
+                "reference": "c1506778ed63a6361d34482bfaa72d460e57515e",
+                "shasum": ""
+            },
+            "require": {
+                "dilneiss/itaubankline": "*",
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao itau",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "itaú",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-iwd-all",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-iwd-all.git",
+                "reference": "b62efbc2188f17e01bc262c67077c12367a75cee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-all/zipball/b62efbc2188f17e01bc262c67077c12367a75cee",
+                "reference": "b62efbc2188f17e01bc262c67077c12367a75cee",
+                "shasum": ""
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IWD_All",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "all",
+                "cerebrum",
+                "iwd",
+                "magento",
+                "mozg"
+            ],
+            "time": "2017-01-27T10:28:53+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-iwd-opc",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-iwd-opc.git",
+                "reference": "ac72611075aa569e444cc299937c04df59c28e0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-iwd-opc/zipball/ac72611075aa569e444cc299937c04df59c28e0b",
+                "reference": "ac72611075aa569e444cc299937c04df59c28e0b",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-iwd-all": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "IWD_Opc",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "checkout",
+                "iwd",
+                "magento",
+                "mozg",
+                "opc"
+            ],
+            "time": "2017-01-27T10:29:01+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-jadlog-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-jadlog-php_56.git",
+                "reference": "54485e0dfda9a1868fdfd94702af22acb814c6a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php_56/zipball/54485e0dfda9a1868fdfd94702af22acb814c6a1",
+                "reference": "54485e0dfda9a1868fdfd94702af22acb814c6a1",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Jadlog",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "jadlog",
+                "magento",
+                "mozg",
+                "shipping",
+                "transportadora"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-jamef-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-jamef-php_56.git",
+                "reference": "c086cd55152dfae7e17c9d23f1a5d4f67d488120"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php_56/zipball/c086cd55152dfae7e17c9d23f1a5d4f67d488120",
+                "reference": "c086cd55152dfae7e17c9d23f1a5d4f67d488120",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Jamef",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "jamef",
+                "magento",
+                "mozg",
+                "shipping",
+                "transportadora"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-locale-pt_br",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-locale-pt_br.git",
+                "reference": "70c4fc8f5ed27596baf370e687b480a737008015"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-locale-pt_br/zipball/70c4fc8f5ed27596baf370e687b480a737008015",
+                "reference": "70c4fc8f5ed27596baf370e687b480a737008015",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Arquivos de tradução",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "locale",
+                "magento",
+                "mozg"
+            ],
+            "time": "2018-04-12T16:06:40+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-loggi-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-loggi-php_56.git",
+                "reference": "16ed1da2c20153bced645a8335c282d6b5358c12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php_56/zipball/16ed1da2c20153bced645a8335c282d6b5358c12",
+                "reference": "16ed1da2c20153bced645a8335c282d6b5358c12",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Loggi",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "loggi",
+                "magento",
+                "motoboy",
+                "mozg",
+                "shipping",
+                "transportadora"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-pagseguro-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-pagseguro-php_56.git",
+                "reference": "ebd0883ba3c90783678629f73dd1137919b0fc21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-pagseguro-php_56/zipball/ebd0883ba3c90783678629f73dd1137919b0fc21",
+                "reference": "ebd0883ba3c90783678629f73dd1137919b0fc21",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master",
+                "pagseguro/pagseguro-php-sdk": "*"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao pagseguro",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "Pagseguro",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-payment-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-payment-php_56.git",
+                "reference": "62e18c99200cf3b6b3d470e31cca5979647d4461"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php_56/zipball/62e18c99200cf3b6b3d470e31cca5979647d4461",
+                "reference": "62e18c99200cf3b6b3d470e31cca5979647d4461",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-fee-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao payment",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-product-page-shipping-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php_56.git",
+                "reference": "a2355c5f4be42f6aae6ea95b329c76f69c7fd2d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php_56/zipball/a2355c5f4be42f6aae6ea95b329c76f69c7fd2d3",
+                "reference": "a2355c5f4be42f6aae6ea95b329c76f69c7fd2d3",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Usando extensão os clientes será capaz de ver os métodos de envio na página do produto.",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "magento",
+                "mozg",
+                "page",
+                "product",
+                "shipestimation",
+                "shipping"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-rede-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-rede-php_56.git",
+                "reference": "12272db4280e8562280dfa40f475b9b5532cf5b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-rede-php_56/zipball/12272db4280e8562280dfa40f475b9b5532cf5b1",
+                "reference": "12272db4280e8562280dfa40f475b9b5532cf5b1",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao rede",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment",
+                "rede"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-redecard-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-redecard-php_56.git",
+                "reference": "ecc7a83c58c2e12b83ce0717e1dd2769d643e0d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php_56/zipball/ecc7a83c58c2e12b83ce0717e1dd2769d643e0d6",
+                "reference": "ecc7a83c58c2e12b83ce0717e1dd2769d643e0d6",
+                "shasum": ""
+            },
+            "require": {
+                "byjg/omnipay-komerci": "*",
+                "mozgbrasil/magento-payment-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração ao redecard",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "Pagamento",
+                "cerebrum",
+                "magento",
+                "mozg",
+                "payment",
+                "redecard"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-squidfacil-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-squidfacil-php_56.git",
+                "reference": "4a0cfac31f57380f33a1e3f715492b4f295ac0a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-squidfacil-php_56/zipball/4a0cfac31f57380f33a1e3f715492b4f295ac0a2",
+                "reference": "4a0cfac31f57380f33a1e3f715492b4f295ac0a2",
+                "shasum": ""
+            },
+            "require": {
+                "mozgbrasil/magento-base-php_56": "dev-master"
+            },
+            "type": "magento-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integração a Squidfacil",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "entrega",
+                "magento",
+                "mozg",
+                "shipping",
+                "squidfacil",
+                "transportadora"
+            ],
+            "time": "2018-08-24T15:49:06+00:00"
+        },
+        {
+            "name": "mozgbrasil/php-framework-php_56",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/php-framework-php_56.git",
+                "reference": "6574d1f3c1875051fa45e0a13506cc2611782083"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_56/zipball/6574d1f3c1875051fa45e0a13506cc2611782083",
+                "reference": "6574d1f3c1875051fa45e0a13506cc2611782083",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": ">=1.3.0",
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "ext-gd": "*",
+                "ext-hash": "*",
+                "ext-iconv": "*",
+                "ext-intl": "*",
+                "ext-mcrypt": "*",
+                "ext-openssl": "*",
+                "ext-pdo": "*",
+                "ext-simplexml": "*",
+                "ext-soap": "*",
+                "ext-sockets": "*",
+                "ext-spl": "*",
+                "guzzlehttp/guzzle": ">=5.3.1",
+                "jenssegers/agent": ">=2.6.0",
+                "jms/serializer": ">=1.1.0",
+                "league/csv": ">=7.2.0 <=8.2.2",
+                "lib-libxml": "*",
+                "moneyphp/money": ">=1.3.0",
+                "php": ">=5.4",
+                "reisraff/accentuation": ">=2.0.2",
+                "sebastian/diff": ">=1.4.3",
+                "stichoza/google-translate-php": ">=3.1.2",
+                "sunra/dbug": ">=0.2.1",
+                "symfony/var-dumper": ">=2.8.31",
+                "tecnickcom/tcpdf": ">=6.2.13",
+                "zendframework/zend-barcode": ">=2.5.1",
+                "zendframework/zend-config": ">=2.5.1",
+                "zendframework/zend-debug": ">=2.5.1",
+                "zendframework/zend-escaper": ">=2.5.1",
+                "zendframework/zend-log": ">=2.5.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "*",
+                "lusitanian/oauth": "*",
+                "pdepend/pdepend": "*",
+                "phpmd/phpmd": "*",
+                "phpunit/phpunit": "*",
+                "sjparkinson/static-review": "*",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "suggest": {
+                "phpunit/phpunit": "The PHP Unit Testing framework."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mozg\\Framework\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Marcio dos Santos Amorim",
+                    "email": "suporte@mozg.com.br",
+                    "homepage": "http://mozg.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mozg API",
+            "homepage": "http://mozg.com.br",
+            "keywords": [
+                "cerebrum",
+                "framework",
+                "magento",
+                "magento2",
+                "mozg",
+                "mysql",
+                "php",
+                "ubuntu"
+            ],
+            "time": "2018-09-10T11:47:49+00:00"
+        },
+        {
+            "name": "nategood/httpful",
+            "version": "0.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nategood/httpful.git",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nategood/httpful/zipball/c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Httpful": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nate Good",
+                    "email": "me@nategood.com",
+                    "homepage": "http://nategood.com"
+                }
+            ],
+            "description": "A Readable, Chainable, REST friendly, PHP HTTP Client",
+            "homepage": "http://github.com/nategood/httpful",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "requests",
+                "rest",
+                "restful"
+            ],
+            "time": "2015-10-26T16:11:30+00:00"
+        },
+        {
+            "name": "omnipay/common",
+            "version": "2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/omnipay-common.git",
+                "reference": "54910f2ece6b1be64f5e53e2111dd1254d50ee49"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/54910f2ece6b1be64f5e53e2111dd1254d50ee49",
+                "reference": "54910f2ece6b1be64f5e53e2111dd1254d50ee49",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "~3.9",
+                "php": ">=5.3.2",
+                "symfony/http-foundation": "~2.1|~3.0"
+            },
+            "require-dev": {
+                "omnipay/tests": "~2.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                },
+                "gateways": [
+                    "AuthorizeNet_AIM",
+                    "AuthorizeNet_SIM",
+                    "Buckaroo_CreditCard",
+                    "Buckaroo_Ideal",
+                    "Buckaroo_PayPal",
+                    "CardSave",
+                    "Coinbase",
+                    "Dummy",
+                    "Eway_Rapid",
+                    "FirstData_Connect",
+                    "GoCardless",
+                    "Manual",
+                    "Migs_ThreeParty",
+                    "Migs_TwoParty",
+                    "Mollie",
+                    "MultiSafepay",
+                    "Netaxept",
+                    "NetBanx",
+                    "PayFast",
+                    "Payflow_Pro",
+                    "PaymentExpress_PxPay",
+                    "PaymentExpress_PxPost",
+                    "PayPal_Express",
+                    "PayPal_Pro",
+                    "Pin",
+                    "SagePay_Direct",
+                    "SagePay_Server",
+                    "SecurePay_DirectPost",
+                    "Stripe",
+                    "TargetPay_Directebanking",
+                    "TargetPay_Ideal",
+                    "TargetPay_Mrcash",
+                    "WorldPay"
+                ]
+            },
+            "autoload": {
+                "psr-0": {
+                    "Omnipay\\Common\\": "src/"
+                },
+                "classmap": [
+                    "src/Omnipay/Omnipay.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Macneil",
+                    "email": "adrian@adrianmacneil.com"
+                },
+                {
+                    "name": "Omnipay Contributors",
+                    "homepage": "https://github.com/thephpleague/omnipay-common/contributors"
+                }
+            ],
+            "description": "Common components for Omnipay payment processing library",
+            "homepage": "https://github.com/thephpleague/omnipay-common",
+            "keywords": [
+                "gateway",
+                "merchant",
+                "omnipay",
+                "pay",
+                "payment",
+                "purchase"
+            ],
+            "time": "2016-11-07T06:10:23+00:00"
+        },
+        {
+            "name": "pagseguro/pagseguro-php-sdk",
+            "version": "5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pagseguro/pagseguro-php-sdk.git",
+                "reference": "263b9e1d5ed87b082ce95d4dd3ea32e47aa536c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pagseguro/pagseguro-php-sdk/zipball/263b9e1d5ed87b082ce95d4dd3ea32e47aa536c3",
+                "reference": "263b9e1d5ed87b082ce95d4dd3ea32e47aa536c3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "lib-curl": "*",
+                "lib-openssl": "*",
+                "php": "^5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PagSeguro\\": "source/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "PagSeguro"
+                }
+            ],
+            "description": "Biblioteca de integração com o PagSeguro",
+            "time": "2018-11-14T20:57:16+00:00"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v2.0.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2019-01-03T20:59:08+00:00"
+        },
+        {
+            "name": "phpcollection/phpcollection",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-collection.git",
+                "reference": "f2bcff45c0da7c27991bbc1f90f47c4b7fb434a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-collection/zipball/f2bcff45c0da7c27991bbc1f90f47c4b7fb434a6",
+                "reference": "f2bcff45c0da7c27991bbc1f90f47c4b7fb434a6",
+                "shasum": ""
+            },
+            "require": {
+                "phpoption/phpoption": "1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpCollection": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "General-Purpose Collection Library for PHP",
+            "keywords": [
+                "collection",
+                "list",
+                "map",
+                "sequence",
+                "set"
+            ],
+            "time": "2015-05-17T12:39:23+00:00"
+        },
+        {
+            "name": "phpoption/phpoption",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpOption\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Option Type for PHP",
+            "keywords": [
+                "language",
+                "option",
+                "php",
+                "type"
+            ],
+            "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "prasathmani/tinyfilemanager",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/prasathmani/tinyfilemanager.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-20T15:27:04+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2016-02-11T07:05:27+00:00"
+        },
+        {
+            "name": "reisraff/accentuation",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reisraff/accentuation.git",
+                "reference": "cb15244c431ce711ec7e5b77c18b801305d7cb16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reisraff/accentuation/zipball/cb15244c431ce711ec7e5b77c18b801305d7cb16",
+                "reference": "cb15244c431ce711ec7e5b77c18b801305d7cb16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phploc/phploc": "2.0.*",
+                "phpmd/phpmd": "2.1.*",
+                "phpunit/phpunit": "4.5.*",
+                "sebastian/phpcpd": "2.0.*",
+                "squizlabs/php_codesniffer": "2.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rafael Reis",
+                    "email": "reisraff@gmail.com",
+                    "homepage": "http://reisraff.github.io/"
+                }
+            ],
+            "description": "This repository works making a parser in some string replacing the accented characters",
+            "homepage": "https://github.com/reisraff/accentuation",
+            "keywords": [
+                "accentuation",
+                "package",
+                "parser",
+                "remove",
+                "replace"
+            ],
+            "time": "2016-02-13T23:25:14+00:00"
+        },
+        {
+            "name": "sebastian/diff",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/diff.git",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Diff implementation",
+            "homepage": "https://github.com/sebastianbergmann/diff",
+            "keywords": [
+                "diff"
+            ],
+            "time": "2017-05-22T07:24:03+00:00"
+        },
+        {
+            "name": "stichoza/google-translate-php",
+            "version": "v3.2.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stichoza/google-translate-php.git",
+                "reference": "2ad0de0c69c99cf5bb78a376b349e2fde595eec9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/2ad0de0c69c99cf5bb78a376b349e2fde595eec9",
+                "reference": "2ad0de0c69c99cf5bb78a376b349e2fde595eec9",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Stichoza\\GoogleTranslate\\": "src/"
+                },
+                "psr-4": {
+                    "Stichoza\\GoogleTranslate\\": "src/Stichoza/GoogleTranslate/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levan Velijanashvili",
+                    "email": "me@stichoza.com"
+                }
+            ],
+            "description": "Free Google Translate API PHP Package",
+            "homepage": "http://github.com/Stichoza/google-translate-php",
+            "keywords": [
+                "google",
+                "php",
+                "translate"
+            ],
+            "time": "2018-06-26T08:24:07+00:00"
+        },
+        {
+            "name": "sunra/dbug",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunra/dBug.git",
+                "reference": "ecd8a589dc3ee1bba84095828c222ff560bc19e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunra/dBug/zipball/ecd8a589dc3ee1bba84095828c222ff560bc19e5",
+                "reference": "ecd8a589dc3ee1bba84095828c222ff560bc19e5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ospinto\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "sunra",
+                    "email": "sunra@yandex.ru",
+                    "homepage": "http://github.com/sunra"
+                },
+                {
+                    "name": "Kwaku Otchere",
+                    "email": "ospinto@hotmail.com"
+                }
+            ],
+            "description": "Most beautiful variable dump library for PHP (ColdFusion like style)",
+            "homepage": "http://github.com/sunra/dBug.git",
+            "keywords": [
+                "debug",
+                "dump",
+                "php"
+            ],
+            "time": "2015-12-14T22:37:24+00:00"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v3.4.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "069bf3f0e8f871a2169a06e43d9f3f03f355e9be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/069bf3f0e8f871a2169a06e43d9f3f03f355e9be",
+                "reference": "069bf3f0e8f871a2169a06e43d9f3f03f355e9be",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/debug": "~2.8|~3.0|~4.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~3.3|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.3|~4.0"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/lock": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-25T10:42:12+00:00"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "v3.4.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "667a26c4dd6bc75c67f06bc9bcd015bdecc7cbb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/667a26c4dd6bc75c67f06bc9bcd015bdecc7cbb8",
+                "reference": "667a26c4dd6bc75c67f06bc9bcd015bdecc7cbb8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "psr/log": "~1.0"
+            },
+            "conflict": {
+                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+            },
+            "require-dev": {
+                "symfony/http-kernel": "~2.8|~3.0|~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Debug\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Debug Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-25T10:19:25+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v2.8.49",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "a77e974a5fecb4398833b0709210e3d5e334ffb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a77e974a5fecb4398833b0709210e3d5e334ffb0",
+                "reference": "a77e974a5fecb4398833b0709210e3d5e334ffb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "^2.0.5|~3.0.0",
+                "symfony/dependency-injection": "~2.6|~3.0.0",
+                "symfony/expression-language": "~2.6|~3.0.0",
+                "symfony/stopwatch": "~2.3|~3.0.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-11-21T14:20:20+00:00"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v3.4.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "9a81d2330ea255ded06a69b4f7fb7804836e7a05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/9a81d2330ea255ded06a69b4f7fb7804836e7a05",
+                "reference": "9a81d2330ea255ded06a69b4f7fb7804836e7a05",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.1",
+                "symfony/polyfill-php70": "~1.6"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.8|~3.0|~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-27T09:04:14+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php70",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/6b88000cdd431cd2e940caa2cb569201f3f84224",
+                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "~1.0|~2.0|~9.99",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T06:26:08+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v3.4.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "009f8dda80930e89e8344a4e310b08f9ff07dd2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/009f8dda80930e89e8344a4e310b08f9ff07dd2e",
+                "reference": "009f8dda80930e89e8344a4e310b08f9ff07dd2e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-16T13:27:11+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.4.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "2159335b452d929cbb9921fc4eb7d1bfed32d0be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2159335b452d929cbb9921fc4eb7d1bfed32d0be",
+                "reference": "2159335b452d929cbb9921fc4eb7d1bfed32d0be",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2019-01-29T16:19:17+00:00"
+        },
+        {
+            "name": "tecnickcom/tcpdf",
+            "version": "6.2.26",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tecnickcom/TCPDF.git",
+                "reference": "367241059ca166e3a76490f4448c284e0a161f15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/367241059ca166e3a76490f4448c284e0a161f15",
+                "reference": "367241059ca166e3a76490f4448c284e0a161f15",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "config",
+                    "include",
+                    "tcpdf.php",
+                    "tcpdf_parser.php",
+                    "tcpdf_import.php",
+                    "tcpdf_barcodes_1d.php",
+                    "tcpdf_barcodes_2d.php",
+                    "include/tcpdf_colors.php",
+                    "include/tcpdf_filters.php",
+                    "include/tcpdf_font_data.php",
+                    "include/tcpdf_fonts.php",
+                    "include/tcpdf_images.php",
+                    "include/tcpdf_static.php",
+                    "include/barcodes/datamatrix.php",
+                    "include/barcodes/pdf417.php",
+                    "include/barcodes/qrcode.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nicola Asuni",
+                    "email": "info@tecnick.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
+            "homepage": "http://www.tcpdf.org/",
+            "keywords": [
+                "PDFD32000-2008",
+                "TCPDF",
+                "barcodes",
+                "datamatrix",
+                "pdf",
+                "pdf417",
+                "qrcode"
+            ],
+            "time": "2018-10-16T17:24:05+00:00"
+        },
+        {
+            "name": "zendframework/zend-barcode",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-barcode.git",
+                "reference": "50f24f604ef2172a0127efe91e786bc2caf2e8cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-barcode/zipball/50f24f604ef2172a0127efe91e786bc2caf2e8cf",
+                "reference": "50f24f604ef2172a0127efe91e786bc2caf2e8cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-servicemanager": "^2.7.8 || ^3.3",
+                "zendframework/zend-stdlib": "^2.7.7 || ^3.1",
+                "zendframework/zend-validator": "^2.10.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-config": "^2.6 || ^3.1",
+                "zendframework/zendpdf": "^2.0.2"
+            },
+            "suggest": {
+                "zendframework/zendpdf": "ZendPdf component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7.x-dev",
+                    "dev-develop": "2.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Barcode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a generic way to generate barcodes",
+            "keywords": [
+                "ZendFramework",
+                "barcode",
+                "zf"
+            ],
+            "time": "2017-12-11T15:30:02+00:00"
+        },
+        {
+            "name": "zendframework/zend-config",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-config.git",
+                "reference": "6796f5dcba52c84ef2501d7313618989b5ef3023"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/6796f5dcba52c84ef2501d7313618989b5ef3023",
+                "reference": "6796f5dcba52c84ef2501d7313618989b5ef3023",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^5.6 || ^7.0",
+                "psr/container": "^1.0",
+                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
+            },
+            "conflict": {
+                "container-interop/container-interop": "<1.2.0"
+            },
+            "require-dev": {
+                "malukenho/docheader": "^0.1.6",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-filter": "^2.7.2",
+                "zendframework/zend-i18n": "^2.7.4",
+                "zendframework/zend-servicemanager": "^2.7.8 || ^3.3"
+            },
+            "suggest": {
+                "zendframework/zend-filter": "^2.7.2; install if you want to use the Filter processor",
+                "zendframework/zend-i18n": "^2.7.4; install if you want to use the Translator processor",
+                "zendframework/zend-servicemanager": "^2.7.8 || ^3.3; if you need an extensible plugin manager for use with the Config Factory"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a nested object property based user interface for accessing this configuration data within application code",
+            "keywords": [
+                "ZendFramework",
+                "config",
+                "zf"
+            ],
+            "time": "2018-04-24T19:26:44+00:00"
+        },
+        {
+            "name": "zendframework/zend-debug",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-debug.git",
+                "reference": "cb423facd6f2e875a3cb44cf992b6bd1f5fd1a96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-debug/zipball/cb423facd6f2e875a3cb44cf992b6bd1f5fd1a96",
+                "reference": "cb423facd6f2e875a3cb44cf992b6bd1f5fd1a96",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-escaper": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.5",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "suggest": {
+                "ext-xdebug": "XDebug, for better backtrace output"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6.x-dev",
+                    "dev-develop": "2.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Debug\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Safely dump debug information to HTML",
+            "keywords": [
+                "ZendFramework",
+                "debug",
+                "zf"
+            ],
+            "time": "2018-04-30T20:10:31+00:00"
+        },
+        {
+            "name": "zendframework/zend-escaper",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-escaper.git",
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/31d8aafae982f9568287cb4dce987e6aff8fd074",
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6.x-dev",
+                    "dev-develop": "2.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Escaper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs",
+            "keywords": [
+                "ZendFramework",
+                "escaper",
+                "zf"
+            ],
+            "time": "2018-04-25T15:48:53+00:00"
+        },
+        {
+            "name": "zendframework/zend-log",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-log.git",
+                "reference": "9cec3b092acb39963659c2f32441cccc56b3f430"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-log/zipball/9cec3b092acb39963659c2f32441cccc56b3f430",
+                "reference": "9cec3b092acb39963659c2f32441cccc56b3f430",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "psr/log": "^1.0",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^5.7.15 || ^6.0.8",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-db": "^2.6",
+                "zendframework/zend-escaper": "^2.5",
+                "zendframework/zend-filter": "^2.5",
+                "zendframework/zend-mail": "^2.6.1",
+                "zendframework/zend-validator": "^2.10.1"
+            },
+            "suggest": {
+                "ext-mongo": "mongo extension to use Mongo writer",
+                "ext-mongodb": "mongodb extension to use MongoDB writer",
+                "zendframework/zend-console": "Zend\\Console component to use the RequestID log processor",
+                "zendframework/zend-db": "Zend\\Db component to use the database log writer",
+                "zendframework/zend-escaper": "Zend\\Escaper component, for use in the XML log formatter",
+                "zendframework/zend-mail": "Zend\\Mail component to use the email log writer",
+                "zendframework/zend-validator": "Zend\\Validator component to block invalid log messages"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.10.x-dev",
+                    "dev-develop": "2.11.x-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Log",
+                    "config-provider": "Zend\\Log\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Log\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "component for general purpose logging",
+            "homepage": "https://github.com/zendframework/zend-log",
+            "keywords": [
+                "log",
+                "logging",
+                "zf2"
+            ],
+            "time": "2018-04-09T21:59:51+00:00"
+        },
+        {
+            "name": "zendframework/zend-servicemanager",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-servicemanager.git",
+                "reference": "a1ed6140d0d3ee803fec96582593ed024950067b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/a1ed6140d0d3ee803fec96582593ed024950067b",
+                "reference": "a1ed6140d0d3ee803fec96582593ed024950067b",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.2",
+                "php": "^5.6 || ^7.0",
+                "psr/container": "^1.0",
+                "zendframework/zend-stdlib": "^3.2.1"
+            },
+            "provide": {
+                "container-interop/container-interop-implementation": "^1.2",
+                "psr/container-implementation": "^1.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6.5",
+                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "phpbench/phpbench": "^0.13.0",
+                "phpunit/phpunit": "^5.7.25 || ^6.4.4",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "suggest": {
+                "ocramius/proxy-manager": "ProxyManager 1.* to handle lazy initialization of services",
+                "zendframework/zend-stdlib": "zend-stdlib ^2.5 if you wish to use the MergeReplaceKey or MergeRemoveKey features in Config instances"
+            },
+            "bin": [
+                "bin/generate-deps-for-config-factory",
+                "bin/generate-factory-for-class"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev",
+                    "dev-develop": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\ServiceManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Factory-Driven Dependency Injection Container",
+            "keywords": [
+                "PSR-11",
+                "ZendFramework",
+                "dependency-injection",
+                "di",
+                "dic",
+                "service-manager",
+                "servicemanager",
+                "zf"
+            ],
+            "time": "2018-12-22T06:05:09+00:00"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "66536006722aff9e62d1b331025089b7ec71c065"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/66536006722aff9e62d1b331025089b7ec71c065",
+                "reference": "66536006722aff9e62d1b331025089b7ec71c065",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.13",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Stdlib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "SPL extensions, array utilities, error handlers, and more",
+            "keywords": [
+                "ZendFramework",
+                "stdlib",
+                "zf"
+            ],
+            "time": "2018-08-28T21:34:05+00:00"
+        },
+        {
+            "name": "zendframework/zend-validator",
+            "version": "2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-validator.git",
+                "reference": "64c33668e5fa2d39c6289a878f927ea2b0850c30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-validator/zipball/64c33668e5fa2d39c6289a878f927ea2b0850c30",
+                "reference": "64c33668e5fa2d39c6289a878f927ea2b0850c30",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.1",
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-stdlib": "^3.2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0.8 || ^5.7.15",
+                "psr/http-message": "^1.0",
+                "zendframework/zend-cache": "^2.6.1",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-config": "^2.6",
+                "zendframework/zend-db": "^2.7",
+                "zendframework/zend-filter": "^2.6",
+                "zendframework/zend-http": "^2.5.4",
+                "zendframework/zend-i18n": "^2.6",
+                "zendframework/zend-math": "^2.6",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-session": "^2.8",
+                "zendframework/zend-uri": "^2.5"
+            },
+            "suggest": {
+                "psr/http-message": "psr/http-message, required when validating PSR-7 UploadedFileInterface instances via the Upload and UploadFile validators",
+                "zendframework/zend-db": "Zend\\Db component, required by the (No)RecordExists validator",
+                "zendframework/zend-filter": "Zend\\Filter component, required by the Digits validator",
+                "zendframework/zend-i18n": "Zend\\I18n component to allow translation of validation error messages",
+                "zendframework/zend-i18n-resources": "Translations of validator messages",
+                "zendframework/zend-math": "Zend\\Math component, required by the Csrf validator",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component to allow using the ValidatorPluginManager and validator chains",
+                "zendframework/zend-session": "Zend\\Session component, ^2.8; required by the Csrf validator",
+                "zendframework/zend-uri": "Zend\\Uri component, required by the Uri and Sitemap\\Loc validators"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.12.x-dev",
+                    "dev-develop": "2.13.x-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Validator",
+                    "config-provider": "Zend\\Validator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Validator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a set of commonly needed validators",
+            "homepage": "https://github.com/zendframework/zend-validator",
+            "keywords": [
+                "validator",
+                "zf2"
+            ],
+            "time": "2019-01-30T14:26:10+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "mozgbrasil/magento-bundle-php_56": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.0 <7.3.0"
+    },
+    "platform-dev": []
+}
