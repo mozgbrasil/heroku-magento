@@ -262,20 +262,6 @@ profile () { # Heroku, During startup, the container starts a bash shell that ru
 function_before
 echo -e "${ONYELLOW} profile () { ${NORMAL}"
 
-echo -e "${ONYELLOW} check n98-magerun ${NORMAL}"
-
-timeProg=`which n98-magerun`
-
-[[ "$(command -v n98-magerun)" ]] || { N98=TRUE; echo "n98-magerun is not installed" 1>&2 ; }
-[[ -f "./n98-magerun.phar" ]] || { N98=TRUE; echo "n98-magerun local installed" 1>&2 ; }
-
-if [ -z "${N98}" ]; then # -z String, True if string is empty.
-  echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
-  wget https://files.magerun.net/n98-magerun.phar
-  chmod +x ./n98-magerun.phar
-  ./n98-magerun.phar --version
-fi
-
 echo -e "${ONYELLOW} check mysql ${NORMAL}"
 
 if type mysql >/dev/null 2>&1; then
@@ -433,6 +419,20 @@ dot_env
 echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
 pwd
+
+echo -e "${ONYELLOW} check n98-magerun ${NORMAL}"
+
+timeProg=`which n98-magerun`
+
+[[ "$(command -v n98-magerun)" ]] || { N98=TRUE; echo "n98-magerun is not installed" 1>&2 ; }
+[[ -f "./n98-magerun.phar" ]] || { N98=TRUE; echo "n98-magerun local installed" 1>&2 ; }
+
+if [ -z "${N98}" ]; then # -z String, True if string is empty.
+  echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
+  wget https://files.magerun.net/n98-magerun.phar
+  chmod +x ./n98-magerun.phar
+  ./n98-magerun.phar --version
+fi
 
 ./n98-magerun.phar --version
 
@@ -739,12 +739,6 @@ bash ./mage list-installed
 echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
 bash ./mage list-upgrades
-
-echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
-
-./n98-magerun.phar cache:disable --root-dir=.
-./n98-magerun.phar sys:check --root-dir=.
-./n98-magerun.phar admin:user:list --root-dir=.
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 
