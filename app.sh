@@ -261,7 +261,7 @@ if type mysql >/dev/null 2>&1; then
 
     if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
         echo -e "${RED} MYSQL_SHOW_TABLES vazio ${NORMAL}"
-        magento_sample_data_import_haifeng        
+        #magento_sample_data_import_haifeng
     fi
 
     if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
