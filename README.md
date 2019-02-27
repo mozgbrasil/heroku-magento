@@ -68,6 +68,8 @@ Clique no botão "View"
 
 Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento para utilizar a plataforma
 
+    O aplicativo ainda não suporta a importação do sample data, a melhor solução é importar o banco antes de implantar o aplicativo na Heroku
+
 ## Útil
 
 https://medium.com/elefante-yogue/usando-php-com-heroku-e7d4f2fee56a
@@ -77,13 +79,13 @@ https://medium.com/elefante-yogue/usando-php-com-heroku-e7d4f2fee56a
     git clone https://github.com/mozgbrasil/heroku-magento
     cp env-example .env
     nano .env
-    composer install -vvv
+    pwd && ls && rm -fr magento && rm -fr vendor && rm composer.lock && pwd && ls && composer install -vvv
       # 1 local: pre-update-cmd, post-update-cmd: command is executed without a lock file present.
       # 2 local, heroku 2: post-install-cmd: command has been executed with a lock file present.
 
     composer show -s -vvv
     composer install -vvv
-    (du -hsx * | sort -rh | head -10)
+    (du -hsx ./* | sort -rh | head -10)
     (du -hsx vendor/* | sort -rh | head -10)
 
 ## Magento

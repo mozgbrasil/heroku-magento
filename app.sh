@@ -99,7 +99,7 @@ echo -e "${ONYELLOW} pwd ${NORMAL}"
 
 pwd && ls
 
-df -h
+#df -h
 
 du -hsx ./* | sort -rh | head -10
 
@@ -280,6 +280,8 @@ if type mysql >/dev/null 2>&1; then
       fi
     fi
 
+    mysql_select_admin_user
+
     if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
         echo -e "${RED} MYSQL_SELECT_ADMIN_USER = null ${NORMAL}"
         magento_install        
@@ -431,12 +433,13 @@ if [ -z "${N98}" ]; then # -z String, True if string is empty.
   echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
   wget https://files.magerun.net/n98-magerun.phar
   chmod +x ./n98-magerun.phar
-  ./n98-magerun.phar --version
+  alias n98-magerun=./n98-magerun.phar
+  n98-magerun --version
 fi
 
-./n98-magerun.phar --version
+n98-magerun --version
 
-./n98-magerun.phar --root-dir=magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
+n98-magerun --root-dir=magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
 
 function_after
 
@@ -616,15 +619,15 @@ awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.
 
 echo -e "${ONYELLOW} Importando... ${NORMAL}"
 
-STRING_MYSQL_IMPORT="mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'"
+if [ -f ".env" ] ; then # if file not exits, only local
+    echo -e "${RED} .env ${NORMAL}"
+    MYSQL_IMPORT=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'` # Heroku, Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+    echo -e "${RED} MYSQL_IMPORT=${MYSQL_IMPORT} ${NORMAL}"
+fi
 
-echo -e "${ONYELLOW} $STRING_MYSQL_IMPORT ${NORMAL}"
-
-#MYSQL_IMPORT=`$STRING_MYSQL_IMPORT` # Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+#
 
 #php bin/worker.php "$STRING_MYSQL_IMPORT" # heroku[run.8223]: Awaiting client, : Starting process with command
-
-echo -e "${ONYELLOW} Importado ... ${NORMAL}"
 
 function_after
 
@@ -692,9 +695,9 @@ php -f install.php -- \
 --admin_username "admin" \
 --admin_password "123456a"
 
-echo -e "${ONYELLOW} magento/index.php ${NORMAL}"
+#echo -e "${ONYELLOW} magento/index.php ${NORMAL}"
 
-php index.php
+#php index.php
 
 echo -e "${ONYELLOW} shell ${NORMAL}"
 
