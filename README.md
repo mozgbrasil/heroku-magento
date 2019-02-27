@@ -77,7 +77,7 @@ https://medium.com/elefante-yogue/usando-php-com-heroku-e7d4f2fee56a
     git clone https://github.com/mozgbrasil/heroku-magento
     cp env-example .env
     nano .env
-    composer install -vvv 
+    composer install -vvv
       # 1 local: pre-update-cmd, post-update-cmd: command is executed without a lock file present.
       # 2 local, heroku 2: post-install-cmd: command has been executed with a lock file present.
 
