@@ -260,17 +260,20 @@ if type mysql >/dev/null 2>&1; then
     mysql_show_tables
 
     if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
-        echo -e "${RED} MYSQL_SHOW_TABLES vazio ${NORMAL}"
-        #magento_sample_data_import_haifeng
+        echo -e "${RED} MYSQL_SHOW_TABLES:false ${NORMAL}"
+        magento_sample_data_import_haifeng
     fi
 
     if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
-        echo -e "${RED} MYSQL_SELECT_ADMIN_USER vazio ${NORMAL}"
-        magento_install        
+        echo -e "${RED} MYSQL_SELECT_ADMIN_USER:false ${NORMAL}"
+        if [ ! -z "${MYSQL_IMPORT}" ]; then
+            echo -e "${RED} MYSQL_IMPORT:true ${NORMAL}"
+            magento_install        
+        fi   
     fi
 
     if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-        echo -e "${RED} local vazio ${NORMAL}"
+        echo -e "${RED} local.xml:false ${NORMAL}"
         magento_config_xml
     fi
 
@@ -584,7 +587,11 @@ awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.
 
 echo -e "${ONYELLOW} Importando... ${NORMAL}"
 
-mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'
+MYSQL_IMPORT=`mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'`
+
+echo -e "${ONPURPLE} MYSQL_IMPORT ${NORMAL}"
+
+echo $MYSQL_IMPORT
 
 echo -e "${ONYELLOW} Importado ... ${NORMAL}"
 
