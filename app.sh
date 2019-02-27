@@ -264,6 +264,8 @@ echo -e "${ONYELLOW} profile () { ${NORMAL}"
 
 echo -e "${ONYELLOW} check n98-magerun ${NORMAL}"
 
+[[ "$(command -v n98-magerun)" ]] || { echo "n98-magerun is not installed" 1>&2 ; }
+
 timeProg=`which n98-magerun`
 if [ "$timeProg" = "" ]
 then
@@ -284,21 +286,21 @@ if type mysql >/dev/null 2>&1; then
     mysql_show_tables
 
     if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
-        echo -e "${RED} MYSQL_SHOW_TABLES:empty ${NORMAL}"
+        echo -e "${RED} MYSQL_SHOW_TABLES = null ${NORMAL}"
         magento_sample_data_import_haifeng
     fi
 
     if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
-        echo -e "${RED} MYSQL_SELECT_ADMIN_USER:empty ${NORMAL}"
+        echo -e "${RED} MYSQL_SELECT_ADMIN_USER = null ${NORMAL}"
         if [ ! -z "${MYSQL_IMPORT}" ]; then
-            echo -e "${RED} MYSQL_IMPORT:!!!empty!!! ${NORMAL}"
+            echo -e "${RED} MYSQL_IMPORT != null ${NORMAL}"
             magento_install        
         fi   
     fi
 
     if [ ! -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
       if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-          echo -e "${RED} local.xml:empty ${NORMAL}"
+          echo -e "${RED} local.xml = null ${NORMAL}"
           magento_config_xml
       fi
     fi

@@ -46,7 +46,7 @@ Clique no botão abaixo para implantar o aplicativo na sua conta na [Heroku](htt
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/heroku-magento)
 
-Efetue o preenchimento dos campos relativo ao banco de dados
+Efetue o preenchimento dos campos relativo ao banco de dados, para o campo "MAGE_URL" altere em "APP_NAME" pelo nome do aplicativo
 
 Em seguida clique no botão "Deploy"
 
@@ -54,7 +54,7 @@ Em seguida clique no botão "Deploy"
 
 A seguir temos um modelo que ao acessar já preenche os campos previamente, apenas cerfifique se de ter feito as devidas alterações
 
-    https://heroku.com/deploy?env[MAGE_URL]=https://???.herokuapp.com/magento/&env[MAGE_DB_HOST]=remotemysql.com&env[MAGE_DB_NAME]=???&env[MAGE_DB_USER]=???&env[MAGE_DB_PASS]=???&template=https://github.com/mozgbrasil/heroku-magento
+    https://heroku.com/deploy?env[MAGE_URL]=https://APP_NAME.herokuapp.com/magento/&env[MAGE_DB_HOST]=remotemysql.com&env[MAGE_DB_NAME]=???&env[MAGE_DB_USER]=???&env[MAGE_DB_PASS]=???&template=https://github.com/mozgbrasil/heroku-magento
 
 Acesse a URL informe o nome da aplicação
 
