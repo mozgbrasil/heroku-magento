@@ -264,11 +264,12 @@ echo -e "${ONYELLOW} profile () { ${NORMAL}"
 
 echo -e "${ONYELLOW} check n98-magerun ${NORMAL}"
 
-[[ "$(command -v n98-magerun)" ]] || { echo "n98-magerun is not installed" 1>&2 ; }
-
 timeProg=`which n98-magerun`
-if [ "$timeProg" = "" ]
-then
+
+[[ "$(command -v n98-magerun)" ]] || { N98=TRUE; echo "n98-magerun is not installed" 1>&2 ; }
+[[ -f "./n98-magerun.phar" ]] || { N98=TRUE; echo "n98-magerun local installed" 1>&2 ; }
+
+if [ -z "${N98}" ]; then # -z String, True if string is empty.
   echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
   wget https://files.magerun.net/n98-magerun.phar
   chmod +x ./n98-magerun.phar
@@ -286,16 +287,16 @@ if type mysql >/dev/null 2>&1; then
     mysql_show_tables
 
     if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
-        echo -e "${RED} MYSQL_SHOW_TABLES = null ${NORMAL}"
-        magento_sample_data_import_haifeng
+      echo -e "${RED} MYSQL_SHOW_TABLES = null ${NORMAL}"
+      if [ -f ".env" ] ; then # if file not exits
+          echo -e "${RED} .env ${NORMAL}"
+          magento_sample_data_import_haifeng
+      fi
     fi
 
     if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
         echo -e "${RED} MYSQL_SELECT_ADMIN_USER = null ${NORMAL}"
-        if [ ! -z "${MYSQL_IMPORT}" ]; then
-            echo -e "${RED} MYSQL_IMPORT != null ${NORMAL}"
-            magento_install        
-        fi   
+        magento_install        
     fi
 
     if [ ! -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
@@ -608,7 +609,7 @@ echo -e "${ONYELLOW} magento_sample_data_import_haifeng () { ${NORMAL}"
 
 #grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
 
-# FIX: permission, LOCK TABLE
+# FIX Heroku: permission, LOCK TABLE
 awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql > vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
 
 #grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
@@ -621,13 +622,7 @@ echo -e "${ONYELLOW} $STRING_MYSQL_IMPORT ${NORMAL}"
 
 #MYSQL_IMPORT=`$STRING_MYSQL_IMPORT` # Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
 
-php bin/worker.php "$STRING_MYSQL_IMPORT"
-
-echo -e "${ONPURPLE} MYSQL_IMPORT ${NORMAL}"
-
-echo $MYSQL_IMPORT
-MYSQL_IMPORT='true'
-echo $MYSQL_IMPORT
+#php bin/worker.php "$STRING_MYSQL_IMPORT" # heroku[run.8223]: Awaiting client, : Starting process with command
 
 echo -e "${ONYELLOW} Importado ... ${NORMAL}"
 

@@ -1,6 +1,6 @@
 <?php
 
-error_log('Iniciando Worker');
+error_log('#@@# bin/worker.php');
 
 /*while(true) {
     error_log('Log a cada 10 segundos');
