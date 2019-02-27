@@ -621,7 +621,7 @@ echo -e "${ONYELLOW} $STRING_MYSQL_IMPORT ${NORMAL}"
 
 #MYSQL_IMPORT=`$STRING_MYSQL_IMPORT` # Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
 
-php bin/worker.php ''$STRING_MYSQL_IMPORT''
+php bin/worker.php "$STRING_MYSQL_IMPORT"
 
 echo -e "${ONPURPLE} MYSQL_IMPORT ${NORMAL}"
 

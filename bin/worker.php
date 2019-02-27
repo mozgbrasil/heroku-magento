@@ -21,6 +21,7 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 
 var_dump($argv);
 var_dump(isset($argv));
+//exit;
 
 if ($argc < 2 )
 {
