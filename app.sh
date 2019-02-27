@@ -591,7 +591,14 @@ echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
 echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
 echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
 
-mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql'
+grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
+
+# FIX: permission LOCK TABLE
+awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql > vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
+
+grep -ri 'LOCK TABLE' vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
+
+mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'
 
 function_after
 
@@ -630,9 +637,12 @@ magento_install () {
 function_before
 echo -e "${ONYELLOW} magento_install () { ${NORMAL}"
 
-echo -e "${ONYELLOW} cd magento ${NORMAL}"
+echo -e "${ONYELLOW} pwd ${NORMAL}"
 
 pwd && ls -lah
+
+echo -e "${ONYELLOW} cd magento ${NORMAL}"
+
 cd magento
 pwd && ls -lah
 
