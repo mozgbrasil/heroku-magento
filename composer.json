@@ -41,30 +41,6 @@
         {
             "type": "package",
             "package": {
-                "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
-                "version": "1.0.0",
-                "source":{
-                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
-                    "type":"git",
-                    "reference":"master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "prasathmani/tinyfilemanager",
-                "version": "1.0.0",
-                "source":{
-                    "url":"https://github.com/prasathmani/tinyfilemanager.git",
-                    "type":"git",
-                    "reference":"master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "ceckoslab/ceckoslab_quicklogin",
                 "version": "1.0.0",
                 "source":{
@@ -84,8 +60,6 @@
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
-        "haifeng-ben-zhang/magento1.9.2.4-sample-data": "1.0.*",
-        "prasathmani/tinyfilemanager": "1.0.*",
         "ceckoslab/ceckoslab_quicklogin": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
