@@ -426,20 +426,18 @@ echo -e "${ONYELLOW} check n98-magerun ${NORMAL}"
 
 timeProg=`which n98-magerun`
 
-[[ "$(command -v n98-magerun)" ]] || { N98=TRUE; echo "n98-magerun is not installed" 1>&2 ; }
-[[ -f "./n98-magerun.phar" ]] || { N98=TRUE; echo "n98-magerun local installed" 1>&2 ; }
+[[ "$(command -v n98-magerun)" ]] || { echo "n98-magerun is not installed" 1>&2 ; }
+[[ -f "./n98-magerun.phar" ]] || { echo "n98-magerun local installed" 1>&2 ; }
 
-if [ -z "${N98}" ]; then # -z String, True if string is empty.
+if [ ! -f "./n98-magerun.phar" ]; then # -z String, True if string is empty.
   echo -e "${ONYELLOW} n98-magerun ${NORMAL}"
   wget https://files.magerun.net/n98-magerun.phar
   chmod +x ./n98-magerun.phar
-  alias n98-magerun=./n98-magerun.phar
-  n98-magerun --version
 fi
 
-n98-magerun --version
+./n98-magerun.phar --version
 
-n98-magerun --root-dir=magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
+./n98-magerun.phar --root-dir=magento local-config:generate "$MAGE_DB_HOST:$MAGE_DB_PORT" "$MAGE_DB_USER" "$MAGE_DB_PASS" "$MAGE_DB_NAME" "files" "admin" "secret" -vvv
 
 function_after
 
